@@ -96,11 +96,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jere\\source\\repos\\CursoSistemaVenta\\CapaPresentacion\\CapaPresentacion.csproj",
+      "projectUniqueName": "C:\\Users\\Jere\\source\\repos\\SistemaVenta\\CapaPresentacion\\CapaPresentacion.csproj",
       "projectName": "CapaPresentacion",
-      "projectPath": "C:\\Users\\Jere\\source\\repos\\CursoSistemaVenta\\CapaPresentacion\\CapaPresentacion.csproj",
+      "projectPath": "C:\\Users\\Jere\\source\\repos\\SistemaVenta\\CapaPresentacion\\CapaPresentacion.csproj",
       "packagesPath": "C:\\Users\\Jere\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jere\\source\\repos\\CursoSistemaVenta\\CapaPresentacion\\obj\\",
+      "outputPath": "C:\\Users\\Jere\\source\\repos\\SistemaVenta\\CapaPresentacion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -122,11 +122,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Jere\\source\\repos\\CursoSistemaVenta\\CapaEntidad\\CapaEntidad.csproj": {
-              "projectPath": "C:\\Users\\Jere\\source\\repos\\CursoSistemaVenta\\CapaEntidad\\CapaEntidad.csproj"
+            "C:\\Users\\Jere\\source\\repos\\SistemaVenta\\CapaEntidad\\CapaEntidad.csproj": {
+              "projectPath": "C:\\Users\\Jere\\source\\repos\\SistemaVenta\\CapaEntidad\\CapaEntidad.csproj"
             },
-            "C:\\Users\\Jere\\source\\repos\\CursoSistemaVenta\\CapaNegocio\\CapaNegocio.csproj": {
-              "projectPath": "C:\\Users\\Jere\\source\\repos\\CursoSistemaVenta\\CapaNegocio\\CapaNegocio.csproj"
+            "C:\\Users\\Jere\\source\\repos\\SistemaVenta\\CapaNegocio\\CapaNegocio.csproj": {
+              "projectPath": "C:\\Users\\Jere\\source\\repos\\SistemaVenta\\CapaNegocio\\CapaNegocio.csproj"
             }
           }
         }

@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "CapaPresentacion/1.0.0": {
         "dependencies": {
+          "CapaEntidad": "1.0.0",
+          "CapaNegocio": "1.0.0",
           "FontAwesome.Sharp": "6.3.0"
         },
         "runtime": {
@@ -20,6 +22,28 @@
             "assemblyVersion": "6.3.0.0",
             "fileVersion": "6.3.0.0"
           }
+        }
+      },
+      "CapaDatos/1.0.0": {
+        "dependencies": {
+          "CapaEntidad": "1.0.0"
+        },
+        "runtime": {
+          "CapaDatos.dll": {}
+        }
+      },
+      "CapaEntidad/1.0.0": {
+        "runtime": {
+          "CapaEntidad.dll": {}
+        }
+      },
+      "CapaNegocio/1.0.0": {
+        "dependencies": {
+          "CapaDatos": "1.0.0",
+          "CapaEntidad": "1.0.0"
+        },
+        "runtime": {
+          "CapaNegocio.dll": {}
         }
       }
     }
@@ -36,6 +60,21 @@
       "sha512": "sha512-3/Fb0N04yYK8An07oox5ISlUyNgsnWildHfoP69uqTEOsemQemRyciphMkXZOcdBupjUD+lVsRE3FqG41/dzPA==",
       "path": "fontawesome.sharp/6.3.0",
       "hashPath": "fontawesome.sharp.6.3.0.nupkg.sha512"
+    },
+    "CapaDatos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CapaEntidad/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CapaNegocio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
