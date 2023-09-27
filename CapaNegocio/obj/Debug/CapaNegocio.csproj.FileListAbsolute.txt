@@ -9,3 +9,14 @@ C:\Users\Jere\source\repos\SistemaVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj
 C:\Users\Jere\source\repos\SistemaVenta\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\Jere\source\repos\SistemaVenta\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\Jere\source\repos\SistemaVenta\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaNegocio\obj\Debug\CapaNegocio.pdb

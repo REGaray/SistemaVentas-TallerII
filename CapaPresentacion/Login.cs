@@ -25,13 +25,16 @@ namespace CapaPresentacion
             this.Close();  // Cierra el formulario actual al hacer clic en un botón.
         }
 
+        //Evento click para mostrar el MessageBox
+        
+
         private void btningresar_Click(object sender, EventArgs e)
         {
             List<Usuario> TEST = new CN_Usuario().Listar();
 
             Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtdocumento.Text && u.Clave == txtclave.Text).FirstOrDefault();
 
-            if(ousuario != null)
+            if (ousuario != null)
             {
                 // Crea una nueva instancia del formulario "Inicio".
                 Inicio form = new Inicio();
@@ -44,12 +47,12 @@ namespace CapaPresentacion
 
                 // Asocia un manejador de eventos al evento de cierre del formulario "Inicio".
                 form.FormClosing += frm_closing;
-            } else
-            {
-                MessageBox.Show("No se encontro el usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-
+            else
+            {
+                MsgBox m = new MsgBox("error", "No se encontró el usuario");
+                m.ShowDialog(); 
+            }
         }
 
         // Manejador de eventos para el cierre del formulario "Inicio".
@@ -59,6 +62,52 @@ namespace CapaPresentacion
             txtdocumento.Text = "";
             txtclave.Text = "";
             this.Show();  // Vuelve a mostrar el formulario de inicio de sesión.
+        }
+
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern int SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        private static extern bool ReleaseCapture();
+
+
+        private void Login_Load_1(object sender, EventArgs e)
+        {
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            //se ajusta el valor de redondeo a cambiar de la esquina
+            int radio = 30;
+
+            //Esquina superior izquierda
+            path.AddArc(0, 0, radio, radio, 180, 90);
+            //Esquina superior derecha
+            path.AddArc(this.Width - radio, 0, radio, radio, 270, 90);
+            //Esquina inferior derecha
+            path.AddArc(this.Width - radio, this.Height - radio, radio, radio, 0, 90);
+            //Esquina inferior izquierda
+            path.AddArc(0, this.Height - radio, radio, radio, 90, 90);
+
+            //Crea una región con el path del rectángulo redondeado y lo aplica al formulario Login
+            this.Region = new Region(path);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                //Checkea si el click fue en la barra del título del formulario
+                if (e.Clicks == 1 && e.Y <= this.Height && e.Y >= 0)
+                {
+                    ReleaseCapture();
+                    SendMessage(this.Handle, WM_NCLBUTTONDOWN, (IntPtr)HT_CAPTION, (IntPtr)0);
+                }
+            }
         }
     }
 }

@@ -7,3 +7,12 @@ C:\Users\Jere\source\repos\SistemaVenta\CapaDatos\obj\Debug\CapaDatos.csproj.Cor
 C:\Users\Jere\source\repos\SistemaVenta\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\Jere\source\repos\SistemaVenta\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Jere\source\repos\SistemaVenta\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Debug\CapaDatos.pdb

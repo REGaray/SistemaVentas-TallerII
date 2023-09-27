@@ -1,0 +1,9 @@
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Release\CapaDatos.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Release\CapaDatos.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Release\CapaEntidad.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\bin\Release\CapaEntidad.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Release\CapaDatos.csproj.AssemblyReference.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Release\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Release\CapaDatos.csproj.CopyComplete
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Release\CapaDatos.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaDatos\obj\Release\CapaDatos.pdb

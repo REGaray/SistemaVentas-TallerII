@@ -1,0 +1,6 @@
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaEntidad\bin\Release\CapaEntidad.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaEntidad\bin\Release\CapaEntidad.pdb
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaEntidad\obj\Release\CapaEntidad.csproj.AssemblyReference.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaEntidad\obj\Release\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaEntidad\obj\Release\CapaEntidad.dll
+C:\Taller 2\PROYECTO\SistemaVenta(Anda)\CapaEntidad\obj\Release\CapaEntidad.pdb
