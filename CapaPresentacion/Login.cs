@@ -26,7 +26,7 @@ namespace CapaPresentacion
         }
 
         //Evento click para mostrar el MessageBox
-        
+
 
         private void btningresar_Click(object sender, EventArgs e)
         {
@@ -51,7 +51,7 @@ namespace CapaPresentacion
             else
             {
                 MsgBox m = new MsgBox("error", "No se encontró el usuario");
-                m.ShowDialog(); 
+                m.ShowDialog();
             }
         }
 
