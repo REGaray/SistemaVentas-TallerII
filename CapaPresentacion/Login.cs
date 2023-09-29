@@ -47,7 +47,7 @@ namespace CapaPresentacion
             if (ousuario != null)
             {
                 // Crea una nueva instancia del formulario "Inicio".
-                Principal form = new Principal();
+                Principal form = new Principal(ousuario);
 
                 // Muestra el formulario "Inicio" y lo hace visible.
                 form.Show();

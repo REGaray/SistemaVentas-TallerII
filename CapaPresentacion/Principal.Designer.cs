@@ -30,21 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             panel1 = new Panel();
-            panel9 = new Panel();
+            panelSubMenuReportes = new Panel();
             btnReportes2 = new FontAwesome.Sharp.IconButton();
-            btnReportes1 = new FontAwesome.Sharp.IconButton();
             btnReportes = new FontAwesome.Sharp.IconButton();
             btnProveedores = new FontAwesome.Sharp.IconButton();
             btnClientes = new FontAwesome.Sharp.IconButton();
-            panel8 = new Panel();
+            panelSubMenuCompras = new Panel();
             btnCompras2 = new FontAwesome.Sharp.IconButton();
             btnCompras1 = new FontAwesome.Sharp.IconButton();
             btnCompras = new FontAwesome.Sharp.IconButton();
-            panel7 = new Panel();
+            panelSubMenuVentas = new Panel();
             btnVentas2 = new FontAwesome.Sharp.IconButton();
             btnVentas1 = new FontAwesome.Sharp.IconButton();
             btnVentas = new FontAwesome.Sharp.IconButton();
-            panel6 = new Panel();
+            panelSubMenuConfig = new Panel();
             btnEmpresa = new FontAwesome.Sharp.IconButton();
             btnProducto = new FontAwesome.Sharp.IconButton();
             btnCategoria = new FontAwesome.Sharp.IconButton();
@@ -56,33 +55,37 @@
             lblEmpresa = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
+            lblusuario = new Label();
             panel2 = new Panel();
             btncancelar = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
+            contenedor = new Panel();
             panel1.SuspendLayout();
-            panel9.SuspendLayout();
-            panel8.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
+            panelSubMenuReportes.SuspendLayout();
+            panelSubMenuCompras.SuspendLayout();
+            panelSubMenuVentas.SuspendLayout();
+            panelSubMenuConfig.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
+            panel4.SuspendLayout();
             panel2.SuspendLayout();
+            contenedor.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.AutoScroll = true;
             panel1.BackColor = Color.FromArgb(1, 13, 44);
-            panel1.Controls.Add(panel9);
+            panel1.Controls.Add(panelSubMenuReportes);
             panel1.Controls.Add(btnReportes);
             panel1.Controls.Add(btnProveedores);
             panel1.Controls.Add(btnClientes);
-            panel1.Controls.Add(panel8);
+            panel1.Controls.Add(panelSubMenuCompras);
             panel1.Controls.Add(btnCompras);
-            panel1.Controls.Add(panel7);
+            panel1.Controls.Add(panelSubMenuVentas);
             panel1.Controls.Add(btnVentas);
-            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(panelSubMenuConfig);
             panel1.Controls.Add(btnConfiguracion);
             panel1.Controls.Add(btnUsuarios);
             panel1.Controls.Add(panel5);
@@ -95,15 +98,14 @@
             panel1.Size = new Size(230, 650);
             panel1.TabIndex = 0;
             // 
-            // panel9
+            // panelSubMenuReportes
             // 
-            panel9.Controls.Add(btnReportes2);
-            panel9.Controls.Add(btnReportes1);
-            panel9.Dock = DockStyle.Top;
-            panel9.Location = new Point(0, 718);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(213, 40);
-            panel9.TabIndex = 14;
+            panelSubMenuReportes.Controls.Add(btnReportes2);
+            panelSubMenuReportes.Dock = DockStyle.Top;
+            panelSubMenuReportes.Location = new Point(0, 718);
+            panelSubMenuReportes.Name = "panelSubMenuReportes";
+            panelSubMenuReportes.Size = new Size(213, 40);
+            panelSubMenuReportes.TabIndex = 14;
             // 
             // btnReportes2
             // 
@@ -118,36 +120,15 @@
             btnReportes2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnReportes2.IconSize = 30;
             btnReportes2.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReportes2.Location = new Point(0, 40);
+            btnReportes2.Location = new Point(0, 0);
             btnReportes2.Name = "btnReportes2";
             btnReportes2.Padding = new Padding(20, 0, 0, 0);
             btnReportes2.Size = new Size(213, 40);
-            btnReportes2.TabIndex = 20;
-            btnReportes2.Text = "Opcion2Reportes";
+            btnReportes2.TabIndex = 22;
+            btnReportes2.Text = "Ver detalle";
             btnReportes2.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnReportes2.UseVisualStyleBackColor = false;
-            // 
-            // btnReportes1
-            // 
-            btnReportes1.BackColor = Color.FromArgb(9, 34, 88);
-            btnReportes1.Dock = DockStyle.Top;
-            btnReportes1.FlatAppearance.BorderSize = 0;
-            btnReportes1.FlatStyle = FlatStyle.Flat;
-            btnReportes1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReportes1.ForeColor = Color.White;
-            btnReportes1.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            btnReportes1.IconColor = Color.White;
-            btnReportes1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnReportes1.IconSize = 30;
-            btnReportes1.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReportes1.Location = new Point(0, 0);
-            btnReportes1.Name = "btnReportes1";
-            btnReportes1.Padding = new Padding(20, 0, 0, 0);
-            btnReportes1.Size = new Size(213, 40);
-            btnReportes1.TabIndex = 19;
-            btnReportes1.Text = "Opcion1Reportes";
-            btnReportes1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnReportes1.UseVisualStyleBackColor = false;
+            btnReportes2.Click += btnReportes2_Click_1;
             // 
             // btnReportes
             // 
@@ -170,6 +151,7 @@
             btnReportes.Text = "Reportes";
             btnReportes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnReportes.UseVisualStyleBackColor = false;
+            btnReportes.Click += btnReportes_Click;
             // 
             // btnProveedores
             // 
@@ -215,15 +197,15 @@
             btnClientes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnClientes.UseVisualStyleBackColor = false;
             // 
-            // panel8
+            // panelSubMenuCompras
             // 
-            panel8.Controls.Add(btnCompras2);
-            panel8.Controls.Add(btnCompras1);
-            panel8.Dock = DockStyle.Top;
-            panel8.Location = new Point(0, 497);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(213, 80);
-            panel8.TabIndex = 14;
+            panelSubMenuCompras.Controls.Add(btnCompras2);
+            panelSubMenuCompras.Controls.Add(btnCompras1);
+            panelSubMenuCompras.Dock = DockStyle.Top;
+            panelSubMenuCompras.Location = new Point(0, 497);
+            panelSubMenuCompras.Name = "panelSubMenuCompras";
+            panelSubMenuCompras.Size = new Size(213, 80);
+            panelSubMenuCompras.TabIndex = 14;
             // 
             // btnCompras2
             // 
@@ -242,10 +224,11 @@
             btnCompras2.Name = "btnCompras2";
             btnCompras2.Padding = new Padding(20, 0, 0, 0);
             btnCompras2.Size = new Size(213, 40);
-            btnCompras2.TabIndex = 19;
-            btnCompras2.Text = "Opcion2Compras";
+            btnCompras2.TabIndex = 20;
+            btnCompras2.Text = "Ver detalle";
             btnCompras2.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCompras2.UseVisualStyleBackColor = false;
+            btnCompras2.Click += btnCompras2_Click;
             // 
             // btnCompras1
             // 
@@ -265,9 +248,10 @@
             btnCompras1.Padding = new Padding(20, 0, 0, 0);
             btnCompras1.Size = new Size(213, 40);
             btnCompras1.TabIndex = 18;
-            btnCompras1.Text = "Opcion1Compras";
+            btnCompras1.Text = "Registrar";
             btnCompras1.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCompras1.UseVisualStyleBackColor = false;
+            btnCompras1.Click += btnCompras1_Click;
             // 
             // btnCompras
             // 
@@ -290,16 +274,17 @@
             btnCompras.Text = "Compras";
             btnCompras.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCompras.UseVisualStyleBackColor = false;
+            btnCompras.Click += btnCompras_Click;
             // 
-            // panel7
+            // panelSubMenuVentas
             // 
-            panel7.Controls.Add(btnVentas2);
-            panel7.Controls.Add(btnVentas1);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 370);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(213, 80);
-            panel7.TabIndex = 14;
+            panelSubMenuVentas.Controls.Add(btnVentas2);
+            panelSubMenuVentas.Controls.Add(btnVentas1);
+            panelSubMenuVentas.Dock = DockStyle.Top;
+            panelSubMenuVentas.Location = new Point(0, 370);
+            panelSubMenuVentas.Name = "panelSubMenuVentas";
+            panelSubMenuVentas.Size = new Size(213, 80);
+            panelSubMenuVentas.TabIndex = 14;
             // 
             // btnVentas2
             // 
@@ -318,10 +303,11 @@
             btnVentas2.Name = "btnVentas2";
             btnVentas2.Padding = new Padding(20, 0, 0, 0);
             btnVentas2.Size = new Size(213, 40);
-            btnVentas2.TabIndex = 18;
-            btnVentas2.Text = "Opcion2Ventas";
+            btnVentas2.TabIndex = 19;
+            btnVentas2.Text = "Ver detalle";
             btnVentas2.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVentas2.UseVisualStyleBackColor = false;
+            btnVentas2.Click += btnVentas2_Click;
             // 
             // btnVentas1
             // 
@@ -341,9 +327,10 @@
             btnVentas1.Padding = new Padding(20, 0, 0, 0);
             btnVentas1.Size = new Size(213, 40);
             btnVentas1.TabIndex = 17;
-            btnVentas1.Text = "Opcion1Ventas";
+            btnVentas1.Text = "Registrar";
             btnVentas1.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVentas1.UseVisualStyleBackColor = false;
+            btnVentas1.Click += btnVentas1_Click;
             // 
             // btnVentas
             // 
@@ -366,17 +353,18 @@
             btnVentas.Text = "Ventas";
             btnVentas.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVentas.UseVisualStyleBackColor = false;
+            btnVentas.Click += btnVentas_Click;
             // 
-            // panel6
+            // panelSubMenuConfig
             // 
-            panel6.Controls.Add(btnEmpresa);
-            panel6.Controls.Add(btnProducto);
-            panel6.Controls.Add(btnCategoria);
-            panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(0, 203);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(213, 120);
-            panel6.TabIndex = 16;
+            panelSubMenuConfig.Controls.Add(btnEmpresa);
+            panelSubMenuConfig.Controls.Add(btnProducto);
+            panelSubMenuConfig.Controls.Add(btnCategoria);
+            panelSubMenuConfig.Dock = DockStyle.Top;
+            panelSubMenuConfig.Location = new Point(0, 203);
+            panelSubMenuConfig.Name = "panelSubMenuConfig";
+            panelSubMenuConfig.Size = new Size(213, 120);
+            panelSubMenuConfig.TabIndex = 16;
             // 
             // btnEmpresa
             // 
@@ -395,10 +383,11 @@
             btnEmpresa.Name = "btnEmpresa";
             btnEmpresa.Padding = new Padding(20, 0, 0, 0);
             btnEmpresa.Size = new Size(213, 40);
-            btnEmpresa.TabIndex = 16;
+            btnEmpresa.TabIndex = 17;
             btnEmpresa.Text = "Empresa";
             btnEmpresa.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEmpresa.UseVisualStyleBackColor = false;
+            btnEmpresa.Click += btnEmpresa_Click_1;
             // 
             // btnProducto
             // 
@@ -421,6 +410,7 @@
             btnProducto.Text = "Productos";
             btnProducto.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnProducto.UseVisualStyleBackColor = false;
+            btnProducto.Click += btnProducto_Click;
             // 
             // btnCategoria
             // 
@@ -443,6 +433,7 @@
             btnCategoria.Text = "Categoría";
             btnCategoria.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCategoria.UseVisualStyleBackColor = false;
+            btnCategoria.Click += btnCategoria_Click;
             // 
             // btnConfiguracion
             // 
@@ -465,6 +456,7 @@
             btnConfiguracion.Text = "Configuración";
             btnConfiguracion.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnConfiguracion.UseVisualStyleBackColor = false;
+            btnConfiguracion.Click += btnConfiguracion_Click;
             // 
             // btnUsuarios
             // 
@@ -487,6 +479,7 @@
             btnUsuarios.Text = "Usuarios";
             btnUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnUsuarios.UseVisualStyleBackColor = false;
+            btnUsuarios.Click += btnUsuarios_Click;
             // 
             // panel5
             // 
@@ -516,7 +509,6 @@
             lblUsuarioActivo.Size = new Size(50, 15);
             lblUsuarioActivo.TabIndex = 12;
             lblUsuarioActivo.Text = "Usuario:";
-            lblUsuarioActivo.Click += label1_Click;
             // 
             // lblEmpresa
             // 
@@ -540,11 +532,23 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(lblusuario);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(213, 45);
             panel4.TabIndex = 15;
+            // 
+            // lblusuario
+            // 
+            lblusuario.AutoSize = true;
+            lblusuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblusuario.ForeColor = Color.White;
+            lblusuario.Location = new Point(68, 26);
+            lblusuario.Name = "lblusuario";
+            lblusuario.Size = new Size(61, 15);
+            lblusuario.TabIndex = 22;
+            lblusuario.Text = "unUsuario";
             // 
             // panel2
             // 
@@ -580,18 +584,26 @@
             btncancelar.TextAlign = ContentAlignment.MiddleRight;
             btncancelar.TextImageRelation = TextImageRelation.ImageAboveText;
             btncancelar.UseVisualStyleBackColor = false;
-            btncancelar.Click += btncancelar_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Gray;
-            label1.Location = new Point(788, 624);
+            label1.Location = new Point(567, 592);
             label1.Name = "label1";
             label1.Size = new Size(150, 15);
             label1.TabIndex = 13;
             label1.Text = "Versión 1.0.0 release 011023";
+            // 
+            // contenedor
+            // 
+            contenedor.Controls.Add(label1);
+            contenedor.Dock = DockStyle.Fill;
+            contenedor.Location = new Point(230, 34);
+            contenedor.Name = "contenedor";
+            contenedor.Size = new Size(720, 616);
+            contenedor.TabIndex = 14;
             // 
             // Principal
             // 
@@ -600,7 +612,7 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(220, 234, 252);
             ClientSize = new Size(950, 650);
-            Controls.Add(label1);
+            Controls.Add(contenedor);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -611,16 +623,19 @@
             Load += Principal_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel6.ResumeLayout(false);
+            panelSubMenuReportes.ResumeLayout(false);
+            panelSubMenuCompras.ResumeLayout(false);
+            panelSubMenuVentas.ResumeLayout(false);
+            panelSubMenuConfig.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             panel2.ResumeLayout(false);
+            contenedor.ResumeLayout(false);
+            contenedor.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -654,6 +669,12 @@
         private FontAwesome.Sharp.IconButton btnReportes;
         private Panel panel9;
         private FontAwesome.Sharp.IconButton btnReportes1;
+        private Panel panelSubMenuConfig;
+        private Panel panelSubMenuVentas;
+        private Panel panelSubMenuCompras;
+        private Panel panelSubMenuReportes;
         private FontAwesome.Sharp.IconButton btnReportes2;
+        private Label lblusuario;
+        private Panel contenedor;
     }
 }
