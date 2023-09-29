@@ -22,12 +22,22 @@ namespace CapaPresentacion
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            this.Close();  // Cierra el formulario actual al hacer clic en un botón.
+            // Cierra el formulario actual al hacer clic en un botón.
+            MsgBox m = new MsgBox("question", "¿Desea salir?");
+            DialogResult respuesta = m.ShowDialog();
+
+            if (respuesta == DialogResult.OK)
+            {
+                this.Close();
+            }
+
+            if (respuesta == DialogResult.Cancel)
+            {
+                DialogResult = DialogResult.Cancel;
+            }
         }
 
-        //Evento click para mostrar el MessageBox
-
-
+        //Evento que se inicia al querer ingresar al sistema, y muestra un MessageBox si no se pudo ingresar
         private void btningresar_Click(object sender, EventArgs e)
         {
             List<Usuario> TEST = new CN_Usuario().Listar();
@@ -72,7 +82,7 @@ namespace CapaPresentacion
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         private static extern bool ReleaseCapture();
 
-
+        //Método que redonda las esquinas de un formulario
         private void Login_Load_1(object sender, EventArgs e)
         {
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
@@ -97,6 +107,7 @@ namespace CapaPresentacion
 
         }
 
+        //Método que permite arrastrar la ventana principal de Login y moverla por la pantalla
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

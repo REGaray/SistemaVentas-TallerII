@@ -36,7 +36,7 @@
             btningresar = new FontAwesome.Sharp.IconButton();
             btncancelar = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
-            label5 = new Label();
+            lblEmpresa = new Label();
             panel2 = new Panel();
             label1 = new Label();
             pictureBox2 = new PictureBox();
@@ -141,7 +141,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(1, 28, 83);
-            panel1.Controls.Add(label5);
+            panel1.Controls.Add(lblEmpresa);
             panel1.Controls.Add(btncancelar);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -150,16 +150,16 @@
             panel1.TabIndex = 9;
             panel1.MouseDown += panel1_MouseDown;
             // 
-            // label5
+            // lblEmpresa
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(12, 6);
-            label5.Name = "label5";
-            label5.Size = new Size(103, 20);
-            label5.TabIndex = 1;
-            label5.Text = "JR Software ®";
+            lblEmpresa.AutoSize = true;
+            lblEmpresa.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblEmpresa.ForeColor = Color.White;
+            lblEmpresa.Location = new Point(12, 6);
+            lblEmpresa.Name = "lblEmpresa";
+            lblEmpresa.Size = new Size(110, 20);
+            lblEmpresa.TabIndex = 1;
+            lblEmpresa.Text = "JR Software ®";
             // 
             // panel2
             // 
@@ -258,7 +258,7 @@
         private FontAwesome.Sharp.IconButton btningresar;
         private FontAwesome.Sharp.IconButton btncancelar;
         private Panel panel1;
-        private Label label5;
+        private Label lblEmpresa;
         private Panel panel2;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
