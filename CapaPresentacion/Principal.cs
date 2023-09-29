@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp; // Importa el espacio de nombres FontAwesome.Sharp, que probablemente contiene iconos personalizados.
 
 using CapaEntidad; // Importa el espacio de nombres CapaEntidad, que probablemente contiene definiciones de entidades.
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -188,9 +189,32 @@ namespace CapaPresentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            lblusuario.Text = usuarioActual.NombreCompleto;
+            // Obtener la lista de permisos del usuario actual
+            List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);
 
+            // Iterar a través de los controles dentro del "menu" (presumiblemente un Panel u otro contenedor)
+            foreach (Control control in menu.Controls)
+            {
+                // Verificar si el control es de tipo IconButton
+                if (control is IconButton iconButton)
+                {
+                    // Verificar si el nombre del control coincide con algún permiso en la lista
+                    bool encontrado = ListaPermisos.Any(m => m.NombreMenu == iconButton.Name);
+
+                    // Si el permiso no se encuentra, ocultar el control (IconButton)
+                    if (!encontrado)
+                    {
+                        iconButton.Visible = false;
+                    }
+                }
+            }
+
+            // Configurar el texto del label "lblusuario" con el nombre del usuario actual
+            lblusuario.Text = usuarioActual.NombreCompleto;
         }
+
+
+
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
