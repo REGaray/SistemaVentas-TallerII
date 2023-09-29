@@ -47,6 +47,10 @@
             btnEmpresa = new FontAwesome.Sharp.IconButton();
             btnProducto = new FontAwesome.Sharp.IconButton();
             btnCategoria = new FontAwesome.Sharp.IconButton();
+            btnConfiguracion = new FontAwesome.Sharp.IconButton();
+            btnUsuarios = new FontAwesome.Sharp.IconButton();
+            panel5 = new Panel();
+            pictureBox1 = new PictureBox();
             lblUsuarioActivo = new Label();
             lblEmpresa = new Label();
             panel3 = new Panel();
@@ -56,21 +60,17 @@
             btncancelar = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
             contenedor = new Panel();
-            btnConfiguracion = new FontAwesome.Sharp.IconButton();
-            btnUsuarios = new FontAwesome.Sharp.IconButton();
-            pictureBox1 = new PictureBox();
-            panel5 = new Panel();
             menu.SuspendLayout();
             panelSubMenuReportes.SuspendLayout();
             panelSubMenuCompras.SuspendLayout();
             panelSubMenuVentas.SuspendLayout();
             panelSubMenuConfig.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
             contenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // menu
@@ -434,6 +434,70 @@
             btnCategoria.UseVisualStyleBackColor = false;
             btnCategoria.Click += btnCategoria_Click;
             // 
+            // btnConfiguracion
+            // 
+            btnConfiguracion.BackColor = Color.FromArgb(15, 49, 120);
+            btnConfiguracion.Dock = DockStyle.Top;
+            btnConfiguracion.FlatAppearance.BorderSize = 0;
+            btnConfiguracion.FlatStyle = FlatStyle.Flat;
+            btnConfiguracion.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfiguracion.ForeColor = Color.White;
+            btnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Gears;
+            btnConfiguracion.IconColor = Color.White;
+            btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnConfiguracion.IconSize = 30;
+            btnConfiguracion.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConfiguracion.Location = new Point(0, 156);
+            btnConfiguracion.Name = "btnConfiguracion";
+            btnConfiguracion.Padding = new Padding(10, 0, 0, 0);
+            btnConfiguracion.Size = new Size(213, 47);
+            btnConfiguracion.TabIndex = 14;
+            btnConfiguracion.Text = "Configuración";
+            btnConfiguracion.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnConfiguracion.UseVisualStyleBackColor = false;
+            btnConfiguracion.Click += btnConfiguracion_Click;
+            // 
+            // btnUsuarios
+            // 
+            btnUsuarios.BackColor = Color.FromArgb(15, 49, 120);
+            btnUsuarios.Dock = DockStyle.Top;
+            btnUsuarios.FlatAppearance.BorderSize = 0;
+            btnUsuarios.FlatStyle = FlatStyle.Flat;
+            btnUsuarios.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUsuarios.ForeColor = Color.White;
+            btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.Users;
+            btnUsuarios.IconColor = Color.White;
+            btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUsuarios.IconSize = 30;
+            btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUsuarios.Location = new Point(0, 109);
+            btnUsuarios.Name = "btnUsuarios";
+            btnUsuarios.Padding = new Padding(10, 0, 0, 0);
+            btnUsuarios.Size = new Size(213, 47);
+            btnUsuarios.TabIndex = 1;
+            btnUsuarios.Text = "Usuarios";
+            btnUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUsuarios.UseVisualStyleBackColor = false;
+            btnUsuarios.Click += btnUsuarios_Click;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(pictureBox1);
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 45);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(213, 64);
+            panel5.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Left;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(63, 64);
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
+            // 
             // lblUsuarioActivo
             // 
             lblUsuarioActivo.AutoSize = true;
@@ -479,7 +543,7 @@
             lblusuario.AutoSize = true;
             lblusuario.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblusuario.ForeColor = Color.White;
-            lblusuario.Location = new Point(68, 26);
+            lblusuario.Location = new Point(61, 26);
             lblusuario.Name = "lblusuario";
             lblusuario.Size = new Size(61, 15);
             lblusuario.TabIndex = 22;
@@ -541,70 +605,6 @@
             contenedor.Size = new Size(720, 616);
             contenedor.TabIndex = 14;
             // 
-            // btnConfiguracion
-            // 
-            btnConfiguracion.BackColor = Color.FromArgb(15, 49, 120);
-            btnConfiguracion.Dock = DockStyle.Top;
-            btnConfiguracion.FlatAppearance.BorderSize = 0;
-            btnConfiguracion.FlatStyle = FlatStyle.Flat;
-            btnConfiguracion.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnConfiguracion.ForeColor = Color.White;
-            btnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Gears;
-            btnConfiguracion.IconColor = Color.White;
-            btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnConfiguracion.IconSize = 30;
-            btnConfiguracion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnConfiguracion.Location = new Point(0, 156);
-            btnConfiguracion.Name = "btnConfiguracion";
-            btnConfiguracion.Padding = new Padding(10, 0, 0, 0);
-            btnConfiguracion.Size = new Size(213, 47);
-            btnConfiguracion.TabIndex = 14;
-            btnConfiguracion.Text = "Configuración";
-            btnConfiguracion.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnConfiguracion.UseVisualStyleBackColor = false;
-            btnConfiguracion.Click += btnConfiguracion_Click;
-            // 
-            // btnUsuarios
-            // 
-            btnUsuarios.BackColor = Color.FromArgb(15, 49, 120);
-            btnUsuarios.Dock = DockStyle.Top;
-            btnUsuarios.FlatAppearance.BorderSize = 0;
-            btnUsuarios.FlatStyle = FlatStyle.Flat;
-            btnUsuarios.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUsuarios.ForeColor = Color.White;
-            btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.Users;
-            btnUsuarios.IconColor = Color.White;
-            btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnUsuarios.IconSize = 30;
-            btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnUsuarios.Location = new Point(0, 109);
-            btnUsuarios.Name = "btnUsuarios";
-            btnUsuarios.Padding = new Padding(10, 0, 0, 0);
-            btnUsuarios.Size = new Size(213, 47);
-            btnUsuarios.TabIndex = 1;
-            btnUsuarios.Text = "Usuarios";
-            btnUsuarios.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnUsuarios.UseVisualStyleBackColor = false;
-            btnUsuarios.Click += btnUsuarios_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Left;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(63, 64);
-            pictureBox1.TabIndex = 14;
-            pictureBox1.TabStop = false;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(pictureBox1);
-            panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(0, 45);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(213, 64);
-            panel5.TabIndex = 15;
-            // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -629,14 +629,14 @@
             panelSubMenuCompras.ResumeLayout(false);
             panelSubMenuVentas.ResumeLayout(false);
             panelSubMenuConfig.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel2.ResumeLayout(false);
             contenedor.ResumeLayout(false);
             contenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -647,7 +647,6 @@
         private Label lblEmpresa;
         private FontAwesome.Sharp.IconButton btncancelar;
         private Label lblUsuarioActivo;
-        private Label label1;
         private Panel panel3;
         private Panel panel4;
         private Panel panel6;
@@ -672,11 +671,12 @@
         private Panel panelSubMenuCompras;
         private Panel panelSubMenuReportes;
         private Label lblusuario;
-        private Panel contenedor;
         private FontAwesome.Sharp.IconButton btnReportes2;
         private FontAwesome.Sharp.IconButton btnConfiguracion;
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private Panel panel5;
         private PictureBox pictureBox1;
+        private Label label1;
+        private Panel contenedor;
     }
 }
