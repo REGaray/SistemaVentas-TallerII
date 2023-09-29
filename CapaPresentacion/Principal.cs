@@ -189,6 +189,7 @@ namespace CapaPresentacion
         private void Principal_Load(object sender, EventArgs e)
         {
             lblusuario.Text = usuarioActual.NombreCompleto;
+
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -198,6 +199,27 @@ namespace CapaPresentacion
             AbrirFormulario(frmUsuarios);
         }
 
-        
+
+        private void Principal_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            // Cierra el formulario actual al hacer clic en un botón.
+            MsgBox m = new MsgBox("question", "¿Desea cerrar sesión?");
+            DialogResult respuesta = m.ShowDialog();
+
+            if (respuesta == DialogResult.OK)
+            {
+                this.Close();
+            }
+
+            if (respuesta == DialogResult.Cancel)
+            {
+                DialogResult = DialogResult.Cancel;
+            }
+        }
     }
 }

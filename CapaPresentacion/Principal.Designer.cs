@@ -584,6 +584,7 @@
             btncancelar.TextAlign = ContentAlignment.MiddleRight;
             btncancelar.TextImageRelation = TextImageRelation.ImageAboveText;
             btncancelar.UseVisualStyleBackColor = false;
+            btncancelar.Click += btncancelar_Click;
             // 
             // label1
             // 
@@ -619,8 +620,10 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(800, 600);
             Name = "Principal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Principal_Load;
+            MouseDown += Principal_MouseDown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panelSubMenuReportes.ResumeLayout(false);
