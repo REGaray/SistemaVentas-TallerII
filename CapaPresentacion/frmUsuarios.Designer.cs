@@ -86,8 +86,18 @@
             EstadoValor = new DataGridViewTextBoxColumn();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtid = new Guna.UI2.WinForms.Guna2TextBox();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel4.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -325,14 +335,15 @@
             // 
             // btneliminar
             // 
-            btneliminar.BorderRadius = 13;
+            btneliminar.BorderRadius = 18;
             btneliminar.Cursor = Cursors.Hand;
             btneliminar.CustomizableEdges = customizableEdges15;
             btneliminar.DisabledState.BorderColor = Color.DarkGray;
             btneliminar.DisabledState.CustomBorderColor = Color.DarkGray;
             btneliminar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btneliminar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btneliminar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btneliminar.FillColor = Color.FromArgb(255, 94, 94);
+            btneliminar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btneliminar.ForeColor = Color.White;
             btneliminar.Location = new Point(19, 93);
             btneliminar.Name = "btneliminar";
@@ -343,14 +354,15 @@
             // 
             // btneditar
             // 
-            btneditar.BorderRadius = 13;
+            btneditar.BorderRadius = 18;
             btneditar.Cursor = Cursors.Hand;
             btneditar.CustomizableEdges = customizableEdges17;
             btneditar.DisabledState.BorderColor = Color.DarkGray;
             btneditar.DisabledState.CustomBorderColor = Color.DarkGray;
             btneditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btneditar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btneditar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btneditar.FillColor = Color.FromArgb(255, 215, 94);
+            btneditar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btneditar.ForeColor = Color.White;
             btneditar.Location = new Point(19, 158);
             btneditar.Name = "btneditar";
@@ -361,14 +373,15 @@
             // 
             // btnguardar
             // 
-            btnguardar.BorderRadius = 13;
+            btnguardar.BorderRadius = 18;
             btnguardar.Cursor = Cursors.Hand;
             btnguardar.CustomizableEdges = customizableEdges19;
             btnguardar.DisabledState.BorderColor = Color.DarkGray;
             btnguardar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnguardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnguardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnguardar.FillColor = Color.FromArgb(100, 88, 255);
+            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnguardar.ForeColor = Color.White;
             btnguardar.Location = new Point(19, 23);
             btnguardar.Name = "btnguardar";
@@ -402,8 +415,9 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            guna2DataGridView1.Dock = DockStyle.Fill;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(12, 333);
+            guna2DataGridView1.Location = new Point(0, 0);
             guna2DataGridView1.MultiSelect = false;
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.ReadOnly = true;
@@ -417,7 +431,7 @@
             guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowTemplate.Height = 28;
-            guna2DataGridView1.Size = new Size(680, 232);
+            guna2DataGridView1.Size = new Size(704, 238);
             guna2DataGridView1.TabIndex = 16;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -514,10 +528,11 @@
             // 
             guna2HtmlLabel9.AutoSize = false;
             guna2HtmlLabel9.BackColor = Color.White;
+            guna2HtmlLabel9.Dock = DockStyle.Top;
             guna2HtmlLabel9.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2HtmlLabel9.Location = new Point(12, 255);
+            guna2HtmlLabel9.Location = new Point(0, 0);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(680, 59);
+            guna2HtmlLabel9.Size = new Size(704, 58);
             guna2HtmlLabel9.TabIndex = 17;
             guna2HtmlLabel9.Text = "Lista de usuarios";
             guna2HtmlLabel9.TextAlignment = ContentAlignment.MiddleLeft;
@@ -543,15 +558,69 @@
             txtid.TabIndex = 18;
             txtid.Visible = false;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(panel2);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 237);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(704, 22);
+            panel1.TabIndex = 19;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(panel3);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(704, 22);
+            panel2.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(704, 22);
+            panel3.TabIndex = 21;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(guna2HtmlLabel9);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 259);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(704, 58);
+            panel4.TabIndex = 20;
+            // 
+            // panel5
+            // 
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 317);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(704, 22);
+            panel5.TabIndex = 21;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(guna2DataGridView1);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(0, 339);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(704, 238);
+            panel6.TabIndex = 22;
+            // 
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(220, 234, 252);
             ClientSize = new Size(704, 577);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel1);
             Controls.Add(txtid);
-            Controls.Add(guna2HtmlLabel9);
-            Controls.Add(guna2DataGridView1);
             Controls.Add(groupBox1);
             Controls.Add(cboestado);
             Controls.Add(guna2HtmlLabel8);
@@ -573,6 +642,10 @@
             Load += frmUsuarios_Load;
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel6.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -611,5 +684,11 @@
         private DataGridViewTextBoxColumn Estado;
         private DataGridViewTextBoxColumn EstadoValor;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
     }
 }
