@@ -94,5 +94,62 @@ namespace CapaPresentacion
             cboestado.SelectedIndex = 0;
         }
 
+        private void dgvdata_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Verifica si la celda que se va a pintar está en la fila de encabezado (rowIndex < 0).
+            if (e.RowIndex < 0)
+            {
+                return; // No hace nada si es una celda de encabezado.
+            }
+
+            // Verifica si la celda que se va a pintar pertenece a la primera columna (columnIndex == 0).
+            if (e.ColumnIndex == 0)
+            {
+                // Pinta toda la celda (incluyendo el fondo y el borde).
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                // Obtiene el ancho y alto de la imagen que se va a dibujar.
+                var w = Properties.Resources.icons8_checkmark_16.Width;
+                var h = Properties.Resources.icons8_checkmark_16.Height;
+
+                // Calcula la posición (coordenadas X e Y) para centrar la imagen en la celda.
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                // Dibuja la imagen (en este caso, una marca de verificación) en la celda.
+                e.Graphics.DrawImage(Properties.Resources.icons8_checkmark_16, new Rectangle(x, y, w, h));
+
+                // Marca la celda como "manejada" para indicar que se ha personalizado su apariencia.
+                e.Handled = true;
+            }
+        }
+
+        private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvdata.Columns[e.ColumnIndex].Name == "btnseleccionar")
+            {
+                int indice = e.RowIndex;
+
+                if (indice >= 0)
+                {
+                    txtid.Text = dgvdata.Rows[indice].Cells["id"].Value.ToString();
+                    txtdocumento.Text = dgvdata.Rows[indice].Cells["Documento"].Value.ToString();
+                    txtnombrecompleto.Text = dgvdata.Rows[indice].Cells["NombreCompleto"].Value.ToString();
+                    txtcorreo.Text = dgvdata.Rows[indice].Cells["Correo"].Value.ToString();
+                    txtclave.Text = dgvdata.Rows[indice].Cells["Clave"].Value.ToString();
+                    txtconfirmarclave.Text = dgvdata.Rows[indice].Cells["Clave"].Value.ToString();
+
+                    foreach (OpcionCombo oc in cborol.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["IdRol"].Value.ToString()))
+                        {
+                            int indice_combo = cborol.Items.IndexOf(oc);
+                            cborol.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

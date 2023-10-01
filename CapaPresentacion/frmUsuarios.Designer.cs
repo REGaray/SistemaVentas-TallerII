@@ -82,16 +82,6 @@
             btneditar = new Guna.UI2.WinForms.Guna2Button();
             btnguardar = new Guna.UI2.WinForms.Guna2Button();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
-            btnseleccionar = new DataGridViewButtonColumn();
-            IdUsuario = new DataGridViewTextBoxColumn();
-            Documento = new DataGridViewTextBoxColumn();
-            NombreCompleto = new DataGridViewTextBoxColumn();
-            Correo = new DataGridViewTextBoxColumn();
-            Clave = new DataGridViewTextBoxColumn();
-            IdRol = new DataGridViewTextBoxColumn();
-            Rol = new DataGridViewTextBoxColumn();
-            EstadoValor = new DataGridViewTextBoxColumn();
-            Estado = new DataGridViewTextBoxColumn();
             txtid = new Guna.UI2.WinForms.Guna2TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
@@ -105,6 +95,16 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel5 = new Panel();
             panel6 = new Panel();
+            btnseleccionar = new DataGridViewButtonColumn();
+            id = new DataGridViewTextBoxColumn();
+            Documento = new DataGridViewTextBoxColumn();
+            NombreCompleto = new DataGridViewTextBoxColumn();
+            Correo = new DataGridViewTextBoxColumn();
+            Clave = new DataGridViewTextBoxColumn();
+            IdRol = new DataGridViewTextBoxColumn();
+            Rol = new DataGridViewTextBoxColumn();
+            EstadoValor = new DataGridViewTextBoxColumn();
+            Estado = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             panel1.SuspendLayout();
@@ -420,7 +420,7 @@
             dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvdata.ColumnHeadersHeight = 22;
             dgvdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvdata.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, IdUsuario, Documento, NombreCompleto, Correo, Clave, IdRol, Rol, EstadoValor, Estado });
+            dgvdata.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, id, Documento, NombreCompleto, Correo, Clave, IdRol, Rol, EstadoValor, Estado });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -468,75 +468,8 @@
             dgvdata.ThemeStyle.RowsStyle.Height = 28;
             dgvdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // btnseleccionar
-            // 
-            btnseleccionar.HeaderText = "";
-            btnseleccionar.Name = "btnseleccionar";
-            btnseleccionar.ReadOnly = true;
-            // 
-            // IdUsuario
-            // 
-            IdUsuario.HeaderText = "IdUsuario";
-            IdUsuario.Name = "IdUsuario";
-            IdUsuario.ReadOnly = true;
-            IdUsuario.Visible = false;
-            // 
-            // Documento
-            // 
-            Documento.FillWeight = 120.950859F;
-            Documento.HeaderText = "Nro Documento";
-            Documento.Name = "Documento";
-            Documento.ReadOnly = true;
-            // 
-            // NombreCompleto
-            // 
-            NombreCompleto.FillWeight = 96.9196548F;
-            NombreCompleto.HeaderText = "Nombre Completo";
-            NombreCompleto.Name = "NombreCompleto";
-            NombreCompleto.ReadOnly = true;
-            // 
-            // Correo
-            // 
-            Correo.FillWeight = 96.9196548F;
-            Correo.HeaderText = "Correo";
-            Correo.Name = "Correo";
-            Correo.ReadOnly = true;
-            // 
-            // Clave
-            // 
-            Clave.HeaderText = "Clave";
-            Clave.Name = "Clave";
-            Clave.ReadOnly = true;
-            Clave.Visible = false;
-            // 
-            // IdRol
-            // 
-            IdRol.HeaderText = "IdRol";
-            IdRol.Name = "IdRol";
-            IdRol.ReadOnly = true;
-            IdRol.Visible = false;
-            // 
-            // Rol
-            // 
-            Rol.FillWeight = 96.9196548F;
-            Rol.HeaderText = "Rol";
-            Rol.Name = "Rol";
-            Rol.ReadOnly = true;
-            // 
-            // EstadoValor
-            // 
-            EstadoValor.HeaderText = "EstadoValor";
-            EstadoValor.Name = "EstadoValor";
-            EstadoValor.ReadOnly = true;
-            EstadoValor.Visible = false;
-            // 
-            // Estado
-            // 
-            Estado.FillWeight = 96.9196548F;
-            Estado.HeaderText = "Estado";
-            Estado.Name = "Estado";
-            Estado.ReadOnly = true;
+            dgvdata.CellContentClick += dgvdata_CellContentClick;
+            dgvdata.CellPainting += dgvdata_CellPainting;
             // 
             // txtid
             // 
@@ -719,6 +652,75 @@
             panel6.Size = new Size(704, 222);
             panel6.TabIndex = 22;
             // 
+            // btnseleccionar
+            // 
+            btnseleccionar.HeaderText = "";
+            btnseleccionar.Name = "btnseleccionar";
+            btnseleccionar.ReadOnly = true;
+            // 
+            // id
+            // 
+            id.HeaderText = "IdUsuario";
+            id.Name = "id";
+            id.ReadOnly = true;
+            id.Visible = false;
+            // 
+            // Documento
+            // 
+            Documento.FillWeight = 120.950859F;
+            Documento.HeaderText = "Nro Documento";
+            Documento.Name = "Documento";
+            Documento.ReadOnly = true;
+            // 
+            // NombreCompleto
+            // 
+            NombreCompleto.FillWeight = 96.9196548F;
+            NombreCompleto.HeaderText = "Nombre Completo";
+            NombreCompleto.Name = "NombreCompleto";
+            NombreCompleto.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            Correo.FillWeight = 96.9196548F;
+            Correo.HeaderText = "Correo";
+            Correo.Name = "Correo";
+            Correo.ReadOnly = true;
+            // 
+            // Clave
+            // 
+            Clave.HeaderText = "Clave";
+            Clave.Name = "Clave";
+            Clave.ReadOnly = true;
+            Clave.Visible = false;
+            // 
+            // IdRol
+            // 
+            IdRol.HeaderText = "IdRol";
+            IdRol.Name = "IdRol";
+            IdRol.ReadOnly = true;
+            IdRol.Visible = false;
+            // 
+            // Rol
+            // 
+            Rol.FillWeight = 96.9196548F;
+            Rol.HeaderText = "Rol";
+            Rol.Name = "Rol";
+            Rol.ReadOnly = true;
+            // 
+            // EstadoValor
+            // 
+            EstadoValor.HeaderText = "EstadoValor";
+            EstadoValor.Name = "EstadoValor";
+            EstadoValor.ReadOnly = true;
+            EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            Estado.FillWeight = 96.9196548F;
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
+            Estado.ReadOnly = true;
+            // 
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -789,8 +791,14 @@
         private Panel panel4;
         private Panel panel5;
         private Panel panel6;
+        private Guna.UI2.WinForms.Guna2ComboBox cbobusqueda;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2TextBox txtbusqueda;
+        private Guna.UI2.WinForms.Guna2Button btnlimpiar;
+        private Guna.UI2.WinForms.Guna2Button btnbuscar;
         private DataGridViewButtonColumn btnseleccionar;
-        private DataGridViewTextBoxColumn IdUsuario;
+        private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn Documento;
         private DataGridViewTextBoxColumn NombreCompleto;
         private DataGridViewTextBoxColumn Correo;
@@ -799,11 +807,5 @@
         private DataGridViewTextBoxColumn Rol;
         private DataGridViewTextBoxColumn EstadoValor;
         private DataGridViewTextBoxColumn Estado;
-        private Guna.UI2.WinForms.Guna2ComboBox cbobusqueda;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox txtbusqueda;
-        private Guna.UI2.WinForms.Guna2Button btnlimpiar;
-        private Guna.UI2.WinForms.Guna2Button btnbuscar;
     }
 }
