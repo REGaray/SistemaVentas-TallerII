@@ -101,18 +101,16 @@ namespace CapaPresentacion
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmcategoria = new frmcategoria();
+            AbrirFormulario(frmcategoria);
 
             hideSubMenu();
         }
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmproductos = new frmproductos();
+            AbrirFormulario(frmproductos);
 
             hideSubMenu();
         }
@@ -244,6 +242,18 @@ namespace CapaPresentacion
             {
                 DialogResult = DialogResult.Cancel;
             }
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Form frmclientes = new frmclientes();
+            AbrirFormulario(frmclientes);
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            Form frmproveedores = new frmproveedores();
+            AbrirFormulario(frmproveedores);
         }
     }
 }

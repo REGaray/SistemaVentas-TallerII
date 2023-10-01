@@ -173,6 +173,7 @@
             btnProveedores.Text = "Proveedores";
             btnProveedores.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnProveedores.UseVisualStyleBackColor = false;
+            btnProveedores.Click += btnProveedores_Click;
             // 
             // btnClientes
             // 
@@ -195,6 +196,7 @@
             btnClientes.Text = "Clientes";
             btnClientes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += btnClientes_Click;
             // 
             // panelSubMenuCompras
             // 
