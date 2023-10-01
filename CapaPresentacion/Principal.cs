@@ -101,18 +101,16 @@ namespace CapaPresentacion
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmcategoria = new frmcategoria();
+            AbrirFormulario(frmcategoria);
 
             hideSubMenu();
         }
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmproductos = new frmproductos();
+            AbrirFormulario(frmproductos);
 
             hideSubMenu();
         }
@@ -134,18 +132,16 @@ namespace CapaPresentacion
 
         private void btnVentas1_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmRegistrarVenta = new frmRegistrarVenta();
+            AbrirFormulario(frmRegistrarVenta);
 
             hideSubMenu();
         }
 
         private void btnVentas2_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmDetalleVenta = new frmDetalleVenta();
+            AbrirFormulario(frmDetalleVenta);
 
             hideSubMenu();
         }
@@ -157,18 +153,16 @@ namespace CapaPresentacion
 
         private void btnCompras1_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmregistrarcompra = new frmRegistrarCompra();
+            AbrirFormulario(frmregistrarcompra);
 
             hideSubMenu();
         }
 
         private void btnCompras2_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmdetalleventa = new frmDetalleCompra();
+            AbrirFormulario(frmdetalleventa);
 
             hideSubMenu();
         }
@@ -244,6 +238,18 @@ namespace CapaPresentacion
             {
                 DialogResult = DialogResult.Cancel;
             }
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Form frmclientes = new frmclientes();
+            AbrirFormulario(frmclientes);
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            Form frmproveedores = new frmproveedores();
+            AbrirFormulario(frmproveedores);
         }
     }
 }

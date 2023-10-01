@@ -70,7 +70,6 @@
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
-            contenedor.SuspendLayout();
             SuspendLayout();
             // 
             // menu
@@ -173,6 +172,7 @@
             btnProveedores.Text = "Proveedores";
             btnProveedores.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnProveedores.UseVisualStyleBackColor = false;
+            btnProveedores.Click += btnProveedores_Click;
             // 
             // btnClientes
             // 
@@ -195,6 +195,7 @@
             btnClientes.Text = "Clientes";
             btnClientes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += btnClientes_Click;
             // 
             // panelSubMenuCompras
             // 
@@ -482,6 +483,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(label1);
             panel5.Controls.Add(pictureBox1);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 45);
@@ -590,7 +592,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Gray;
-            label1.Location = new Point(567, 592);
+            label1.Location = new Point(12, 3);
             label1.Name = "label1";
             label1.Size = new Size(150, 15);
             label1.TabIndex = 13;
@@ -598,7 +600,6 @@
             // 
             // contenedor
             // 
-            contenedor.Controls.Add(label1);
             contenedor.Dock = DockStyle.Fill;
             contenedor.Location = new Point(230, 34);
             contenedor.Name = "contenedor";
@@ -630,13 +631,12 @@
             panelSubMenuVentas.ResumeLayout(false);
             panelSubMenuConfig.ResumeLayout(false);
             panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel2.ResumeLayout(false);
-            contenedor.ResumeLayout(false);
-            contenedor.PerformLayout();
             ResumeLayout(false);
         }
 
