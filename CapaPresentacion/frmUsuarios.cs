@@ -54,6 +54,20 @@ namespace CapaPresentacion
             cbobusqueda.ValueMember = "Valor";
             cbobusqueda.SelectedIndex = 0;
 
+
+            // MOSTRAR TODOS LOS USUARIOS
+            List<Usuario> listaUsuario = new CN_Usuario().Listar();
+
+            foreach (Usuario item in listaUsuario)
+            {
+                dgvdata.Rows.Add(new object[] { "", item.IdUsuario, item.Documento, item.NombreCompleto, item.Correo, item.Clave,
+                item.oRol.IdRol,
+                item.oRol.Descripcion,
+                item.Estado == true? 1 : 0,
+                item.Estado == true? "Activo" : "Inactivo"
+                });
+            }
+
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
