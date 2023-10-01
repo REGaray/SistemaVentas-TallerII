@@ -270,7 +270,7 @@
             txtdocumento.Location = new Point(12, 35);
             txtdocumento.Name = "txtdocumento";
             txtdocumento.PasswordChar = '\0';
-            txtdocumento.PlaceholderText = "Nn";
+            txtdocumento.PlaceholderText = "42061377";
             txtdocumento.SelectedText = "";
             txtdocumento.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtdocumento.Size = new Size(148, 36);
