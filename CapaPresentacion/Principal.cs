@@ -132,18 +132,16 @@ namespace CapaPresentacion
 
         private void btnVentas1_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmRegistrarVenta = new frmRegistrarVenta();
+            AbrirFormulario(frmRegistrarVenta);
 
             hideSubMenu();
         }
 
         private void btnVentas2_Click(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmDetalleVenta = new frmDetalleVenta();
+            AbrirFormulario(frmDetalleVenta);
 
             hideSubMenu();
         }

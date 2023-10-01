@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class frmRegistrarCompra : Form
+    public partial class frmRegistrarVenta : Form
     {
-        public frmRegistrarCompra()
+        public frmRegistrarVenta()
         {
             InitializeComponent();
-        }
-
-        private void guna2TextBox9_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
