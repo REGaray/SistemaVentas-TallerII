@@ -31,3 +31,14 @@ C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNego
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaNegocio\obj\Debug\CapaNegocio.pdb

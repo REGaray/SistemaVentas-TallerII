@@ -16,3 +16,9 @@ C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEnti
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaEntidad\obj\Debug\CapaEntidad.pdb
