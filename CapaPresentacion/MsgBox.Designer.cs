@@ -160,9 +160,10 @@
             Controls.Add(pL2);
             Controls.Add(pL1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MsgBox";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Form1";
+            Text = "Aviso";
             ((System.ComponentModel.ISupportInitialize)pbQuestion).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbWarning).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbError).EndInit();

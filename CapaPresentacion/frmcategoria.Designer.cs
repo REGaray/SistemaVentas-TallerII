@@ -30,24 +30,24 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -57,23 +57,23 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            txtdocumento = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            cborol = new Guna.UI2.WinForms.Guna2ComboBox();
-            btnbuscar = new Guna.UI2.WinForms.Guna2Button();
             btnlimpiar = new Guna.UI2.WinForms.Guna2Button();
-            txtbusqueda = new Guna.UI2.WinForms.Guna2TextBox();
-            cbobusqueda = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnguardar = new Guna.UI2.WinForms.Guna2Button();
             groupBox1 = new GroupBox();
             btneliminar = new Guna.UI2.WinForms.Guna2Button();
             btneditar = new Guna.UI2.WinForms.Guna2Button();
+            btnguardar = new Guna.UI2.WinForms.Guna2Button();
+            cborol = new Guna.UI2.WinForms.Guna2ComboBox();
+            btnbuscar = new Guna.UI2.WinForms.Guna2Button();
+            txtdocumento = new Guna.UI2.WinForms.Guna2TextBox();
+            txtbusqueda = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            cbobusqueda = new Guna.UI2.WinForms.Guna2ComboBox();
+            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvcategoria = new Guna.UI2.WinForms.Guna2DataGridView();
             btnseleccionar = new DataGridViewButtonColumn();
             Descripcion = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
@@ -81,7 +81,7 @@
             groupBox1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvcategoria).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -104,84 +104,6 @@
             guna2CustomGradientPanel1.Size = new Size(704, 237);
             guna2CustomGradientPanel1.TabIndex = 0;
             // 
-            // txtdocumento
-            // 
-            txtdocumento.BackColor = Color.White;
-            txtdocumento.BorderRadius = 13;
-            txtdocumento.CustomizableEdges = customizableEdges13;
-            txtdocumento.DefaultText = "";
-            txtdocumento.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtdocumento.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtdocumento.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtdocumento.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtdocumento.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtdocumento.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtdocumento.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtdocumento.Location = new Point(12, 35);
-            txtdocumento.Name = "txtdocumento";
-            txtdocumento.PasswordChar = '\0';
-            txtdocumento.PlaceholderText = "Nn";
-            txtdocumento.SelectedText = "";
-            txtdocumento.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtdocumento.Size = new Size(148, 36);
-            txtdocumento.TabIndex = 8;
-            // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.White;
-            guna2HtmlLabel3.Location = new Point(166, 12);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(41, 17);
-            guna2HtmlLabel3.TabIndex = 7;
-            guna2HtmlLabel3.Text = "Estado:";
-            // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(12, 12);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(68, 17);
-            guna2HtmlLabel2.TabIndex = 6;
-            guna2HtmlLabel2.Text = "Descripcion:";
-            // 
-            // cborol
-            // 
-            cborol.BackColor = Color.White;
-            cborol.BorderRadius = 13;
-            cborol.CustomizableEdges = customizableEdges9;
-            cborol.DrawMode = DrawMode.OwnerDrawFixed;
-            cborol.DropDownStyle = ComboBoxStyle.DropDownList;
-            cborol.FocusedColor = Color.FromArgb(94, 148, 255);
-            cborol.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cborol.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            cborol.ForeColor = Color.FromArgb(68, 88, 112);
-            cborol.ItemHeight = 30;
-            cborol.Location = new Point(166, 35);
-            cborol.Name = "cborol";
-            cborol.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            cborol.Size = new Size(148, 36);
-            cborol.TabIndex = 13;
-            // 
-            // btnbuscar
-            // 
-            btnbuscar.BackColor = Color.White;
-            btnbuscar.BorderRadius = 18;
-            btnbuscar.Cursor = Cursors.Hand;
-            btnbuscar.CustomizableEdges = customizableEdges11;
-            btnbuscar.DisabledState.BorderColor = Color.DarkGray;
-            btnbuscar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnbuscar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnbuscar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnbuscar.FillColor = Color.FromArgb(33, 43, 70);
-            btnbuscar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnbuscar.ForeColor = Color.White;
-            btnbuscar.Image = Properties.Resources.search_32_white;
-            btnbuscar.Location = new Point(423, 170);
-            btnbuscar.Name = "btnbuscar";
-            btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnbuscar.Size = new Size(38, 36);
-            btnbuscar.TabIndex = 31;
-            // 
             // btnlimpiar
             // 
             btnlimpiar.BackColor = Color.White;
@@ -201,75 +123,6 @@
             btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnlimpiar.Size = new Size(38, 36);
             btnlimpiar.TabIndex = 30;
-            // 
-            // txtbusqueda
-            // 
-            txtbusqueda.BackColor = Color.White;
-            txtbusqueda.BorderRadius = 13;
-            txtbusqueda.CustomizableEdges = customizableEdges15;
-            txtbusqueda.DefaultText = "";
-            txtbusqueda.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtbusqueda.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtbusqueda.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtbusqueda.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtbusqueda.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtbusqueda.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtbusqueda.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtbusqueda.Location = new Point(166, 170);
-            txtbusqueda.Name = "txtbusqueda";
-            txtbusqueda.PasswordChar = '\0';
-            txtbusqueda.PlaceholderText = "";
-            txtbusqueda.SelectedText = "";
-            txtbusqueda.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtbusqueda.Size = new Size(251, 36);
-            txtbusqueda.TabIndex = 28;
-            // 
-            // cbobusqueda
-            // 
-            cbobusqueda.BackColor = Color.White;
-            cbobusqueda.BorderRadius = 13;
-            cbobusqueda.CustomizableEdges = customizableEdges17;
-            cbobusqueda.DrawMode = DrawMode.OwnerDrawFixed;
-            cbobusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbobusqueda.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbobusqueda.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbobusqueda.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            cbobusqueda.ForeColor = Color.FromArgb(68, 88, 112);
-            cbobusqueda.ItemHeight = 30;
-            cbobusqueda.Location = new Point(12, 170);
-            cbobusqueda.Name = "cbobusqueda";
-            cbobusqueda.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            cbobusqueda.Size = new Size(148, 36);
-            cbobusqueda.TabIndex = 29;
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.White;
-            guna2HtmlLabel11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2HtmlLabel11.Location = new Point(12, 147);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(62, 17);
-            guna2HtmlLabel11.TabIndex = 27;
-            guna2HtmlLabel11.Text = "Buscar por:";
-            // 
-            // btnguardar
-            // 
-            btnguardar.BorderRadius = 18;
-            btnguardar.Cursor = Cursors.Hand;
-            btnguardar.CustomizableEdges = customizableEdges7;
-            btnguardar.DisabledState.BorderColor = Color.DarkGray;
-            btnguardar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnguardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnguardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnguardar.FillColor = Color.FromArgb(33, 43, 70);
-            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnguardar.ForeColor = Color.White;
-            btnguardar.Location = new Point(19, 23);
-            btnguardar.Name = "btnguardar";
-            btnguardar.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnguardar.Size = new Size(126, 36);
-            btnguardar.TabIndex = 0;
-            btnguardar.Text = "Guardar";
             // 
             // groupBox1
             // 
@@ -322,6 +175,153 @@
             btneditar.TabIndex = 1;
             btneditar.Text = "Editar";
             // 
+            // btnguardar
+            // 
+            btnguardar.BorderRadius = 18;
+            btnguardar.Cursor = Cursors.Hand;
+            btnguardar.CustomizableEdges = customizableEdges7;
+            btnguardar.DisabledState.BorderColor = Color.DarkGray;
+            btnguardar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnguardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnguardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnguardar.FillColor = Color.FromArgb(33, 43, 70);
+            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnguardar.ForeColor = Color.White;
+            btnguardar.Location = new Point(19, 23);
+            btnguardar.Name = "btnguardar";
+            btnguardar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnguardar.Size = new Size(126, 36);
+            btnguardar.TabIndex = 0;
+            btnguardar.Text = "Guardar";
+            // 
+            // cborol
+            // 
+            cborol.BackColor = Color.White;
+            cborol.BorderRadius = 13;
+            cborol.CustomizableEdges = customizableEdges9;
+            cborol.DrawMode = DrawMode.OwnerDrawFixed;
+            cborol.DropDownStyle = ComboBoxStyle.DropDownList;
+            cborol.FocusedColor = Color.FromArgb(94, 148, 255);
+            cborol.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cborol.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cborol.ForeColor = Color.FromArgb(68, 88, 112);
+            cborol.ItemHeight = 30;
+            cborol.Location = new Point(166, 35);
+            cborol.Name = "cborol";
+            cborol.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cborol.Size = new Size(148, 36);
+            cborol.TabIndex = 13;
+            // 
+            // btnbuscar
+            // 
+            btnbuscar.BackColor = Color.White;
+            btnbuscar.BorderRadius = 18;
+            btnbuscar.Cursor = Cursors.Hand;
+            btnbuscar.CustomizableEdges = customizableEdges11;
+            btnbuscar.DisabledState.BorderColor = Color.DarkGray;
+            btnbuscar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnbuscar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnbuscar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnbuscar.FillColor = Color.FromArgb(33, 43, 70);
+            btnbuscar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnbuscar.ForeColor = Color.White;
+            btnbuscar.Image = Properties.Resources.search_32_white;
+            btnbuscar.Location = new Point(423, 170);
+            btnbuscar.Name = "btnbuscar";
+            btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnbuscar.Size = new Size(38, 36);
+            btnbuscar.TabIndex = 31;
+            // 
+            // txtdocumento
+            // 
+            txtdocumento.BackColor = Color.White;
+            txtdocumento.BorderRadius = 13;
+            txtdocumento.CustomizableEdges = customizableEdges13;
+            txtdocumento.DefaultText = "";
+            txtdocumento.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtdocumento.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtdocumento.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtdocumento.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtdocumento.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtdocumento.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtdocumento.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtdocumento.Location = new Point(12, 35);
+            txtdocumento.Name = "txtdocumento";
+            txtdocumento.PasswordChar = '\0';
+            txtdocumento.PlaceholderText = "Nn";
+            txtdocumento.SelectedText = "";
+            txtdocumento.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtdocumento.Size = new Size(148, 36);
+            txtdocumento.TabIndex = 8;
+            // 
+            // txtbusqueda
+            // 
+            txtbusqueda.BackColor = Color.White;
+            txtbusqueda.BorderRadius = 13;
+            txtbusqueda.CustomizableEdges = customizableEdges15;
+            txtbusqueda.DefaultText = "";
+            txtbusqueda.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtbusqueda.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtbusqueda.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtbusqueda.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtbusqueda.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtbusqueda.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtbusqueda.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtbusqueda.Location = new Point(166, 170);
+            txtbusqueda.Name = "txtbusqueda";
+            txtbusqueda.PasswordChar = '\0';
+            txtbusqueda.PlaceholderText = "";
+            txtbusqueda.SelectedText = "";
+            txtbusqueda.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtbusqueda.Size = new Size(251, 36);
+            txtbusqueda.TabIndex = 28;
+            // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.White;
+            guna2HtmlLabel3.Location = new Point(166, 12);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(41, 17);
+            guna2HtmlLabel3.TabIndex = 7;
+            guna2HtmlLabel3.Text = "Estado:";
+            // 
+            // cbobusqueda
+            // 
+            cbobusqueda.BackColor = Color.White;
+            cbobusqueda.BorderRadius = 13;
+            cbobusqueda.CustomizableEdges = customizableEdges17;
+            cbobusqueda.DrawMode = DrawMode.OwnerDrawFixed;
+            cbobusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbobusqueda.FocusedColor = Color.FromArgb(94, 148, 255);
+            cbobusqueda.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cbobusqueda.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cbobusqueda.ForeColor = Color.FromArgb(68, 88, 112);
+            cbobusqueda.ItemHeight = 30;
+            cbobusqueda.Location = new Point(12, 170);
+            cbobusqueda.Name = "cbobusqueda";
+            cbobusqueda.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cbobusqueda.Size = new Size(148, 36);
+            cbobusqueda.TabIndex = 29;
+            // 
+            // guna2HtmlLabel11
+            // 
+            guna2HtmlLabel11.BackColor = Color.White;
+            guna2HtmlLabel11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2HtmlLabel11.Location = new Point(12, 147);
+            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            guna2HtmlLabel11.Size = new Size(62, 17);
+            guna2HtmlLabel11.TabIndex = 27;
+            guna2HtmlLabel11.Text = "Buscar por:";
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.White;
+            guna2HtmlLabel2.Location = new Point(12, 12);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(68, 17);
+            guna2HtmlLabel2.TabIndex = 6;
+            guna2HtmlLabel2.Text = "Descripcion:";
+            // 
             // guna2CustomGradientPanel2
             // 
             guna2CustomGradientPanel2.BackColor = Color.White;
@@ -342,10 +342,11 @@
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(704, 22);
             guna2HtmlLabel1.TabIndex = 0;
+            guna2HtmlLabel1.Text = null;
             // 
             // guna2CustomGradientPanel3
             // 
-            guna2CustomGradientPanel3.Controls.Add(dgvdata);
+            guna2CustomGradientPanel3.Controls.Add(dgvcategoria);
             guna2CustomGradientPanel3.CustomizableEdges = customizableEdges23;
             guna2CustomGradientPanel3.Dock = DockStyle.Fill;
             guna2CustomGradientPanel3.Location = new Point(0, 253);
@@ -354,10 +355,10 @@
             guna2CustomGradientPanel3.Size = new Size(704, 324);
             guna2CustomGradientPanel3.TabIndex = 2;
             // 
-            // dgvdata
+            // dgvcategoria
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvcategoria.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(1, 13, 44);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -366,10 +367,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvdata.ColumnHeadersHeight = 22;
-            dgvdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvdata.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, Descripcion, Estado });
+            dgvcategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvcategoria.ColumnHeadersHeight = 22;
+            dgvcategoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvcategoria.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, Descripcion, Estado });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -377,12 +378,12 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(192, 195, 202);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvdata.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvdata.Dock = DockStyle.Fill;
-            dgvdata.GridColor = Color.FromArgb(231, 229, 255);
-            dgvdata.Location = new Point(0, 0);
-            dgvdata.MultiSelect = false;
-            dgvdata.Name = "dgvdata";
+            dgvcategoria.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvcategoria.Dock = DockStyle.Fill;
+            dgvcategoria.GridColor = Color.FromArgb(231, 229, 255);
+            dgvcategoria.Location = new Point(0, 0);
+            dgvcategoria.MultiSelect = false;
+            dgvcategoria.Name = "dgvcategoria";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -390,37 +391,39 @@
             dataGridViewCellStyle4.SelectionBackColor = Color.White;
             dataGridViewCellStyle4.SelectionForeColor = Color.Black;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvdata.RowHeadersVisible = false;
-            dgvdata.RowTemplate.Height = 28;
-            dgvdata.Size = new Size(704, 324);
-            dgvdata.TabIndex = 17;
-            dgvdata.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvdata.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvdata.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvdata.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvdata.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvdata.ThemeStyle.BackColor = Color.White;
-            dgvdata.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvdata.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvdata.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvdata.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvdata.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvdata.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvdata.ThemeStyle.HeaderStyle.Height = 22;
-            dgvdata.ThemeStyle.ReadOnly = false;
-            dgvdata.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvdata.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvdata.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvdata.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvdata.ThemeStyle.RowsStyle.Height = 28;
-            dgvdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvcategoria.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvcategoria.RowHeadersVisible = false;
+            dgvcategoria.RowTemplate.Height = 28;
+            dgvcategoria.Size = new Size(704, 324);
+            dgvcategoria.TabIndex = 17;
+            dgvcategoria.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvcategoria.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvcategoria.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvcategoria.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvcategoria.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvcategoria.ThemeStyle.BackColor = Color.White;
+            dgvcategoria.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvcategoria.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvcategoria.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvcategoria.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvcategoria.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvcategoria.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvcategoria.ThemeStyle.HeaderStyle.Height = 22;
+            dgvcategoria.ThemeStyle.ReadOnly = false;
+            dgvcategoria.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvcategoria.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvcategoria.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvcategoria.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvcategoria.ThemeStyle.RowsStyle.Height = 28;
+            dgvcategoria.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvcategoria.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // btnseleccionar
             // 
+            btnseleccionar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             btnseleccionar.HeaderText = "";
             btnseleccionar.Name = "btnseleccionar";
+            btnseleccionar.Width = 30;
             // 
             // Descripcion
             // 
@@ -443,12 +446,13 @@
             Controls.Add(guna2CustomGradientPanel1);
             Name = "frmcategoria";
             Text = "frmcategoria";
+            Load += frmcategoria_Load;
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
             groupBox1.ResumeLayout(false);
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvdata).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvcategoria).EndInit();
             ResumeLayout(false);
         }
 
@@ -471,7 +475,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvcategoria;
         private DataGridViewButtonColumn btnseleccionar;
         private DataGridViewTextBoxColumn Descripcion;
         private DataGridViewTextBoxColumn Estado;

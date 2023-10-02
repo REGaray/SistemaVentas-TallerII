@@ -175,3 +175,5 @@ C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmPTVenta.resources
 C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmEmpresa.resources
 C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmPTVenta.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVentas.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVentasasfdasfd.resources

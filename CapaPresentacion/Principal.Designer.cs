@@ -50,6 +50,7 @@
             btnConfiguracion = new FontAwesome.Sharp.IconButton();
             btnUsuarios = new FontAwesome.Sharp.IconButton();
             panel5 = new Panel();
+            label1 = new Label();
             pictureBox1 = new PictureBox();
             lblUsuarioActivo = new Label();
             lblEmpresa = new Label();
@@ -58,7 +59,6 @@
             lblusuario = new Label();
             panel2 = new Panel();
             btncancelar = new FontAwesome.Sharp.IconButton();
-            label1 = new Label();
             contenedor = new Panel();
             menu.SuspendLayout();
             panelSubMenuReportes.SuspendLayout();
@@ -127,6 +127,7 @@
             btnReportes2.Text = "Ver detalle";
             btnReportes2.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnReportes2.UseVisualStyleBackColor = false;
+            btnReportes2.Click += btnReportes2_Click;
             // 
             // btnReportes
             // 
@@ -491,6 +492,17 @@
             panel5.Size = new Size(213, 64);
             panel5.TabIndex = 15;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Gray;
+            label1.Location = new Point(12, 3);
+            label1.Name = "label1";
+            label1.Size = new Size(150, 15);
+            label1.TabIndex = 13;
+            label1.Text = "Versión 1.0.0 release 011023";
+            // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Left;
@@ -587,17 +599,6 @@
             btncancelar.UseVisualStyleBackColor = false;
             btncancelar.Click += btncancelar_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Gray;
-            label1.Location = new Point(12, 3);
-            label1.Name = "label1";
-            label1.Size = new Size(150, 15);
-            label1.TabIndex = 13;
-            label1.Text = "Versión 1.0.0 release 011023";
-            // 
             // contenedor
             // 
             contenedor.Dock = DockStyle.Fill;
@@ -621,7 +622,7 @@
             MinimumSize = new Size(800, 600);
             Name = "Principal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "SistemaVentas";
             Load += Principal_Load;
             MouseDown += Principal_MouseDown;
             menu.ResumeLayout(false);

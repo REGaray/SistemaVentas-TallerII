@@ -16,5 +16,15 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void frmcategoria_Load(object sender, EventArgs e)
+        {
+            dgvcategoria.Rows.Add("", "Lácteos", "Activo");
+            dgvcategoria.Rows.Add("", "Gaseosas", "Activo");
+            dgvcategoria.Rows.Add("", "Almacén", "Activo");
+            dgvcategoria.Rows.Add("", "Espirituosas", "Activo");
+            dgvcategoria.Rows.Add("", "Higiene Personal", "Activo");
+            dgvcategoria.Rows.Add("", "Cigarrillos", "Activo");
+        }
     }
 }

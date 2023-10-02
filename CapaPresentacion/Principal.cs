@@ -250,5 +250,13 @@ namespace CapaPresentacion
             Form frmproveedores = new frmproveedores();
             AbrirFormulario(frmproveedores);
         }
+
+        private void btnReportes2_Click(object sender, EventArgs e)
+        {
+            Form frmReporteVenta = new frmReporteVentas();
+            AbrirFormulario(frmReporteVenta);
+
+            hideSubMenu();
+        }
     }
 }
