@@ -25,24 +25,38 @@ namespace CapaPresentacion
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
+            // Agrega las opciones "Activo" e "Inactivo" al ComboBox "cboestado".
             cboestado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
             cboestado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Inactivo" });
+
+            // Establece el atributo "Texto" como el valor a mostrar en el ComboBox "cboestado".
             cboestado.DisplayMember = "Texto";
+
+            // Establece el atributo "Valor" como el valor a obtener del ComboBox "cboestado".
             cboestado.ValueMember = "Valor";
+
+            // Selecciona la primera opción en el ComboBox "cboestado" (en este caso, "Activo").
             cboestado.SelectedIndex = 0;
 
-
+            // Obtiene una lista de roles y la asigna al ComboBox "cborol".
             List<Rol> listaRol = new CN_Rol().Listar();
 
             foreach (Rol item in listaRol)
             {
+                // Agrega cada rol como una opción en el ComboBox "cborol".
                 cborol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
             }
+
+            // Establece el atributo "Texto" como el valor a mostrar en el ComboBox "cborol".
             cborol.DisplayMember = "Texto";
+
+            // Establece el atributo "Valor" como el valor a obtener del ComboBox "cborol".
             cborol.ValueMember = "Valor";
+
+            // Selecciona la primera opción en el ComboBox "cborol".
             cborol.SelectedIndex = 0;
 
-
+            // Llena el ComboBox "cbobusqueda" con las opciones de búsqueda basadas en las columnas visibles del DataGridView.
             foreach (DataGridViewColumn columna in dgvdata.Columns)
             {
                 if (columna.Visible == true && columna.Name != "btnseleccionar")
@@ -50,37 +64,73 @@ namespace CapaPresentacion
                     cbobusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
                 }
             }
+
+            // Establece el atributo "Texto" como el valor a mostrar en el ComboBox "cbobusqueda".
             cbobusqueda.DisplayMember = "Texto";
+
+            // Establece el atributo "Valor" como el valor a obtener del ComboBox "cbobusqueda".
             cbobusqueda.ValueMember = "Valor";
+
+            // Selecciona la primera opción en el ComboBox "cbobusqueda".
             cbobusqueda.SelectedIndex = 0;
 
-
-            // MOSTRAR TODOS LOS USUARIOS
+            // Obtiene una lista de usuarios y los muestra en el DataGridView.
             List<Usuario> listaUsuario = new CN_Usuario().Listar();
 
             foreach (Usuario item in listaUsuario)
             {
+                // Agrega una nueva fila con los datos del usuario al DataGridView.
                 dgvdata.Rows.Add(new object[] { "", item.IdUsuario, item.Documento, item.NombreCompleto, item.Correo, item.Clave,
                 item.oRol.IdRol,
                 item.oRol.Descripcion,
-                item.Estado == true? 1 : 0,
-                item.Estado == true? "Activo" : "Inactivo"
+                item.Estado == true ? 1 : 0,
+                item.Estado == true ? "Activo" : "Inactivo"
                 });
             }
-
         }
+
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            //dgvdata.Rows.Add(new object[] { "", txtid.Text, txtdocumento.Text, txtnombrecompleto.Text, txtcorreo.Text, txtclave.Text,
-            //((OpcionCombo)cborol.SelectedItem).Valor.ToString(),
-            //((OpcionCombo)cborol.SelectedItem).Texto.ToString(),
-            //((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
-            //((OpcionCombo)cboestado.SelectedItem).Texto.ToString()
-            //});
+            // Inicializa una variable de mensaje vacía.
+            string mensaje = string.Empty;
 
-            //limpiar();
+            // Crea un objeto Usuario con los datos del formulario.
+            Usuario objusuario = new Usuario()
+            {
+                IdUsuario = Convert.ToInt32(txtid.Text),
+                Documento = txtdocumento.Text,
+                NombreCompleto = txtnombrecompleto.Text,
+                Correo = txtcorreo.Text,
+                Clave = txtclave.Text,
+                oRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)cborol.SelectedItem).Valor) },
+                Estado = Convert.ToInt32(((OpcionCombo)cboestado.SelectedItem).Valor) == 1 ? true : false,
+            };
+
+            // Llama al método "registrar" de la clase CN_Usuario para registrar al usuario en la base de datos.
+            int idUsuarioGenerado = new CN_Usuario().registrar(objusuario, out mensaje);
+
+            // Verifica si se registró correctamente un usuario.
+            if (idUsuarioGenerado != 0)
+            {
+                // Agrega una nueva fila con los datos del usuario registrado en el DataGridView.
+                dgvdata.Rows.Add(new object[] { "", idUsuarioGenerado, txtdocumento.Text, txtnombrecompleto.Text, txtcorreo.Text, txtclave.Text,
+                ((OpcionCombo)cborol.SelectedItem).Valor.ToString(),
+                ((OpcionCombo)cborol.SelectedItem).Texto.ToString(),
+                ((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
+                ((OpcionCombo)cboestado.SelectedItem).Texto.ToString()
+                });
+
+                // Llama al método "limpiar" para limpiar los campos del formulario.
+                limpiar();
+            }
+            else
+            {
+                // Muestra un mensaje de error en caso de que no se haya registrado el usuario.
+                MessageBox.Show(mensaje);
+            }
         }
+
 
         private void limpiar()
         {
@@ -127,13 +177,19 @@ namespace CapaPresentacion
 
         private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Verifica si la celda clicada pertenece a la columna "btnseleccionar".
             if (dgvdata.Columns[e.ColumnIndex].Name == "btnseleccionar")
             {
+                // Obtiene el índice de la fila clicada.
                 int indice = e.RowIndex;
 
+                // Verifica si el índice de fila es válido (mayor o igual a 0).
                 if (indice >= 0)
                 {
+                    // Establece el índice de fila en el campo de texto "txtindice".
                     txtindice.Text = indice.ToString();
+
+                    // Llena los campos del formulario con los datos de la fila seleccionada en el DataGridView.
                     txtid.Text = dgvdata.Rows[indice].Cells["id"].Value.ToString();
                     txtdocumento.Text = dgvdata.Rows[indice].Cells["Documento"].Value.ToString();
                     txtnombrecompleto.Text = dgvdata.Rows[indice].Cells["NombreCompleto"].Value.ToString();
@@ -141,6 +197,7 @@ namespace CapaPresentacion
                     txtclave.Text = dgvdata.Rows[indice].Cells["Clave"].Value.ToString();
                     txtconfirmarclave.Text = dgvdata.Rows[indice].Cells["Clave"].Value.ToString();
 
+                    // Busca y selecciona el elemento correspondiente en el ComboBox "cborol" basado en el IdRol.
                     foreach (OpcionCombo oc in cborol.Items)
                     {
                         if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["IdRol"].Value.ToString()))
@@ -151,6 +208,7 @@ namespace CapaPresentacion
                         }
                     }
 
+                    // Busca y selecciona el elemento correspondiente en el ComboBox "cboestado" basado en el Estadovalor.
                     foreach (OpcionCombo oc in cboestado.Items)
                     {
                         if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["Estadovalor"].Value.ToString()))
@@ -163,6 +221,7 @@ namespace CapaPresentacion
                 }
             }
         }
+
 
         private void btneditar_Click(object sender, EventArgs e)
         {
