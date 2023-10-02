@@ -679,39 +679,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Ruben\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\Jerem\\.nuget\\packages\\": {},
->>>>>>> 0cc5afc6492469595f7efbc64622973bb71780cf
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Taller 2\\PROYECTO\\SistemaVentas\\SistemaVentas-TallerII\\CapaPresentacion\\CapaPresentacion.csproj",
       "projectName": "CapaPresentacion",
       "projectPath": "C:\\Taller 2\\PROYECTO\\SistemaVentas\\SistemaVentas-TallerII\\CapaPresentacion\\CapaPresentacion.csproj",
       "packagesPath": "C:\\Users\\Ruben\\.nuget\\packages\\",
       "outputPath": "C:\\Taller 2\\PROYECTO\\SistemaVentas\\SistemaVentas-TallerII\\CapaPresentacion\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Jerem\\source\\repos\\SistemaVentas-TallerII\\CapaPresentacion\\CapaPresentacion.csproj",
-      "projectName": "CapaPresentacion",
-      "projectPath": "C:\\Users\\Jerem\\source\\repos\\SistemaVentas-TallerII\\CapaPresentacion\\CapaPresentacion.csproj",
-      "packagesPath": "C:\\Users\\Jerem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jerem\\source\\repos\\SistemaVentas-TallerII\\CapaPresentacion\\obj\\",
->>>>>>> 0cc5afc6492469595f7efbc64622973bb71780cf
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\Ruben\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\Jerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 0cc5afc6492469595f7efbc64622973bb71780cf
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -727,19 +711,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Taller 2\\PROYECTO\\SistemaVentas\\SistemaVentas-TallerII\\CapaEntidad\\CapaEntidad.csproj": {
               "projectPath": "C:\\Taller 2\\PROYECTO\\SistemaVentas\\SistemaVentas-TallerII\\CapaEntidad\\CapaEntidad.csproj"
             },
             "C:\\Taller 2\\PROYECTO\\SistemaVentas\\SistemaVentas-TallerII\\CapaNegocio\\CapaNegocio.csproj": {
               "projectPath": "C:\\Taller 2\\PROYECTO\\SistemaVentas\\SistemaVentas-TallerII\\CapaNegocio\\CapaNegocio.csproj"
-=======
-            "C:\\Users\\Jerem\\source\\repos\\SistemaVentas-TallerII\\CapaEntidad\\CapaEntidad.csproj": {
-              "projectPath": "C:\\Users\\Jerem\\source\\repos\\SistemaVentas-TallerII\\CapaEntidad\\CapaEntidad.csproj"
-            },
-            "C:\\Users\\Jerem\\source\\repos\\SistemaVentas-TallerII\\CapaNegocio\\CapaNegocio.csproj": {
-              "projectPath": "C:\\Users\\Jerem\\source\\repos\\SistemaVentas-TallerII\\CapaNegocio\\CapaNegocio.csproj"
->>>>>>> 0cc5afc6492469595f7efbc64622973bb71780cf
             }
           }
         }
