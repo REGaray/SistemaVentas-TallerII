@@ -167,7 +167,7 @@
             txtdocumento.Location = new Point(31, 35);
             txtdocumento.Name = "txtdocumento";
             txtdocumento.PasswordChar = '\0';
-            txtdocumento.PlaceholderText = "42061377";
+            txtdocumento.PlaceholderText = "11223344";
             txtdocumento.SelectedText = "";
             txtdocumento.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtdocumento.Size = new Size(148, 36);
@@ -189,7 +189,7 @@
             txtnombrecompleto.Location = new Point(31, 105);
             txtnombrecompleto.Name = "txtnombrecompleto";
             txtnombrecompleto.PasswordChar = '\0';
-            txtnombrecompleto.PlaceholderText = "Nn";
+            txtnombrecompleto.PlaceholderText = "Apellido y Nombre";
             txtnombrecompleto.SelectedText = "";
             txtnombrecompleto.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtnombrecompleto.Size = new Size(148, 36);
@@ -211,7 +211,7 @@
             txtcorreo.Location = new Point(31, 170);
             txtcorreo.Name = "txtcorreo";
             txtcorreo.PasswordChar = '\0';
-            txtcorreo.PlaceholderText = "example@gmail.com";
+            txtcorreo.PlaceholderText = "example@correo.com";
             txtcorreo.SelectedText = "";
             txtcorreo.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtcorreo.Size = new Size(148, 36);
