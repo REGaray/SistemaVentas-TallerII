@@ -171,3 +171,7 @@ C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\D
 C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.pdb
 C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.genruntimeconfig.cache
 C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\ref\CapaPresentacion.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmEmpresa.resources
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmPTVenta.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmEmpresa.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmPTVenta.resources

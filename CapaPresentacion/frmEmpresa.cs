@@ -21,5 +21,14 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

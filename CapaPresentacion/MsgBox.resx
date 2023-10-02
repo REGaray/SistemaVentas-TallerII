@@ -121,7 +121,7 @@
   <data name="pbQuestion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADX3SURBVHhe7d0J
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADX3SURBVHhe7d0J
         lB1VgfBxdnBmXBhHEFdUOKgh3VX1TNiHsMii4CeOuIsyg4iMMyA6w8w4OgHX8WMZIklX1UvSoUGWAC4k
         7PsmEAiQkIAQICEh3f2q6vWWpDvpTnd9977cfBOrb2/p9+rV8v+f8zsiIqm+VXVvv6WqdiEiIiIiIiIi
         IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
@@ -358,7 +358,7 @@
   <data name="pbWarning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAClISURBVHhe7d0J
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAClISURBVHhe7d0J
         nB51ffjxTQj3oSCCeGvtZbzXGjc7v9kHgpTUFgg2NcpVEFBA8aoHWBVbe3hx2cqt9da2fwVPxNqI4gGN
         ctTAJjOzS4wEEXPtzswuR/b3/0340tJ5vkn2eJ555vi8X6/Pq5TS7C9zfL9JNtn0AQAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -541,7 +541,7 @@
   <data name="pbError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC56SURBVHhe7d0J
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC56SURBVHhe7d0J
         lFx1nejxDoEEWVUWH46KIBLA7SmbuPFEdPQ56DtvTp/nwKT71q2m1Dj9SPe9t5LoKCWyBBCZgMoqyKKO
         IMvI0TeQEYLgDuhT8aksEQlLQLYBsie/9/9X/dp07v13d1V3LXf5fs/5HNQjSd/t/7tVXUsfERERERER
         ERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERER
