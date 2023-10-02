@@ -117,9 +117,8 @@ namespace CapaPresentacion
 
         private void btnEmpresa_Click_1(object sender, EventArgs e)
         {
-            //..
-            // Codigo correspondiente
-            //..
+            Form frmempresa = new frmEmpresa();
+            AbrirFormulario(frmempresa);
 
             hideSubMenu();
         }

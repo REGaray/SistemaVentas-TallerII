@@ -166,11 +166,11 @@
             guna2ImageButton7.Image = (Image)resources.GetObject("guna2ImageButton7.Image");
             guna2ImageButton7.ImageOffset = new Point(0, 0);
             guna2ImageButton7.ImageRotate = 0F;
-            guna2ImageButton7.Location = new Point(177, 273);
+            guna2ImageButton7.Location = new Point(185, 265);
             guna2ImageButton7.Name = "guna2ImageButton7";
             guna2ImageButton7.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton7.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna2ImageButton7.Size = new Size(78, 59);
+            guna2ImageButton7.Size = new Size(51, 46);
             guna2ImageButton7.TabIndex = 12;
             // 
             // guna2ImageButton8
@@ -180,11 +180,11 @@
             guna2ImageButton8.Image = (Image)resources.GetObject("guna2ImageButton8.Image");
             guna2ImageButton8.ImageOffset = new Point(0, 0);
             guna2ImageButton8.ImageRotate = 0F;
-            guna2ImageButton8.Location = new Point(93, 273);
+            guna2ImageButton8.Location = new Point(101, 265);
             guna2ImageButton8.Name = "guna2ImageButton8";
             guna2ImageButton8.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton8.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2ImageButton8.Size = new Size(78, 59);
+            guna2ImageButton8.Size = new Size(51, 46);
             guna2ImageButton8.TabIndex = 11;
             // 
             // guna2ImageButton9
@@ -194,11 +194,11 @@
             guna2ImageButton9.Image = (Image)resources.GetObject("guna2ImageButton9.Image");
             guna2ImageButton9.ImageOffset = new Point(0, 0);
             guna2ImageButton9.ImageRotate = 0F;
-            guna2ImageButton9.Location = new Point(9, 273);
+            guna2ImageButton9.Location = new Point(17, 265);
             guna2ImageButton9.Name = "guna2ImageButton9";
             guna2ImageButton9.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton9.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2ImageButton9.Size = new Size(78, 59);
+            guna2ImageButton9.Size = new Size(51, 46);
             guna2ImageButton9.TabIndex = 10;
             // 
             // guna2ImageButton4
@@ -208,11 +208,11 @@
             guna2ImageButton4.Image = (Image)resources.GetObject("guna2ImageButton4.Image");
             guna2ImageButton4.ImageOffset = new Point(0, 0);
             guna2ImageButton4.ImageRotate = 0F;
-            guna2ImageButton4.Location = new Point(176, 196);
+            guna2ImageButton4.Location = new Point(184, 188);
             guna2ImageButton4.Name = "guna2ImageButton4";
             guna2ImageButton4.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton4.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2ImageButton4.Size = new Size(78, 59);
+            guna2ImageButton4.Size = new Size(51, 46);
             guna2ImageButton4.TabIndex = 9;
             // 
             // guna2ImageButton5
@@ -222,11 +222,11 @@
             guna2ImageButton5.Image = (Image)resources.GetObject("guna2ImageButton5.Image");
             guna2ImageButton5.ImageOffset = new Point(0, 0);
             guna2ImageButton5.ImageRotate = 0F;
-            guna2ImageButton5.Location = new Point(92, 196);
+            guna2ImageButton5.Location = new Point(100, 188);
             guna2ImageButton5.Name = "guna2ImageButton5";
             guna2ImageButton5.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton5.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            guna2ImageButton5.Size = new Size(78, 59);
+            guna2ImageButton5.Size = new Size(51, 46);
             guna2ImageButton5.TabIndex = 8;
             // 
             // guna2ImageButton6
@@ -236,11 +236,11 @@
             guna2ImageButton6.Image = (Image)resources.GetObject("guna2ImageButton6.Image");
             guna2ImageButton6.ImageOffset = new Point(0, 0);
             guna2ImageButton6.ImageRotate = 0F;
-            guna2ImageButton6.Location = new Point(8, 196);
+            guna2ImageButton6.Location = new Point(16, 188);
             guna2ImageButton6.Name = "guna2ImageButton6";
             guna2ImageButton6.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton6.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2ImageButton6.Size = new Size(78, 59);
+            guna2ImageButton6.Size = new Size(51, 46);
             guna2ImageButton6.TabIndex = 7;
             // 
             // guna2ImageButton3
@@ -250,11 +250,11 @@
             guna2ImageButton3.Image = (Image)resources.GetObject("guna2ImageButton3.Image");
             guna2ImageButton3.ImageOffset = new Point(0, 0);
             guna2ImageButton3.ImageRotate = 0F;
-            guna2ImageButton3.Location = new Point(177, 118);
+            guna2ImageButton3.Location = new Point(185, 110);
             guna2ImageButton3.Name = "guna2ImageButton3";
             guna2ImageButton3.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2ImageButton3.Size = new Size(78, 59);
+            guna2ImageButton3.Size = new Size(51, 46);
             guna2ImageButton3.TabIndex = 6;
             // 
             // guna2ImageButton2
@@ -264,11 +264,11 @@
             guna2ImageButton2.Image = (Image)resources.GetObject("guna2ImageButton2.Image");
             guna2ImageButton2.ImageOffset = new Point(0, 0);
             guna2ImageButton2.ImageRotate = 0F;
-            guna2ImageButton2.Location = new Point(93, 118);
+            guna2ImageButton2.Location = new Point(101, 110);
             guna2ImageButton2.Name = "guna2ImageButton2";
             guna2ImageButton2.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2ImageButton2.Size = new Size(78, 59);
+            guna2ImageButton2.Size = new Size(51, 46);
             guna2ImageButton2.TabIndex = 5;
             // 
             // guna2ImageButton1
@@ -278,11 +278,11 @@
             guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
             guna2ImageButton1.ImageOffset = new Point(0, 0);
             guna2ImageButton1.ImageRotate = 0F;
-            guna2ImageButton1.Location = new Point(9, 118);
+            guna2ImageButton1.Location = new Point(17, 110);
             guna2ImageButton1.Name = "guna2ImageButton1";
             guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            guna2ImageButton1.Size = new Size(78, 59);
+            guna2ImageButton1.Size = new Size(51, 46);
             guna2ImageButton1.TabIndex = 4;
             // 
             // guna2Button4
