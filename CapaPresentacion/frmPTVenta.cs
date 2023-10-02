@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class frmRegistrarVenta : Form
+    public partial class frmPTVenta : Form
     {
-        public frmRegistrarVenta()
+        public frmPTVenta()
         {
             InitializeComponent();
-        }
-
-        private void frmRegistrarVenta_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
