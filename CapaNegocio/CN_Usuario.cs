@@ -18,5 +18,38 @@ namespace CapaNegocio
         {
             return objcd_usuario.Listar();  // Llama al método 'Listar' de CD_Usuario y devuelve la lista de usuarios recuperada de la base de datos.
         }
+
+        public int registrar(Usuario obj, out string mensaje)
+        {
+            mensaje = string.Empty;
+
+            if (obj.Documento == "")
+            {
+                mensaje += "Es necesario el Documento del usuario\n";
+            }
+            if (obj.NombreCompleto == "")
+            {
+                mensaje += "Es necesario el NombreCompleto del usuario\n";
+            }
+            if (obj.Clave == "")
+            {
+                mensaje += "Es necesario el Clave del usuario\n";
+            }
+
+            // Llama a la función "registrar" del objeto "objcd_usuario" para realizar el registro.
+            return objcd_usuario.registrar(obj, out mensaje);
+        }
+
+        public bool editar(Usuario obj, out string mensaje)
+        {
+            // Llama a la función "editar" del objeto "objcd_usuario" para realizar la edición.
+            return objcd_usuario.editar(obj, out mensaje);
+        }
+
+        public bool eliminar(Usuario obj, out string mensaje)
+        {
+            // Llama a la función "eliminar" del objeto "objcd_usuario" para realizar la eliminación.
+            return objcd_usuario.eliminar(obj, out mensaje);
+        }
     }
 }

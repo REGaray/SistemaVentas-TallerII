@@ -119,8 +119,8 @@
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2CustomGradientPanel7 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2CustomGradientPanel7 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel9 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -725,17 +725,6 @@
             guna2CustomGradientPanel6.Size = new Size(16, 230);
             guna2CustomGradientPanel6.TabIndex = 27;
             // 
-            // guna2CustomGradientPanel7
-            // 
-            guna2CustomGradientPanel7.Controls.Add(dgvdata);
-            guna2CustomGradientPanel7.CustomizableEdges = customizableEdges37;
-            guna2CustomGradientPanel7.Dock = DockStyle.Left;
-            guna2CustomGradientPanel7.Location = new Point(15, 347);
-            guna2CustomGradientPanel7.Name = "guna2CustomGradientPanel7";
-            guna2CustomGradientPanel7.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            guna2CustomGradientPanel7.Size = new Size(498, 230);
-            guna2CustomGradientPanel7.TabIndex = 28;
-            // 
             // guna2HtmlLabel12
             // 
             guna2HtmlLabel12.AutoSize = false;
@@ -746,6 +735,17 @@
             guna2HtmlLabel12.Size = new Size(16, 230);
             guna2HtmlLabel12.TabIndex = 23;
             guna2HtmlLabel12.Text = null;
+            // 
+            // guna2CustomGradientPanel7
+            // 
+            guna2CustomGradientPanel7.Controls.Add(dgvdata);
+            guna2CustomGradientPanel7.CustomizableEdges = customizableEdges37;
+            guna2CustomGradientPanel7.Dock = DockStyle.Left;
+            guna2CustomGradientPanel7.Location = new Point(15, 347);
+            guna2CustomGradientPanel7.Name = "guna2CustomGradientPanel7";
+            guna2CustomGradientPanel7.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            guna2CustomGradientPanel7.Size = new Size(498, 230);
+            guna2CustomGradientPanel7.TabIndex = 28;
             // 
             // guna2CustomGradientPanel9
             // 
@@ -893,6 +893,7 @@
             Controls.Add(guna2CustomGradientPanel1);
             Name = "frmRegistrarVenta";
             Text = "frmRegistrarVenta";
+            Load += frmRegistrarVenta_Load;
             guna2CustomGradientPanel1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();

@@ -72,18 +72,19 @@ namespace CapaPresentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            dgvdata.Rows.Add(new object[] { "", txtid.Text, txtdocumento.Text, txtnombrecompleto.Text, txtcorreo.Text, txtclave.Text,
-            ((OpcionCombo)cborol.SelectedItem).Valor.ToString(),
-            ((OpcionCombo)cborol.SelectedItem).Texto.ToString(),
-            ((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
-            ((OpcionCombo)cboestado.SelectedItem).Texto.ToString()
-            });
+            //dgvdata.Rows.Add(new object[] { "", txtid.Text, txtdocumento.Text, txtnombrecompleto.Text, txtcorreo.Text, txtclave.Text,
+            //((OpcionCombo)cborol.SelectedItem).Valor.ToString(),
+            //((OpcionCombo)cborol.SelectedItem).Texto.ToString(),
+            //((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
+            //((OpcionCombo)cboestado.SelectedItem).Texto.ToString()
+            //});
 
-            limpiar();
+            //limpiar();
         }
 
         private void limpiar()
         {
+            txtindice.Text = "-1";
             txtid.Text = "0";
             txtdocumento.Text = "";
             txtnombrecompleto.Text = "";
@@ -132,6 +133,7 @@ namespace CapaPresentacion
 
                 if (indice >= 0)
                 {
+                    txtindice.Text = indice.ToString();
                     txtid.Text = dgvdata.Rows[indice].Cells["id"].Value.ToString();
                     txtdocumento.Text = dgvdata.Rows[indice].Cells["Documento"].Value.ToString();
                     txtnombrecompleto.Text = dgvdata.Rows[indice].Cells["NombreCompleto"].Value.ToString();
@@ -148,8 +150,23 @@ namespace CapaPresentacion
                             break;
                         }
                     }
+
+                    foreach (OpcionCombo oc in cboestado.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["Estadovalor"].Value.ToString()))
+                        {
+                            int indice_combo = cboestado.Items.IndexOf(oc);
+                            cboestado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
                 }
             }
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

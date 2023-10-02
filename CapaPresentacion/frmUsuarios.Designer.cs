@@ -42,8 +42,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -62,6 +60,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -79,7 +81,6 @@
             cboestado = new Guna.UI2.WinForms.Guna2ComboBox();
             groupBox1 = new GroupBox();
             btneliminar = new Guna.UI2.WinForms.Guna2Button();
-            btneditar = new Guna.UI2.WinForms.Guna2Button();
             btnguardar = new Guna.UI2.WinForms.Guna2Button();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
             btnseleccionar = new DataGridViewButtonColumn();
@@ -105,6 +106,8 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel5 = new Panel();
             panel6 = new Panel();
+            txtindice = new Guna.UI2.WinForms.Guna2TextBox();
+            btnlimpiarform = new Guna.UI2.WinForms.Guna2Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             panel1.SuspendLayout();
@@ -167,7 +170,7 @@
             txtdocumento.Location = new Point(31, 35);
             txtdocumento.Name = "txtdocumento";
             txtdocumento.PasswordChar = '\0';
-            txtdocumento.PlaceholderText = "42061377";
+            txtdocumento.PlaceholderText = "11223344";
             txtdocumento.SelectedText = "";
             txtdocumento.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtdocumento.Size = new Size(148, 36);
@@ -189,7 +192,7 @@
             txtnombrecompleto.Location = new Point(31, 105);
             txtnombrecompleto.Name = "txtnombrecompleto";
             txtnombrecompleto.PasswordChar = '\0';
-            txtnombrecompleto.PlaceholderText = "Nn";
+            txtnombrecompleto.PlaceholderText = "Apellido y Nombre";
             txtnombrecompleto.SelectedText = "";
             txtnombrecompleto.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtnombrecompleto.Size = new Size(148, 36);
@@ -211,7 +214,7 @@
             txtcorreo.Location = new Point(31, 170);
             txtcorreo.Name = "txtcorreo";
             txtcorreo.PasswordChar = '\0';
-            txtcorreo.PlaceholderText = "example@gmail.com";
+            txtcorreo.PlaceholderText = "example@correo.com";
             txtcorreo.SelectedText = "";
             txtcorreo.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtcorreo.Size = new Size(148, 36);
@@ -336,8 +339,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.White;
+            groupBox1.Controls.Add(btnlimpiarform);
             groupBox1.Controls.Add(btneliminar);
-            groupBox1.Controls.Add(btneditar);
             groupBox1.Controls.Add(btnguardar);
             groupBox1.Location = new Point(530, 12);
             groupBox1.Name = "groupBox1";
@@ -350,7 +353,7 @@
             // 
             btneliminar.BorderRadius = 18;
             btneliminar.Cursor = Cursors.Hand;
-            btneliminar.CustomizableEdges = customizableEdges15;
+            btneliminar.CustomizableEdges = customizableEdges17;
             btneliminar.DisabledState.BorderColor = Color.DarkGray;
             btneliminar.DisabledState.CustomBorderColor = Color.DarkGray;
             btneliminar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -360,29 +363,10 @@
             btneliminar.ForeColor = Color.White;
             btneliminar.Location = new Point(19, 93);
             btneliminar.Name = "btneliminar";
-            btneliminar.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btneliminar.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btneliminar.Size = new Size(126, 36);
             btneliminar.TabIndex = 2;
             btneliminar.Text = "Eliminar";
-            // 
-            // btneditar
-            // 
-            btneditar.BorderRadius = 18;
-            btneditar.Cursor = Cursors.Hand;
-            btneditar.CustomizableEdges = customizableEdges17;
-            btneditar.DisabledState.BorderColor = Color.DarkGray;
-            btneditar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btneditar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btneditar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btneditar.FillColor = Color.FromArgb(91, 192, 222);
-            btneditar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btneditar.ForeColor = Color.White;
-            btneditar.Location = new Point(19, 158);
-            btneditar.Name = "btneditar";
-            btneditar.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btneditar.Size = new Size(126, 36);
-            btneditar.TabIndex = 1;
-            btneditar.Text = "Editar";
             // 
             // btnguardar
             // 
@@ -721,12 +705,52 @@
             panel6.Size = new Size(704, 222);
             panel6.TabIndex = 22;
             // 
+            // txtindice
+            // 
+            txtindice.CustomizableEdges = customizableEdges31;
+            txtindice.DefaultText = "-1";
+            txtindice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtindice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtindice.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtindice.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtindice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtindice.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtindice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtindice.Location = new Point(464, 199);
+            txtindice.Name = "txtindice";
+            txtindice.PasswordChar = '\0';
+            txtindice.PlaceholderText = "";
+            txtindice.SelectedText = "";
+            txtindice.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            txtindice.Size = new Size(27, 27);
+            txtindice.TabIndex = 23;
+            // 
+            // btnlimpiarform
+            // 
+            btnlimpiarform.BorderRadius = 18;
+            btnlimpiarform.Cursor = Cursors.Hand;
+            btnlimpiarform.CustomizableEdges = customizableEdges15;
+            btnlimpiarform.DisabledState.BorderColor = Color.DarkGray;
+            btnlimpiarform.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnlimpiarform.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnlimpiarform.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnlimpiarform.FillColor = Color.FromArgb(91, 192, 222);
+            btnlimpiarform.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnlimpiarform.ForeColor = Color.White;
+            btnlimpiarform.Location = new Point(19, 158);
+            btnlimpiarform.Name = "btnlimpiarform";
+            btnlimpiarform.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnlimpiarform.Size = new Size(126, 36);
+            btnlimpiarform.TabIndex = 3;
+            btnlimpiarform.Text = "Limpiar";
+            // 
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(220, 234, 252);
             ClientSize = new Size(704, 577);
+            Controls.Add(txtindice);
             Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(panel4);
@@ -781,7 +805,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboestado;
         private GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Button btneliminar;
-        private Guna.UI2.WinForms.Guna2Button btneditar;
         private Guna.UI2.WinForms.Guna2Button btnguardar;
         private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
@@ -807,5 +830,7 @@
         private DataGridViewTextBoxColumn Rol;
         private DataGridViewTextBoxColumn EstadoValor;
         private DataGridViewTextBoxColumn Estado;
+        private Guna.UI2.WinForms.Guna2TextBox txtindice;
+        private Guna.UI2.WinForms.Guna2Button btnlimpiarform;
     }
 }
