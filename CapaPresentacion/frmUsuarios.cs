@@ -107,7 +107,8 @@ namespace CapaPresentacion
                 Estado = Convert.ToInt32(((OpcionCombo)cboestado.SelectedItem).Valor) == 1 ? true : false,
             };
 
-            if(objusuario.IdUsuario == 0) {
+            if (objusuario.IdUsuario == 0)
+            {
                 // Llama al método "registrar" de la clase CN_Usuario para registrar al usuario en la base de datos.
                 int idUsuarioGenerado = new CN_Usuario().registrar(objusuario, out mensaje);
 
@@ -162,7 +163,7 @@ namespace CapaPresentacion
             }
 
 
-            
+
         }
 
 
@@ -263,6 +264,41 @@ namespace CapaPresentacion
         private void btneditar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnlimpiarform_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            // Este condicional nos permite saber si realmente se ha seleccionado a un usuario.
+            if (Convert.ToInt32(txtid.Text) != 0)
+            {
+                if (MessageBox.Show("¿Desea eliminar el usuario", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+
+                    Usuario objusuario = new Usuario()
+                    {
+                        IdUsuario = Convert.ToInt32(txtid.Text),
+                    };
+
+                    bool respuesta = new CN_Usuario().eliminar(objusuario, out mensaje);
+
+                    if (respuesta)
+                    {
+                        dgvdata.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation) == DialogResult.Yes
+                    }
+                }
+
+
+            }
         }
     }
 }

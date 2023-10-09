@@ -164,7 +164,7 @@ namespace CapaDatos
 
                     // Agrega los parámetros de salida "Respuesta" y "Mensaje" al comando.
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                     // Establece el tipo de comando como un procedimiento almacenado.
                     cmd.CommandType = CommandType.StoredProcedure;
