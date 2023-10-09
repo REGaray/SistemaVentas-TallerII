@@ -646,6 +646,7 @@
             btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnlimpiar.Size = new Size(38, 36);
             btnlimpiar.TabIndex = 25;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
             // txtbusqueda
             // 

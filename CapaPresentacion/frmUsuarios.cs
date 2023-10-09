@@ -336,5 +336,13 @@ namespace CapaPresentacion
                 }
             }
         }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            txtbusqueda.Text = "";
+            foreach (DataGridViewRow row in dgvdata.Rows) {
+                row.Visible = true;
+            }
+        }
     }
 }
