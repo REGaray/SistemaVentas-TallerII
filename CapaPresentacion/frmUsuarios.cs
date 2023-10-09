@@ -134,14 +134,22 @@ namespace CapaPresentacion
                     //MessageBox.Show(mensaje);
                 }
             }
+            // Este bloque de código se ejecuta cuando el resultado de la edición de un usuario es 'false'.
+            // El código intenta editar un usuario utilizando la clase CN_Usuario y actualiza una fila en un DataGridView (dgvdata) si la edición es exitosa.
+            // Si la edición no es exitosa, muestra un mensaje de error a través de un cuadro de diálogo MsgBox.
+
+            // Bloque de código:
             else
             {
+                // Intenta editar el usuario utilizando la clase CN_Usuario y almacena el resultado en 'resultado'.
                 bool resultado = new CN_Usuario().editar(objusuario, out mensaje);
 
                 if (resultado)
                 {
+                    // Si la edición fue exitosa, actualiza la fila en el DataGridView con los nuevos valores.
                     DataGridViewRow row = dgvdata.Rows[Convert.ToInt32(txtid.Text)];
 
+                    // Actualiza las celdas de la fila con los valores ingresados por el usuario.
                     row.Cells["Id"].Value = txtid.Text;
                     row.Cells["Documento"].Value = txtdocumento.Text;
                     row.Cells["NombreCompleto"].Value = txtnombrecompleto.Text;
@@ -152,20 +160,17 @@ namespace CapaPresentacion
                     row.Cells["EstadoValor"].Value = ((OpcionCombo)cboestado.SelectedItem).Valor.ToString();
                     row.Cells["Estado"].Value = ((OpcionCombo)cboestado.SelectedItem).Texto.ToString();
 
+                    // Limpia los campos de entrada.
                     limpiar();
                 }
                 else
                 {
-                    // Muestra un mensaje de error en caso de que no se haya registrado el usuario.
+                    // Si la edición no fue exitosa, muestra un mensaje de error en un cuadro de diálogo.
                     MsgBox m = new MsgBox("error", mensaje);
                     m.ShowDialog();
                 }
             }
-
-
-
         }
-
 
         private void limpiar()
         {
@@ -260,46 +265,41 @@ namespace CapaPresentacion
             }
         }
 
-
-        private void btneditar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnlimpiarform_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            // Este condicional nos permite saber si realmente se ha seleccionado a un usuario.
+            // Verificar si se ha seleccionado un usuario (el valor de txtid.Text no es igual a 0).
             if (Convert.ToInt32(txtid.Text) != 0)
             {
-                if (MessageBox.Show("¿Desea eliminar el usuario", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                // Mostrar un cuadro de diálogo de confirmación antes de eliminar al usuario.
+                if (MessageBox.Show("¿Desea eliminar el usuario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string mensaje = string.Empty;
 
+                    // Crear un objeto de usuario con el ID de usuario a eliminar.
                     Usuario objusuario = new Usuario()
                     {
                         IdUsuario = Convert.ToInt32(txtid.Text),
                     };
 
+                    // Llamar al método de eliminación de usuario (eliminar) a través de la clase CN_Usuario.
+                    // El resultado se almacena en la variable 'respuesta', y cualquier mensaje se guarda en 'mensaje'.
                     bool respuesta = new CN_Usuario().eliminar(objusuario, out mensaje);
 
+                    // Verificar si la eliminación fue exitosa.
                     if (respuesta)
                     {
+                        // Si la eliminación fue exitosa, eliminar la fila correspondiente en el DataGridView.
                         dgvdata.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
                     }
                     else
                     {
+                        // Si la eliminación no fue exitosa, mostrar un mensaje de advertencia.
                         MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
-
-
             }
         }
+
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
@@ -339,8 +339,12 @@ namespace CapaPresentacion
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
+            // Limpiar el campo de búsqueda al establecer su texto como una cadena vacía.
             txtbusqueda.Text = "";
-            foreach (DataGridViewRow row in dgvdata.Rows) {
+
+            // Mostrar todas las filas en el DataGridView estableciendo la propiedad 'Visible' de cada fila como verdadera.
+            foreach (DataGridViewRow row in dgvdata.Rows)
+            {
                 row.Visible = true;
             }
         }
