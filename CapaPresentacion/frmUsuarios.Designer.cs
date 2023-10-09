@@ -564,6 +564,7 @@
             txtid.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtid.Size = new Size(27, 27);
             txtid.TabIndex = 18;
+            txtid.Visible = false;
             // 
             // panel1
             // 
@@ -624,6 +625,7 @@
             btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 26;
+            btnbuscar.Click += btnbuscar_Click;
             // 
             // btnlimpiar
             // 
@@ -745,6 +747,7 @@
             txtindice.ShadowDecoration.CustomizableEdges = customizableEdges32;
             txtindice.Size = new Size(27, 27);
             txtindice.TabIndex = 23;
+            txtindice.Visible = false;
             // 
             // frmUsuarios
             // 
