@@ -107,30 +107,62 @@ namespace CapaPresentacion
                 Estado = Convert.ToInt32(((OpcionCombo)cboestado.SelectedItem).Valor) == 1 ? true : false,
             };
 
-            // Llama al método "registrar" de la clase CN_Usuario para registrar al usuario en la base de datos.
-            int idUsuarioGenerado = new CN_Usuario().registrar(objusuario, out mensaje);
+            if(objusuario.IdUsuario == 0) {
+                // Llama al método "registrar" de la clase CN_Usuario para registrar al usuario en la base de datos.
+                int idUsuarioGenerado = new CN_Usuario().registrar(objusuario, out mensaje);
 
-            // Verifica si se registró correctamente un usuario.
-            if (idUsuarioGenerado != 0)
-            {
-                // Agrega una nueva fila con los datos del usuario registrado en el DataGridView.
-                dgvdata.Rows.Add(new object[] { "", idUsuarioGenerado, txtdocumento.Text, txtnombrecompleto.Text, txtcorreo.Text, txtclave.Text,
-                ((OpcionCombo)cborol.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cborol.SelectedItem).Texto.ToString(),
-                ((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cboestado.SelectedItem).Texto.ToString()
-                });
+                // Verifica si se registró correctamente un usuario.
+                if (idUsuarioGenerado != 0)
+                {
+                    // Agrega una nueva fila con los datos del usuario registrado en el DataGridView.
+                    dgvdata.Rows.Add(new object[] { "", idUsuarioGenerado, txtdocumento.Text, txtnombrecompleto.Text, txtcorreo.Text, txtclave.Text,
+                    ((OpcionCombo)cborol.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cborol.SelectedItem).Texto.ToString(),
+                    ((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cboestado.SelectedItem).Texto.ToString()
+                    });
 
-                // Llama al método "limpiar" para limpiar los campos del formulario.
-                limpiar();
+                    // Llama al método "limpiar" para limpiar los campos del formulario.
+                    limpiar();
+                }
+                else
+                {
+                    // Muestra un mensaje de error en caso de que no se haya registrado el usuario.
+                    MsgBox m = new MsgBox("error", mensaje);
+                    m.ShowDialog();
+                    //MessageBox.Show(mensaje);
+                }
             }
             else
             {
-                // Muestra un mensaje de error en caso de que no se haya registrado el usuario.
-                MsgBox m = new MsgBox("error", mensaje);
-                m.ShowDialog();
-                //MessageBox.Show(mensaje);
+                bool resultado = new CN_Usuario().editar(objusuario, out mensaje);
+
+                if (resultado)
+                {
+                    DataGridViewRow row = dgvdata.Rows[Convert.ToInt32(txtid.Text)];
+
+                    row.Cells["Id"].Value = txtid.Text;
+                    row.Cells["Documento"].Value = txtdocumento.Text;
+                    row.Cells["NombreCompleto"].Value = txtnombrecompleto.Text;
+                    row.Cells["Correo"].Value = txtclave.Text;
+                    row.Cells["Clave"].Value = txtclave.Text;
+                    row.Cells["IdRol"].Value = ((OpcionCombo)cborol.SelectedItem).Valor.ToString();
+                    row.Cells["Rol"].Value = ((OpcionCombo)cborol.SelectedItem).Texto.ToString();
+                    row.Cells["EstadoValor"].Value = ((OpcionCombo)cboestado.SelectedItem).Valor.ToString();
+                    row.Cells["Estado"].Value = ((OpcionCombo)cboestado.SelectedItem).Texto.ToString();
+
+                    limpiar();
+                }
+                else
+                {
+                    // Muestra un mensaje de error en caso de que no se haya registrado el usuario.
+                    MsgBox m = new MsgBox("error", mensaje);
+                    m.ShowDialog();
+                }
             }
+
+
+            
         }
 
 
@@ -145,6 +177,9 @@ namespace CapaPresentacion
             txtconfirmarclave.Text = "";
             cborol.SelectedIndex = 0;
             cboestado.SelectedIndex = 0;
+
+            // Una vez limpiado los campos, el focus vuelve a el txtDocumento.
+            txtdocumento.Select();
         }
 
         private void dgvdata_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
