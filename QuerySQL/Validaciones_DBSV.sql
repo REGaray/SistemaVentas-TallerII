@@ -123,3 +123,26 @@ BEGIN
 	END
 
 END
+
+GO
+
+/*----------------------------- PREOCEDIMIENTOS PARA CATEGORIA -----------------------------*/
+
+-- PROCEDIMIENTO PARA GUARDAR CATEGORIA --
+CREATE PROC SP_RregistrarCategoria(
+	@Descripcion VARCHAR(50),
+	@Resultado INT OUTPUT,
+	@Mensaje VARCHAR(500) OUTPUT
+)AS
+
+BEGIN
+	SET @Resultado = 0
+	IF NOT EXISTS (SELECT * FROM CATEGORIA WHERE Descripcion = @Descripcion)
+		BEGIN
+			INSERT INTO CATEGORIA(Descripcion)
+			VALUES(@Descripcion)
+			SET @Resultado = SCOPE_IDENTITY()
+		END
+	ELSE
+		SET @Mensaje = @Mensaje + 'No se puede repetir la descripcion de una categoria\n'
+END
