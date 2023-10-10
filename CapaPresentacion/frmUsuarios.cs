@@ -348,5 +348,10 @@ namespace CapaPresentacion
                 row.Visible = true;
             }
         }
+
+        private void btnlimpiarform_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
     }
 }

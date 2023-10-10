@@ -367,6 +367,7 @@
             btnlimpiarform.Size = new Size(126, 36);
             btnlimpiarform.TabIndex = 3;
             btnlimpiarform.Text = "Limpiar";
+            btnlimpiarform.Click += btnlimpiarform_Click;
             // 
             // btneliminar
             // 
