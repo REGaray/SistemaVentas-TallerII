@@ -54,3 +54,12 @@ WHERE IdUsuario = 5
 
 select u.IdUsuario, u.Documento, u.NombreCompleto, u.Correo, u.Clave, u.Estado, r.IdRol, r.Descripcion from usuario u
 inner join rol r on r.IdRol = u.IdRol
+
+SELECT * FROM CATEGORIA
+INSERT INTO CATEGORIA(Descripcion, Estado) VALUES
+('Lácteos', 1),
+('Gaseosas', 1),
+('Almacén', 1),
+('Espirituosas', 1),
+('Higiene Personal', 1),
+('Cigarrillos', 1)
