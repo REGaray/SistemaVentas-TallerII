@@ -42,6 +42,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -62,8 +64,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -80,6 +80,7 @@
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cboestado = new Guna.UI2.WinForms.Guna2ComboBox();
             groupBox1 = new GroupBox();
+            btnlimpiarform = new Guna.UI2.WinForms.Guna2Button();
             btneliminar = new Guna.UI2.WinForms.Guna2Button();
             btnguardar = new Guna.UI2.WinForms.Guna2Button();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -107,7 +108,6 @@
             panel5 = new Panel();
             panel6 = new Panel();
             txtindice = new Guna.UI2.WinForms.Guna2TextBox();
-            btnlimpiarform = new Guna.UI2.WinForms.Guna2Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             panel1.SuspendLayout();
@@ -349,6 +349,26 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Controles";
             // 
+            // btnlimpiarform
+            // 
+            btnlimpiarform.BorderRadius = 18;
+            btnlimpiarform.Cursor = Cursors.Hand;
+            btnlimpiarform.CustomizableEdges = customizableEdges15;
+            btnlimpiarform.DisabledState.BorderColor = Color.DarkGray;
+            btnlimpiarform.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnlimpiarform.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnlimpiarform.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnlimpiarform.FillColor = Color.FromArgb(91, 192, 222);
+            btnlimpiarform.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnlimpiarform.ForeColor = Color.White;
+            btnlimpiarform.Location = new Point(19, 158);
+            btnlimpiarform.Name = "btnlimpiarform";
+            btnlimpiarform.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnlimpiarform.Size = new Size(126, 36);
+            btnlimpiarform.TabIndex = 3;
+            btnlimpiarform.Text = "Limpiar";
+            btnlimpiarform.Click += btnlimpiarform_Click;
+            // 
             // btneliminar
             // 
             btneliminar.BorderRadius = 18;
@@ -367,6 +387,7 @@
             btneliminar.Size = new Size(126, 36);
             btneliminar.TabIndex = 2;
             btneliminar.Text = "Eliminar";
+            btneliminar.Click += btneliminar_Click;
             // 
             // btnguardar
             // 
@@ -543,6 +564,7 @@
             txtid.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtid.Size = new Size(27, 27);
             txtid.TabIndex = 18;
+            txtid.Visible = false;
             // 
             // panel1
             // 
@@ -603,6 +625,7 @@
             btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 26;
+            btnbuscar.Click += btnbuscar_Click;
             // 
             // btnlimpiar
             // 
@@ -623,6 +646,7 @@
             btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnlimpiar.Size = new Size(38, 36);
             btnlimpiar.TabIndex = 25;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
             // txtbusqueda
             // 
@@ -724,25 +748,7 @@
             txtindice.ShadowDecoration.CustomizableEdges = customizableEdges32;
             txtindice.Size = new Size(27, 27);
             txtindice.TabIndex = 23;
-            // 
-            // btnlimpiarform
-            // 
-            btnlimpiarform.BorderRadius = 18;
-            btnlimpiarform.Cursor = Cursors.Hand;
-            btnlimpiarform.CustomizableEdges = customizableEdges15;
-            btnlimpiarform.DisabledState.BorderColor = Color.DarkGray;
-            btnlimpiarform.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnlimpiarform.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnlimpiarform.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnlimpiarform.FillColor = Color.FromArgb(91, 192, 222);
-            btnlimpiarform.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnlimpiarform.ForeColor = Color.White;
-            btnlimpiarform.Location = new Point(19, 158);
-            btnlimpiarform.Name = "btnlimpiarform";
-            btnlimpiarform.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnlimpiarform.Size = new Size(126, 36);
-            btnlimpiarform.TabIndex = 3;
-            btnlimpiarform.Text = "Limpiar";
+            txtindice.Visible = false;
             // 
             // frmUsuarios
             // 
