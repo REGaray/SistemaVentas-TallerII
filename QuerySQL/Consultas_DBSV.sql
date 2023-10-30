@@ -28,6 +28,7 @@ INNER JOIN USUARIO u on u.IdRol = r.IdRol
 
 WHERE u.IdUsuario = 2
 
+--Brindar seguridad del rol Encargado--
 
 INSERT INTO PERMISO (IdRol, NombreMenu) VALUES
 (1, 'btnUsuarios'),
@@ -35,15 +36,34 @@ INSERT INTO PERMISO (IdRol, NombreMenu) VALUES
 (1, 'btnVentas'),
 (1, 'btnCompras'),
 (1, 'btnClientes'),
-(1, 'btnProveedores'),
-(1, 'btnReportes')
+(1, 'btnProveedores');
 
+
+--Brindar seguridad del rol Empleado--
 INSERT INTO PERMISO (IdRol, NombreMenu) VALUES
 (2, 'btnVentas'),
 (2, 'btnCompras'),
 (2, 'btnClientes'),
-(2, 'btnProveedores')
+(2, 'btnProveedores');
 
+
+--Creación del Gerente--
+INSERT INTO USUARIO (Documento, NombreCompleto, Correo, Clave, IdRol, Estado)
+VALUES ('12341234', 'Diana B. Mini', 'diana@gmail.com', '123', 3, 1)
+
+--Creación del rol Gerente--
+INSERT INTO ROL(Descripcion)
+VALUES ('GERENTE'); 
+
+INSERT INTO PERMISO (IdRol, NombreMenu) VALUES
+(3, 'btnUsuarios'),
+(3, 'btnConfiguracion'),
+(3, 'btnVentas'),
+(3, 'btnCompras'),
+(3, 'btnClientes'),
+(3, 'btnProveedores'),
+(3, 'btnReportes');
+SELECT * FROM PERMISO;
 
 
 /*
@@ -65,3 +85,7 @@ INSERT INTO CATEGORIA(Descripcion, Estado) VALUES
 ('Espirituosas', 1),
 ('Higiene Personal', 1),
 ('Cigarrillos', 1)
+
+DELETE CATEGORIA;
+
+DBCC CHECKIDENT('PERMISO', RESEED, 0);
