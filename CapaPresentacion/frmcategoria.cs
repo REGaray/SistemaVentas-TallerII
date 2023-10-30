@@ -38,7 +38,7 @@ namespace CapaPresentacion
 
 
             // Llena el ComboBox "cbobusqueda" con las opciones de búsqueda basadas en las columnas visibles del DataGridView.
-            foreach (DataGridViewColumn columna in dgvcategoria.Columns)
+            foreach (DataGridViewColumn columna in dgvdata.Columns)
             {
                 if (columna.Visible == true && columna.Name != "btnseleccionar")
                 {
@@ -61,7 +61,7 @@ namespace CapaPresentacion
             foreach (Categoria item in lista)
             {
                 // Agrega una nueva fila con los datos del usuario al DataGridView.
-                dgvcategoria.Rows.Add(new object[] { "", item.IdCategoria, item.Descripcion,
+                dgvdata.Rows.Add(new object[] { "", item.IdCategoria, item.Descripcion,
                 item.Estado == true ? 1 : 0,
                 item.Estado == true ? "Activo" : "Inactivo"
                 });
@@ -76,5 +76,89 @@ namespace CapaPresentacion
             //dgvcategoria.Rows.Add("", "Higiene Personal", "Activo");
             //dgvcategoria.Rows.Add("", "Cigarrillos", "Activo");
         }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            // Inicializa una variable de mensaje vacía.
+            string mensaje = string.Empty;
+
+            // Crea un objeto Usuario con los datos del formulario.
+            Categoria obj = new Categoria()
+            {
+                IdCategoria = Convert.ToInt32(txtid.Text),
+                Descripcion = txtdescripcion.Text,
+                Estado = Convert.ToInt32(((OpcionCombo)cboestado.SelectedItem).Valor) == 1 ? true : false,
+            };
+
+            if (obj.IdCategoria == 0)
+            {
+                // Llama al método "registrar" de la clase CN_Usuario para registrar al usuario en la base de datos.
+                int idGenerado = new CN_Categoria().registrar(obj, out mensaje);
+
+                // Verifica si se registró correctamente un usuario.
+                if (idGenerado != 0)
+                {
+                    // Agrega una nueva fila con los datos del usuario registrado en el DataGridView.
+                    dgvdata.Rows.Add(new object[] { "", idGenerado, txtdescripcion.Text,
+                    ((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cboestado.SelectedItem).Texto.ToString()
+                    });
+
+                    // Llama al método "limpiar" para limpiar los campos del formulario.
+                    limpiar();
+                }
+                else
+                {
+                    // Muestra un mensaje de error en caso de que no se haya registrado el usuario.
+                    MsgBox m = new MsgBox("error", mensaje);
+                    m.ShowDialog();
+                    //MessageBox.Show(mensaje);
+                }
+            }
+            // Este bloque de código se ejecuta cuando el resultado de la edición de un usuario es 'false'.
+            // El código intenta editar un usuario utilizando la clase CN_Usuario y actualiza una fila en un DataGridView (dgvdata) si la edición es exitosa.
+            // Si la edición no es exitosa, muestra un mensaje de error a través de un cuadro de diálogo MsgBox.
+
+            // Bloque de código:
+            else
+            {
+                // Intenta editar el usuario utilizando la clase CN_Usuario y almacena el resultado en 'resultado'.
+                bool resultado = new CN_Categoria().editar(obj, out mensaje);
+
+                if (resultado)
+                {
+                    // Si la edición fue exitosa, actualiza la fila en el DataGridView con los nuevos valores.
+                    DataGridViewRow row = dgvdata.Rows[Convert.ToInt32(txtid.Text)];
+
+                    // Actualiza las celdas de la fila con los valores ingresados por el usuario.
+                    row.Cells["Id"].Value = txtid.Text;
+                    row.Cells["Descripcion"].Value = txtdescripcion.Text;
+                    row.Cells["EstadoValor"].Value = ((OpcionCombo)cboestado.SelectedItem).Valor.ToString();
+                    row.Cells["Estado"].Value = ((OpcionCombo)cboestado.SelectedItem).Texto.ToString();
+
+                    // Limpia los campos de entrada.
+                    limpiar();
+                }
+                else
+                {
+                    // Si la edición no fue exitosa, muestra un mensaje de error en un cuadro de diálogo.
+                    MsgBox m = new MsgBox("error", mensaje);
+                    m.ShowDialog();
+                }
+            }
+        }
+
+        private void limpiar()
+        {
+            txtindice.Text = "-1";
+            txtid.Text = "0";
+            txtdescripcion.Text = "";
+            cboestado.SelectedIndex = 0;
+
+            // Una vez limpiado los campos, el focus vuelve a el txtDocumento.
+            txtdescripcion.Select();
+        }
+
+
     }
 }
