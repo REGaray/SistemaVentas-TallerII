@@ -159,6 +159,100 @@ namespace CapaPresentacion
             txtdescripcion.Select();
         }
 
+        private void dgvdata_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Verifica si la celda que se va a pintar está en la fila de encabezado (rowIndex < 0).
+            if (e.RowIndex < 0)
+            {
+                return; // No hace nada si es una celda de encabezado.
+            }
 
+            // Verifica si la celda que se va a pintar pertenece a la primera columna (columnIndex == 0).
+            if (e.ColumnIndex == 0)
+            {
+                // Pinta toda la celda (incluyendo el fondo y el borde).
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                // Obtiene el ancho y alto de la imagen que se va a dibujar.
+                var w = Properties.Resources.icons8_checkmark_16.Width;
+                var h = Properties.Resources.icons8_checkmark_16.Height;
+
+                // Calcula la posición (coordenadas X e Y) para centrar la imagen en la celda.
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                // Dibuja la imagen (en este caso, una marca de verificación) en la celda.
+                e.Graphics.DrawImage(Properties.Resources.icons8_checkmark_16, new Rectangle(x, y, w, h));
+
+                // Marca la celda como "manejada" para indicar que se ha personalizado su apariencia.
+                e.Handled = true;
+            }
+        }
+
+        private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica si la celda clicada pertenece a la columna "btnseleccionar".
+            if (dgvdata.Columns[e.ColumnIndex].Name == "btnseleccionar")
+            {
+                // Obtiene el índice de la fila clicada.
+                int indice = e.RowIndex;
+
+                // Verifica si el índice de fila es válido (mayor o igual a 0).
+                if (indice >= 0)
+                {
+                    // Establece el índice de fila en el campo de texto "txtindice".
+                    txtindice.Text = indice.ToString();
+
+                    // Llena los campos del formulario con los datos de la fila seleccionada en el DataGridView.
+                    txtid.Text = dgvdata.Rows[indice].Cells["id"].Value.ToString();
+
+                    // Busca y selecciona el elemento correspondiente en el ComboBox "cboestado" basado en el Estadovalor.
+                    foreach (OpcionCombo oc in cboestado.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["Estadovalor"].Value.ToString()))
+                        {
+                            int indice_combo = cboestado.Items.IndexOf(oc);
+                            cboestado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            // Verificar si se ha seleccionado un usuario (el valor de txtid.Text no es igual a 0).
+            if (Convert.ToInt32(txtid.Text) != 0)
+            {
+                // Mostrar un cuadro de diálogo de confirmación antes de eliminar al usuario.
+                if (MessageBox.Show("¿Desea eliminar la categoria?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+
+                    // Crear un objeto de usuario con el ID de usuario a eliminar.
+                    Categoria obj = new Categoria()
+                    {
+                        IdCategoria = Convert.ToInt32(txtid.Text),
+                    };
+
+                    // Llamar al método de eliminación de usuario (eliminar) a través de la clase CN_Usuario.
+                    // El resultado se almacena en la variable 'respuesta', y cualquier mensaje se guarda en 'mensaje'.
+                    bool respuesta = new CN_Categoria().eliminar(obj, out mensaje);
+
+                    // Verificar si la eliminación fue exitosa.
+                    if (respuesta)
+                    {
+                        // Si la eliminación fue exitosa, eliminar la fila correspondiente en el DataGridView.
+                        dgvdata.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                    }
+                    else
+                    {
+                        // Si la eliminación no fue exitosa, mostrar un mensaje de advertencia.
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
+        }
     }
 }
