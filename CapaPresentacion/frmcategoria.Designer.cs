@@ -175,6 +175,7 @@
             btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnlimpiar.Size = new Size(38, 36);
             btnlimpiar.TabIndex = 30;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
             // groupBox1
             // 
@@ -226,7 +227,8 @@
             btneditar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btneditar.Size = new Size(126, 36);
             btneditar.TabIndex = 1;
-            btneditar.Text = "Editar";
+            btneditar.Text = "Limpiar";
+            btneditar.Click += btneditar_Click;
             // 
             // btnguardar
             // 
@@ -285,6 +287,7 @@
             btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 31;
+            btnbuscar.Click += btnbuscar_Click;
             // 
             // txtdescripcion
             // 
