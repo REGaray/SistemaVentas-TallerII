@@ -414,6 +414,7 @@
             // 
             // dgvdata
             // 
+            dgvdata.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -441,6 +442,7 @@
             dgvdata.Location = new Point(0, 0);
             dgvdata.MultiSelect = false;
             dgvdata.Name = "dgvdata";
+            dgvdata.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -466,7 +468,7 @@
             dgvdata.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvdata.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvdata.ThemeStyle.HeaderStyle.Height = 22;
-            dgvdata.ThemeStyle.ReadOnly = false;
+            dgvdata.ThemeStyle.ReadOnly = true;
             dgvdata.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvdata.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvdata.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -482,23 +484,28 @@
             btnseleccionar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             btnseleccionar.HeaderText = "";
             btnseleccionar.Name = "btnseleccionar";
+            btnseleccionar.ReadOnly = true;
             btnseleccionar.Width = 30;
             // 
             // Id
             // 
             Id.HeaderText = "Id";
             Id.Name = "Id";
+            Id.ReadOnly = true;
             Id.Visible = false;
             // 
             // Descripcion
             // 
+            Descripcion.FillWeight = 96.9196548F;
             Descripcion.HeaderText = "Descripcion";
             Descripcion.Name = "Descripcion";
+            Descripcion.ReadOnly = true;
             // 
             // EstadoValor
             // 
             EstadoValor.HeaderText = "EstadoValor";
             EstadoValor.Name = "EstadoValor";
+            EstadoValor.ReadOnly = true;
             EstadoValor.Visible = false;
             // 
             // Estado
@@ -506,6 +513,7 @@
             Estado.FillWeight = 96.9196548F;
             Estado.HeaderText = "Estado";
             Estado.Name = "Estado";
+            Estado.ReadOnly = true;
             // 
             // frmcategoria
             // 
@@ -546,9 +554,9 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
         private Guna.UI2.WinForms.Guna2TextBox txtindice;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
         private DataGridViewButtonColumn btnseleccionar;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Descripcion;

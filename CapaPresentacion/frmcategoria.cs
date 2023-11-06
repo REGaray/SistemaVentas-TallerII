@@ -189,6 +189,7 @@ namespace CapaPresentacion
             }
         }
 
+
         private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica si la celda clicada pertenece a la columna "btnseleccionar".
@@ -245,6 +246,7 @@ namespace CapaPresentacion
                     {
                         // Si la eliminación fue exitosa, eliminar la fila correspondiente en el DataGridView.
                         dgvdata.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                        limpiar();
                     }
                     else
                     {
@@ -307,5 +309,7 @@ namespace CapaPresentacion
         {
             limpiar();
         }
+
+        
     }
 }

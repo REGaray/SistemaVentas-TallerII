@@ -67,6 +67,7 @@ namespace CapaDatos
                     // Crea un objeto SqlCommand para ejecutar el procedimiento almacenado "SP_RregistrarCategoria".
                     SqlCommand cmd = new SqlCommand("SP_RregistrarCategoria", oconexion);
                     cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("Estado", obj.Estado);
 
                     // Configura parámetros de salida para capturar el resultado y mensaje.
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
