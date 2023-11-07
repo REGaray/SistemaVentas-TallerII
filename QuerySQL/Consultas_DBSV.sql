@@ -98,5 +98,30 @@ WHERE u.IdUsuario = 2
 --   - IdRol: Identificador único del rol.
 --   - Descripcion: Descripción o nombre del rol.
 
-select u.IdUsuario, u.Documento, u.NombreCompleto, u.Correo, u.Clave, u.Estado, r.IdRol, r.Descripcion from usuario u
-INNER JOIN rol r on r.IdRol = u.IdRol
+SELECT u.IdUsuario, u.Documento, u.NombreCompleto, u.Correo, u.Clave, u.Estado, r.IdRol, r.Descripcion FROM usuario u
+INNER JOIN rol r ON r.IdRol = u.IdRol
+
+
+
+-- Esta consulta recupera datos de productos y sus categorías correspondientes.
+
+-- Seleccionamos las siguientes columnas de la tabla 'producto':
+--   - IdProducto: Identificador único del producto.
+--   - Codigo: Código único del producto.
+--   - Nombre: Nombre del producto.
+--   - Descripcion: Descripción detallada del producto.
+--   - IdCategoria: Identificador único de la categoría a la que pertenece el producto.
+--   - DescripcionCategoria: Descripción de la categoría del producto.
+--   - Stock: Cantidad de stock disponible del producto.
+--   - PrecioCompra: Precio al que se compra el producto.
+--   - PrecioVenta: Precio al que se vende el producto.
+
+-- Además, seleccionamos las siguientes columnas de la tabla 'categoria':
+--   - IdCategoria: Identificador único de la categoría.
+--   - DescripcionCategoria: Descripción o nombre de la categoría.
+--   - (Nota: La columna 'IdCategoria' se selecciona tanto de 'producto' como de 'categoria' para vincular los productos con sus categorías correspondientes).
+
+-- Se utiliza una instrucción INNER JOIN para combinar datos de las tablas 'producto' y 'categoria' en función de la igualdad de 'IdCategoria'.
+
+SELECT IdProducto, Codigo, Nombre, p.Descripcion, c.IdCategoria, c.Descripcion[DescripcionCategoria], Stock, PrecioCompra, PrecioVenta FROM PRODUCTO p
+INNER JOIN CATEGORIA c ON c.IdCategoria = p.IdCategoria
