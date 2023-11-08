@@ -21,8 +21,8 @@ namespace CapaDatos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select u.IdProducto, u.Documento, u.NombreCompleto, u.Correo, u.Clave, u.Estado, r.IdRol, r.Descripcion from Producto u");
-                    query.AppendLine("inner join rol r on r.IdRol = u.IdRol");
+                    query.AppendLine("SELECT IdProducto, Codigo, Nombre, p.Descripcion, c.IdCategoria, c.Descripcion[DescripcionCategoria], Stock, PrecioCompra, PrecioVenta, p.Estado FROM PRODUCTO p");
+                    query.AppendLine("INNER JOIN CATEGORIA c ON c.IdCategoria = p.IdCategoria");
 
 
 
@@ -41,12 +41,14 @@ namespace CapaDatos
                             {
                                 // Crea un objeto 'Producto' y asigna valores desde la base de datos.
                                 IdProducto = Convert.ToInt32(dr["IdProducto"]),
-                                Documento = dr["Documento"].ToString(),
-                                NombreCompleto = dr["NombreCompleto"].ToString(),
-                                Correo = dr["Correo"].ToString(),
-                                Clave = dr["Clave"].ToString(),
+                                Codigo = dr["Codigo"].ToString(),
+                                Nombre = dr["Nombre"].ToString(),
+                                Descripcion = dr["Descripcion"].ToString(),
+                                oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(dr["IdCategoria"]), Descripcion = dr["DescripcionCategoria"].ToString() },
+                                Stock = Convert.ToInt32(dr["Stock"]),
+                                PrecioCompra = Convert.ToDecimal(dr["PrecioCompra"]),
+                                PrecioVenta = Convert.ToDecimal(dr["PrecioVenta"]),
                                 Estado = Convert.ToBoolean(dr["Estado"]),
-                                oRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]), Descripcion = dr["Descripcion"].ToString() }
                             });
                         }
                     }
@@ -71,14 +73,13 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
-                    SqlCommand cmd = new SqlCommand("SP_REGISTRARProducto", oconexion);  // Crea un nuevo comando SQL que llama al procedimiento almacenado
-                    cmd.Parameters.AddWithValue("Documento", obj.Documento);           // Agrega parámetros al comando SQL con los valores del objeto 'obj'
-                    cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
-                    cmd.Parameters.AddWithValue("Correo", obj.Correo);
-                    cmd.Parameters.AddWithValue("Clave", obj.Clave);
-                    cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
+                    SqlCommand cmd = new SqlCommand("sp_RegistrarProducto", oconexion);  // Crea un nuevo comando SQL que llama al procedimiento almacenado
+                    cmd.Parameters.AddWithValue("Codigo", obj.Codigo);           // Agrega parámetros al comando SQL con los valores del objeto 'obj'
+                    cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("IdCategoria", obj.oCategoria.IdCategoria);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
-                    cmd.Parameters.Add("IdProductoResultado", SqlDbType.Int).Direction = ParameterDirection.Output;  // Parámetro de salida para almacenar el ID del Producto generado
+                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;  // Parámetro de salida para almacenar el ID del Producto generado
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;           // Parámetro de salida para almacenar un mensaje de resultado
 
                     cmd.CommandType = CommandType.StoredProcedure;  // Establece el tipo de comando como un procedimiento almacenado
@@ -88,7 +89,7 @@ namespace CapaDatos
                     cmd.ExecuteNonQuery();  // Ejecuta el procedimiento almacenado en la base de datos
 
                     // Obtiene el ID del Producto generado y el mensaje de resultado desde los parámetros de salida
-                    idProductoGenerado = Convert.ToInt32(cmd.Parameters["IdProductoResultado"].Value);
+                    idProductoGenerado = Convert.ToInt32(cmd.Parameters["Resultado"].Value);
                     mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
             }
@@ -111,15 +112,14 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
-                    SqlCommand cmd = new SqlCommand("SP_EDITARProducto", oconexion);  // Crea un nuevo comando SQL que llama al procedimiento almacenado
+                    SqlCommand cmd = new SqlCommand("sp_ModificarProducto", oconexion);  // Crea un nuevo comando SQL que llama al procedimiento almacenado
                     cmd.Parameters.AddWithValue("IdProducto", obj.IdProducto);         // Agrega parámetros al comando SQL con los valores del objeto 'obj'
-                    cmd.Parameters.AddWithValue("Documento", obj.Documento);
-                    cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
-                    cmd.Parameters.AddWithValue("Correo", obj.Correo);
-                    cmd.Parameters.AddWithValue("Clave", obj.Clave);
-                    cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
+                    cmd.Parameters.AddWithValue("Codigo", obj.Codigo);
+                    cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("IdCategoria", obj.oCategoria.IdCategoria);
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
-                    cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;  // Parámetro de salida para almacenar la respuesta (1 si se editó, 0 si no)
+                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;  // Parámetro de salida para almacenar la respuesta (1 si se editó, 0 si no)
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;  // Parámetro de salida para almacenar un mensaje de resultado
 
                     cmd.CommandType = CommandType.StoredProcedure;  // Establece el tipo de comando como un procedimiento almacenado
@@ -129,7 +129,7 @@ namespace CapaDatos
                     cmd.ExecuteNonQuery();  // Ejecuta el procedimiento almacenado en la base de datos
 
                     // Obtiene la respuesta (1 si se editó, 0 si no) y el mensaje de resultado desde los parámetros de salida
-                    respuesta = Convert.ToBoolean(cmd.Parameters["Respuesta"].Value);
+                    respuesta = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
                     mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
             }
@@ -153,7 +153,7 @@ namespace CapaDatos
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
                     // Crea un nuevo comando SQL para llamar al procedimiento almacenado "SP_ELIMINARProducto" en la conexión.
-                    SqlCommand cmd = new SqlCommand("SP_ELIMINARProducto", oconexion);
+                    SqlCommand cmd = new SqlCommand("SP_EliminarProducto", oconexion);
 
                     // Agrega el parámetro "IdProducto" al comando y establece su valor con el IdProducto del objeto Producto.
                     cmd.Parameters.AddWithValue("IdProducto", obj.IdProducto);

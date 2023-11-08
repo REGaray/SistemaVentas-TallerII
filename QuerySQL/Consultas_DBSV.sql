@@ -123,5 +123,5 @@ INNER JOIN rol r ON r.IdRol = u.IdRol
 
 -- Se utiliza una instrucción INNER JOIN para combinar datos de las tablas 'producto' y 'categoria' en función de la igualdad de 'IdCategoria'.
 
-SELECT IdProducto, Codigo, Nombre, p.Descripcion, c.IdCategoria, c.Descripcion[DescripcionCategoria], Stock, PrecioCompra, PrecioVenta FROM PRODUCTO p
+SELECT IdProducto, Codigo, Nombre, p.Descripcion, c.IdCategoria, c.Descripcion[DescripcionCategoria], Stock, PrecioCompra, PrecioVenta, p.Estado FROM PRODUCTO p
 INNER JOIN CATEGORIA c ON c.IdCategoria = p.IdCategoria
