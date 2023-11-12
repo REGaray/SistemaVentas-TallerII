@@ -11,6 +11,7 @@ using CapaDatos;
 using CapaEntidad;
 using CapaNegocio;
 using CapaPresentacion.Utilidades;
+using ClosedXML.Excel;
 using static Guna.UI2.Native.WinApi;
 
 namespace CapaPresentacion
@@ -377,5 +378,81 @@ namespace CapaPresentacion
         {
             limpiar();
         }
+
+
+        private void btnexportar_Click(object sender, EventArgs e)
+        {
+            // Verifica si no hay filas en el DataGridView (dgvdata) para exportar.
+            if (dgvdata.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay datos para exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                // Crea una nueva DataTable (dt) para almacenar los datos a exportar.
+                DataTable dt = new DataTable();
+
+                // Itera a través de las columnas visibles del DataGridView para agregarlas como columnas en la DataTable.
+                foreach (DataGridViewColumn columna in dgvdata.Columns)
+                {
+                    if (columna.HeaderText != "" && columna.Visible)
+                    {
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                    }
+                }
+
+                // Itera a través de las filas visibles del DataGridView para agregar los datos a la DataTable.
+                foreach (DataGridViewRow row in dgvdata.Rows)
+                {
+                    if (row.Visible)
+                    {
+                        dt.Rows.Add(new object[]
+                        {
+                    row.Cells[2].Value.ToString(),
+                    row.Cells[3].Value.ToString(),
+                    row.Cells[4].Value.ToString(),
+                    row.Cells[6].Value.ToString(),
+                    row.Cells[7].Value.ToString(),
+                    row.Cells[8].Value.ToString(),
+                    row.Cells[9].Value.ToString(),
+                    row.Cells[11].Value.ToString(),
+                        });
+                    }
+                }
+
+                // Configura el diálogo de guardado de archivo.
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format("ReporteProducto_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmSS"));
+                savefile.Filter = "Archivos de Excel | *.xlsx";
+
+                // Muestra el diálogo de guardado de archivo y procede si el usuario elige una ubicación para guardar.
+                if (savefile.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        // Crea un nuevo archivo Excel usando la biblioteca ClosedXML (XLWorkbook).
+                        XLWorkbook wb = new XLWorkbook();
+
+                        // Agrega la DataTable (dt) como una hoja en el archivo Excel.
+                        var hoja = wb.Worksheets.Add(dt, "Informe");
+
+                        // Ajusta automáticamente el ancho de las columnas para que se ajusten al contenido.
+                        hoja.ColumnsUsed().AdjustToContents();
+
+                        // Guarda el archivo Excel en la ubicación especificada por el usuario.
+                        wb.SaveAs(savefile.FileName);
+
+                        // Muestra un mensaje de éxito.
+                        MessageBox.Show("Reporte Generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        // Muestra un mensaje de error en caso de problemas durante la generación del reporte.
+                        MessageBox.Show("Error al generar el reporte", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
+        }
+
     }
 }

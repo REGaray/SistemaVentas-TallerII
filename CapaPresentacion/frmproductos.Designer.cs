@@ -47,6 +47,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmproductos));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -69,7 +70,6 @@
             txtbusqueda = new Guna.UI2.WinForms.Guna2TextBox();
             cbobusqueda = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtid = new Guna.UI2.WinForms.Guna2TextBox();
             txtindice = new Guna.UI2.WinForms.Guna2TextBox();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -85,12 +85,11 @@
             PrecioVenta = new DataGridViewTextBoxColumn();
             EstadoValor = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
-            panel5 = new Panel();
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
             txtdescripcion = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnexportar = new Guna.UI2.WinForms.Guna2Button();
             groupBox1 = new GroupBox();
             btnlimpiarform = new Guna.UI2.WinForms.Guna2Button();
             btneliminar = new Guna.UI2.WinForms.Guna2Button();
@@ -104,13 +103,12 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            panel6 = new Panel();
+            panel5 = new Panel();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             groupBox1.SuspendLayout();
-            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // guna2HtmlLabel4
@@ -124,16 +122,15 @@
             // 
             // panel4
             // 
+            panel4.BackColor = Color.White;
             panel4.Controls.Add(btnbuscar);
             panel4.Controls.Add(btnlimpiar);
             panel4.Controls.Add(txtbusqueda);
             panel4.Controls.Add(cbobusqueda);
             panel4.Controls.Add(guna2HtmlLabel11);
-            panel4.Controls.Add(guna2HtmlLabel9);
-            panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 259);
             panel4.Name = "panel4";
-            panel4.Size = new Size(704, 72);
+            panel4.Size = new Size(797, 76);
             panel4.TabIndex = 39;
             // 
             // btnbuscar
@@ -228,19 +225,6 @@
             guna2HtmlLabel11.TabIndex = 18;
             guna2HtmlLabel11.Text = "Buscar por:";
             // 
-            // guna2HtmlLabel9
-            // 
-            guna2HtmlLabel9.AutoSize = false;
-            guna2HtmlLabel9.BackColor = Color.White;
-            guna2HtmlLabel9.Dock = DockStyle.Top;
-            guna2HtmlLabel9.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2HtmlLabel9.Location = new Point(0, 0);
-            guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(704, 72);
-            guna2HtmlLabel9.TabIndex = 17;
-            guna2HtmlLabel9.Text = null;
-            guna2HtmlLabel9.TextAlignment = ContentAlignment.MiddleLeft;
-            // 
             // txtid
             // 
             txtid.CustomizableEdges = customizableEdges9;
@@ -306,9 +290,8 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvdata.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvdata.Dock = DockStyle.Fill;
             dgvdata.GridColor = Color.FromArgb(231, 229, 255);
-            dgvdata.Location = new Point(0, 0);
+            dgvdata.Location = new Point(0, 360);
             dgvdata.MultiSelect = false;
             dgvdata.Name = "dgvdata";
             dgvdata.ReadOnly = true;
@@ -322,7 +305,7 @@
             dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvdata.RowHeadersVisible = false;
             dgvdata.RowTemplate.Height = 28;
-            dgvdata.Size = new Size(704, 222);
+            dgvdata.Size = new Size(785, 305);
             dgvdata.TabIndex = 16;
             dgvdata.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvdata.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -434,21 +417,13 @@
             Estado.Name = "Estado";
             Estado.ReadOnly = true;
             // 
-            // panel5
-            // 
-            panel5.BackColor = Color.FromArgb(220, 234, 252);
-            panel5.Location = new Point(0, 331);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(704, 24);
-            panel5.TabIndex = 40;
-            // 
             // panel1
             // 
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 237);
             panel1.Name = "panel1";
-            panel1.Size = new Size(704, 22);
+            panel1.Size = new Size(797, 22);
             panel1.TabIndex = 38;
             // 
             // panel2
@@ -457,7 +432,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(704, 22);
+            panel2.Size = new Size(797, 22);
             panel2.TabIndex = 20;
             // 
             // panel3
@@ -466,7 +441,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(704, 22);
+            panel3.Size = new Size(797, 22);
             panel3.TabIndex = 21;
             // 
             // txtdescripcion
@@ -491,25 +466,27 @@
             txtdescripcion.Size = new Size(148, 36);
             txtdescripcion.TabIndex = 44;
             // 
-            // guna2Button1
+            // btnexportar
             // 
-            guna2Button1.BackColor = Color.White;
-            guna2Button1.BorderRadius = 18;
-            guna2Button1.Cursor = Cursors.Hand;
-            guna2Button1.CustomizableEdges = customizableEdges15;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(33, 43, 70);
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(31, 170);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button1.Size = new Size(126, 36);
-            guna2Button1.TabIndex = 30;
-            guna2Button1.Text = "Descargar PDF";
+            btnexportar.BackColor = Color.White;
+            btnexportar.BorderRadius = 18;
+            btnexportar.Cursor = Cursors.Hand;
+            btnexportar.CustomizableEdges = customizableEdges15;
+            btnexportar.DisabledState.BorderColor = Color.DarkGray;
+            btnexportar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnexportar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnexportar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnexportar.FillColor = Color.FromArgb(33, 43, 70);
+            btnexportar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnexportar.ForeColor = Color.White;
+            btnexportar.Image = (Image)resources.GetObject("btnexportar.Image");
+            btnexportar.Location = new Point(31, 170);
+            btnexportar.Name = "btnexportar";
+            btnexportar.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnexportar.Size = new Size(148, 36);
+            btnexportar.TabIndex = 30;
+            btnexportar.Text = "Descargar Excel";
+            btnexportar.Click += btnexportar_Click;
             // 
             // groupBox1
             // 
@@ -707,33 +684,32 @@
             guna2HtmlLabel1.Dock = DockStyle.Top;
             guna2HtmlLabel1.Location = new Point(0, 0);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(704, 237);
+            guna2HtmlLabel1.Size = new Size(797, 237);
             guna2HtmlLabel1.TabIndex = 26;
             guna2HtmlLabel1.Text = null;
             // 
-            // panel6
+            // panel5
             // 
-            panel6.BackColor = Color.FromArgb(220, 234, 250);
-            panel6.Controls.Add(dgvdata);
-            panel6.Location = new Point(0, 355);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(704, 222);
-            panel6.TabIndex = 41;
+            panel5.BackColor = Color.FromArgb(220, 234, 252);
+            panel5.Location = new Point(0, 332);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(797, 31);
+            panel5.TabIndex = 45;
             // 
             // frmproductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(704, 577);
+            ClientSize = new Size(797, 664);
+            Controls.Add(panel5);
+            Controls.Add(dgvdata);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(panel4);
             Controls.Add(txtid);
             Controls.Add(txtindice);
-            Controls.Add(panel6);
-            Controls.Add(panel5);
             Controls.Add(panel1);
             Controls.Add(txtdescripcion);
-            Controls.Add(guna2Button1);
+            Controls.Add(btnexportar);
             Controls.Add(groupBox1);
             Controls.Add(cboestado);
             Controls.Add(guna2HtmlLabel8);
@@ -754,7 +730,6 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
-            panel6.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -771,12 +746,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txtid;
         private Guna.UI2.WinForms.Guna2TextBox txtindice;
         private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
-        private Panel panel5;
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
         private Guna.UI2.WinForms.Guna2TextBox txtdescripcion;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnexportar;
         private GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Button btnlimpiarform;
         private Guna.UI2.WinForms.Guna2Button btneliminar;
@@ -789,9 +763,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtcodigo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Panel panel6;
         private DataGridViewButtonColumn btnseleccionar;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn Codigo;
@@ -804,5 +775,7 @@
         private DataGridViewTextBoxColumn PrecioVenta;
         private DataGridViewTextBoxColumn EstadoValor;
         private DataGridViewTextBoxColumn Estado;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Panel panel5;
     }
 }

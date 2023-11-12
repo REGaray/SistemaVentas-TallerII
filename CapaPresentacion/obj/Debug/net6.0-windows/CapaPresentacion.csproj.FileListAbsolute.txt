@@ -191,3 +191,9 @@ C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\ne
 C:\Users\Jerem\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVentasasfdasfd.resources
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVentas.resources
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVentasasfdasfd.resources
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\ClosedXML.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\ExcelNumberFormat.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\Irony.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\XLParser.dll
