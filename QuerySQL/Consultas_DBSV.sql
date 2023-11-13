@@ -20,6 +20,7 @@ SELECT * FROM PERMISO
 SELECT * FROM COMPRA
 SELECT * FROM DETALLE_COMPRA
 SELECT * FROM PROVEEDOR
+SELECT * FROM NEGOCIO
 
 -- Creando roles --
 INSERT INTO ROL(Descripcion)
@@ -129,6 +130,15 @@ INSERT INTO PROVEEDOR (Documento, RazonSocial, Correo, Telefono, Estado) VALUES
 
 DELETE PROVEEDOR
 DBCC CHECKIDENT('PROVEEDOR', RESEED, 0);
+
+
+-- Agregando negocio a la DB --
+INSERT INTO NEGOCIO(idNegocio, Nombre, RUC, Direccion) VALUES
+(1, 'JR Software', '101010', '9 de Julio 2102')
+
+SELECT * FROM NEGOCIO
+
+
 
 
 -- Esta consulta selecciona los roles (IdRol) y nombres de menú (NombreMenu) de la tabla PERMISO,

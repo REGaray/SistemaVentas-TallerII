@@ -197,3 +197,4 @@ C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\Irony.dll
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\XLParser.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.aaaaaaa.resources
