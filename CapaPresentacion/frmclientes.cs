@@ -236,6 +236,42 @@ namespace CapaPresentacion
             }
         }
 
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            // Verificar si se ha seleccionado un Cliente (el valor de txtid.Text no es igual a 0).
+            if (Convert.ToInt32(txtid.Text) != 0)
+            {
+                // Mostrar un cuadro de diálogo de confirmación antes de eliminar al Cliente.
+                if (MessageBox.Show("¿Desea eliminar el Cliente?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+
+                    // Crear un objeto de Cliente con el ID de Cliente a eliminar.
+                    Cliente objCliente = new Cliente()
+                    {
+                        IdCliente = Convert.ToInt32(txtid.Text),
+                    };
+
+                    // Llamar al método de eliminación de Cliente (eliminar) a través de la clase CN_Cliente.
+                    // El resultado se almacena en la variable 'respuesta', y cualquier mensaje se guarda en 'mensaje'.
+                    bool respuesta = new CN_Cliente().eliminar(objCliente, out mensaje);
+
+                    // Verificar si la eliminación fue exitosa.
+                    if (respuesta)
+                    {
+                        // Si la eliminación fue exitosa, eliminar la fila correspondiente en el DataGridView.
+                        dgvdata.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                        limpiar();
+                    }
+                    else
+                    {
+                        // Si la eliminación no fue exitosa, mostrar un mensaje de advertencia.
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
+        }
+
 
 
     }

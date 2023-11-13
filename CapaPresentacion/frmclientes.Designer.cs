@@ -321,6 +321,7 @@
             btneliminar.Size = new Size(126, 36);
             btneliminar.TabIndex = 2;
             btneliminar.Text = "Eliminar";
+            btneliminar.Click += btneliminar_Click;
             // 
             // btneditar
             // 
