@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
+using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 
 namespace CapaPresentacion
@@ -55,7 +56,29 @@ namespace CapaPresentacion
             //dgvRC.Rows.Add("", "Topline Seven Menta", "$250.00", 2, "$500.00");
         }
 
+        private void btnbuscarproveedor_Click(object sender, EventArgs e)
+        {
+            // Se crea y muestra un formulario modal 'mdProveedor' para buscar proveedores.
+            using (var modal = new md_Proveedor())
+            {
+                // Se muestra el formulario modal y se espera a que se cierre.
+                var result = modal.ShowDialog();
 
+                // Si el resultado del formulario modal es "OK" (el usuario seleccionó un proveedor).
+                if (result == DialogResult.OK)
+                {
+                    // Se actualizan los campos de texto con los datos del proveedor seleccionado.
+                    txtidproveedor.Text = modal._Proveedor.IdProveedor.ToString();
+                    txtdocproveedor.Text = modal._Proveedor.Documento;
+                    txtnombreproveedor.Text = modal._Proveedor.RazonSocial;
+                }
+                else
+                {
+                    // Si el resultado no es "OK" (el usuario canceló la selección), se selecciona el campo de texto 'txtdocproveedor'.
+                    txtdocproveedor.Select();
+                }
+            }
+        }
 
 
 

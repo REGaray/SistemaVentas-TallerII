@@ -48,11 +48,11 @@
             btnlimpiar = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
-            panel1 = new Panel();
-            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             id = new DataGridViewTextBoxColumn();
             Documento = new DataGridViewTextBoxColumn();
             RazonSocial = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             panel1.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
@@ -117,6 +117,7 @@
             btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 46;
+            btnbuscar.Click += btnbuscar_Click;
             // 
             // btnlimpiar
             // 
@@ -137,6 +138,7 @@
             btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnlimpiar.Size = new Size(38, 36);
             btnlimpiar.TabIndex = 45;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
             // guna2HtmlLabel7
             // 
@@ -188,6 +190,8 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvdata.RowHeadersVisible = false;
+            dgvdata.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 234, 252);
+            dgvdata.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.FromArgb(33, 40, 70);
             dgvdata.RowTemplate.Height = 28;
             dgvdata.Size = new Size(800, 364);
             dgvdata.TabIndex = 41;
@@ -212,6 +216,28 @@
             dgvdata.ThemeStyle.RowsStyle.Height = 28;
             dgvdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvdata.CellDoubleClick += dgvdata_CellDoubleClick;
+            // 
+            // id
+            // 
+            id.HeaderText = "Id";
+            id.Name = "id";
+            id.ReadOnly = true;
+            id.Visible = false;
+            // 
+            // Documento
+            // 
+            Documento.FillWeight = 120.950859F;
+            Documento.HeaderText = "Nro Documento";
+            Documento.Name = "Documento";
+            Documento.ReadOnly = true;
+            // 
+            // RazonSocial
+            // 
+            RazonSocial.FillWeight = 96.9196548F;
+            RazonSocial.HeaderText = "Razon Social";
+            RazonSocial.Name = "RazonSocial";
+            RazonSocial.ReadOnly = true;
             // 
             // panel1
             // 
@@ -238,27 +264,6 @@
             guna2CustomGradientPanel1.Size = new Size(800, 364);
             guna2CustomGradientPanel1.TabIndex = 49;
             // 
-            // id
-            // 
-            id.HeaderText = "Id";
-            id.Name = "id";
-            id.ReadOnly = true;
-            id.Visible = false;
-            // 
-            // Documento
-            // 
-            Documento.FillWeight = 120.950859F;
-            Documento.HeaderText = "Nro Documento";
-            Documento.Name = "Documento";
-            Documento.ReadOnly = true;
-            // 
-            // RazonSocial
-            // 
-            RazonSocial.FillWeight = 96.9196548F;
-            RazonSocial.HeaderText = "Razon Social";
-            RazonSocial.Name = "RazonSocial";
-            RazonSocial.ReadOnly = true;
-            // 
             // md_Proveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -267,6 +272,7 @@
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(panel1);
             Name = "md_Proveedor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "md_Proveedor";
             Load += md_Proveedor_Load;
             ((System.ComponentModel.ISupportInitialize)dgvdata).EndInit();

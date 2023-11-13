@@ -263,6 +263,7 @@
             btnbuscarproveedor.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnbuscarproveedor.Size = new Size(38, 36);
             btnbuscarproveedor.TabIndex = 27;
+            btnbuscarproveedor.Click += btnbuscarproveedor_Click;
             // 
             // txtnombreproveedor
             // 
