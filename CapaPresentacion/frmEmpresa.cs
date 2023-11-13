@@ -17,18 +17,5 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
