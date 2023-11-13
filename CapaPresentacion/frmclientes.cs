@@ -272,7 +272,57 @@ namespace CapaPresentacion
             }
         }
 
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            string columnaFiltro = ((OpcionCombo)cbobusqueda.SelectedItem).Valor.ToString();
 
+            if (dgvdata.Rows.Count > 0)
+            {
+                // Filtrar filas en una tabla o grilla según un criterio de búsqueda.
+                // Este código compara el contenido de la celda en la columna 'columnaFiltro'
+                // con el texto ingresado en el control 'txtbusqueda'.
 
+                // Parámetros:
+                // - row: La fila actual que se va a evaluar.
+                // - columnaFiltro: El nombre de la columna en la que se va a buscar.
+                // - txtbusqueda.Text: El texto de búsqueda ingresado por el Cliente.
+
+                foreach (DataGridViewRow row in dgvdata.Rows)
+                {
+                    // Convertir el valor de la celda en texto y eliminar espacios en blanco,
+                    // luego convertirlo a mayúsculas para hacer una comparación sin distinción
+                    // entre mayúsculas y minúsculas.
+                    string valorCelda = row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper();
+
+                    // Convertir el texto de búsqueda a mayúsculas para hacer una comparación sin distinción
+                    // entre mayúsculas y minúsculas.
+                    string textoBusqueda = txtbusqueda.Text.Trim().ToUpper();
+
+                    // Verificar si el valor de la celda contiene el texto de búsqueda.
+                    // Si es así, hacer visible la fila; de lo contrario, ocultarla.
+                    if (valorCelda.Contains(textoBusqueda))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            // Limpiar el campo de búsqueda al establecer su texto como una cadena vacía.
+            txtbusqueda.Text = "";
+
+            // Mostrar todas las filas en el DataGridView estableciendo la propiedad 'Visible' de cada fila como verdadera.
+            foreach (DataGridViewRow row in dgvdata.Rows)
+            {
+                row.Visible = true;
+            }
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
     }
 }

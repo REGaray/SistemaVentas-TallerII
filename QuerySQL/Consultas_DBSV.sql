@@ -36,6 +36,8 @@ INSERT INTO USUARIO (Documento, NombreCompleto, Correo, Clave, IdRol, Estado) VA
 -- EMPLEADO --
 	   ('42000111', 'Ruben E. Garay', 'ruben@gmail.com', '123', 3, 1)
 
+DELETE USUARIO
+DBCC CHECKIDENT('USUARIO', RESEED, 0);
 
 -- Brindar seguridad del rol Gerente --
 INSERT INTO PERMISO (IdRol, NombreMenu) VALUES
@@ -95,7 +97,21 @@ DBCC CHECKIDENT('PRODUCTO', RESEED, 0);
 
 
 -- Agregando clientes a la DB --
-SELECT IdCliente, Documento, NombreCompleto, Correo, Telefono, Estado FROM CLIENTE
+-- Insertar cliente 1
+INSERT INTO CLIENTE (Documento, NombreCompleto, Correo, Telefono, Estado) VALUES 
+('12345', 'Juan Pérez', 'juan.perez@example.com', '555-123-4567', 1),
+('67890', 'María Rodríguez', 'maria.rodriguez@example.com', '555-987-6543', 1),
+('54321', 'Carlos Gómez', 'carlos.gomez@example.com', '555-456-7890', 0),
+('98765', 'Laura Martínez', 'laura.martinez@example.com', '555-234-5678', 1),
+('13579', 'Luisa Sánchez', 'luisa.sanchez@example.com', '555-567-1234', 1),
+('24680', 'Roberto Fernández', 'roberto.fernandez@example.com', '555-876-5432', 0),
+('55555', 'Ana López', 'ana.lopez@example.com', '555-555-5555', 1),
+('99999', 'Pedro Ramírez', 'pedro.ramirez@example.com', '555-999-9999', 1),
+('11111', 'Elena Torres', 'elena.torres@example.com', '555-111-1111', 0),
+('77777', 'Miguel González', 'miguel.gonzalez@example.com', '555-777-7777', 1)
+
+DELETE CLIENTE
+DBCC CHECKIDENT('CLIENTE', RESEED, 0);
 
 
 

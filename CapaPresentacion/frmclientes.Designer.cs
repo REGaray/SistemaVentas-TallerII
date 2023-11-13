@@ -289,6 +289,7 @@
             btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnlimpiar.Size = new Size(38, 36);
             btnlimpiar.TabIndex = 30;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
             // groupBox1
             // 
@@ -340,7 +341,8 @@
             btneditar.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btneditar.Size = new Size(126, 36);
             btneditar.TabIndex = 1;
-            btneditar.Text = "Editar";
+            btneditar.Text = "Limpiar";
+            btneditar.Click += btneditar_Click;
             // 
             // btnguardar
             // 
@@ -399,6 +401,7 @@
             btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 31;
+            btnbuscar.Click += btnbuscar_Click;
             // 
             // txtdocumento
             // 
@@ -630,7 +633,6 @@
             Telefono.HeaderText = "Telefono";
             Telefono.Name = "Telefono";
             Telefono.ReadOnly = true;
-            Telefono.Visible = false;
             // 
             // EstadoValor
             // 
@@ -692,6 +694,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txttelefono;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
+        private Guna.UI2.WinForms.Guna2TextBox txtindice;
+        private Guna.UI2.WinForms.Guna2TextBox txtid;
         private DataGridViewButtonColumn btnseleccionar;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn Documento;
@@ -700,7 +704,5 @@
         private DataGridViewTextBoxColumn Telefono;
         private DataGridViewTextBoxColumn EstadoValor;
         private DataGridViewTextBoxColumn Estado;
-        private Guna.UI2.WinForms.Guna2TextBox txtindice;
-        private Guna.UI2.WinForms.Guna2TextBox txtid;
     }
 }
