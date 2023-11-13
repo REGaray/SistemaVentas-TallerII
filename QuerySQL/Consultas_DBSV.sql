@@ -94,6 +94,11 @@ DBCC CHECKIDENT('PRODUCTO', RESEED, 0);
 
 
 
+-- Agregando clientes a la DB --
+SELECT IdCliente, Documento, NombreCompleto, Correo, Telefono, Estado FROM CLIENTE
+
+
+
 -- Esta consulta selecciona los roles (IdRol) y nombres de menú (NombreMenu) de la tabla PERMISO,
 -- y los combina con los roles (IdRol) correspondientes de la tabla ROL mediante una operación INNER JOIN.
 -- La condición de unión se basa en la igualdad de IdRol en ROL y IdPermiso en PERMISO.

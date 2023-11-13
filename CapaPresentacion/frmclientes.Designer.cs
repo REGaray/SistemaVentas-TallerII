@@ -85,19 +85,22 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            dgvclientes = new Guna.UI2.WinForms.Guna2DataGridView();
+            dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
             btnseleccionar = new DataGridViewButtonColumn();
             id = new DataGridViewTextBoxColumn();
             Documento = new DataGridViewTextBoxColumn();
             NombreCompleto = new DataGridViewTextBoxColumn();
             Correo = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
+            Clave = new DataGridViewTextBoxColumn();
+            IdRol = new DataGridViewTextBoxColumn();
+            Rol = new DataGridViewTextBoxColumn();
+            EstadoValor = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
             guna2CustomGradientPanel1.SuspendLayout();
             groupBox1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvclientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -461,7 +464,7 @@
             // 
             // guna2CustomGradientPanel3
             // 
-            guna2CustomGradientPanel3.Controls.Add(dgvclientes);
+            guna2CustomGradientPanel3.Controls.Add(dgvdata);
             guna2CustomGradientPanel3.CustomizableEdges = customizableEdges29;
             guna2CustomGradientPanel3.Dock = DockStyle.Fill;
             guna2CustomGradientPanel3.Location = new Point(0, 259);
@@ -470,11 +473,11 @@
             guna2CustomGradientPanel3.Size = new Size(704, 318);
             guna2CustomGradientPanel3.TabIndex = 4;
             // 
-            // dgvclientes
+            // dgvdata
             // 
-            dgvclientes.AllowUserToAddRows = false;
+            dgvdata.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
-            dgvclientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(1, 13, 44);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -483,10 +486,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvclientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvclientes.ColumnHeadersHeight = 22;
-            dgvclientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvclientes.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, id, Documento, NombreCompleto, Correo, Column1, Estado });
+            dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvdata.ColumnHeadersHeight = 22;
+            dgvdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvdata.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, id, Documento, NombreCompleto, Correo, Clave, IdRol, Rol, EstadoValor, Estado });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -494,13 +497,13 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(192, 195, 202);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvclientes.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvclientes.Dock = DockStyle.Fill;
-            dgvclientes.GridColor = Color.FromArgb(231, 229, 255);
-            dgvclientes.Location = new Point(0, 0);
-            dgvclientes.MultiSelect = false;
-            dgvclientes.Name = "dgvclientes";
-            dgvclientes.ReadOnly = true;
+            dgvdata.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvdata.Dock = DockStyle.Fill;
+            dgvdata.GridColor = Color.FromArgb(231, 229, 255);
+            dgvdata.Location = new Point(0, 0);
+            dgvdata.MultiSelect = false;
+            dgvdata.Name = "dgvdata";
+            dgvdata.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -508,40 +511,38 @@
             dataGridViewCellStyle4.SelectionBackColor = Color.White;
             dataGridViewCellStyle4.SelectionForeColor = Color.Black;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvclientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvclientes.RowHeadersVisible = false;
-            dgvclientes.RowTemplate.Height = 28;
-            dgvclientes.Size = new Size(704, 318);
-            dgvclientes.TabIndex = 17;
-            dgvclientes.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dgvclientes.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvclientes.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvclientes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvclientes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvclientes.ThemeStyle.BackColor = Color.White;
-            dgvclientes.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dgvclientes.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dgvclientes.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvclientes.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvclientes.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvclientes.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvclientes.ThemeStyle.HeaderStyle.Height = 22;
-            dgvclientes.ThemeStyle.ReadOnly = true;
-            dgvclientes.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dgvclientes.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvclientes.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvclientes.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dgvclientes.ThemeStyle.RowsStyle.Height = 28;
-            dgvclientes.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dgvclientes.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvdata.RowHeadersVisible = false;
+            dgvdata.RowTemplate.Height = 28;
+            dgvdata.Size = new Size(704, 318);
+            dgvdata.TabIndex = 17;
+            dgvdata.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvdata.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvdata.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvdata.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvdata.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvdata.ThemeStyle.BackColor = Color.White;
+            dgvdata.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvdata.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvdata.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvdata.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvdata.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvdata.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvdata.ThemeStyle.HeaderStyle.Height = 22;
+            dgvdata.ThemeStyle.ReadOnly = true;
+            dgvdata.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvdata.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvdata.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvdata.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvdata.ThemeStyle.RowsStyle.Height = 28;
+            dgvdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // btnseleccionar
             // 
-            btnseleccionar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             btnseleccionar.HeaderText = "";
             btnseleccionar.Name = "btnseleccionar";
             btnseleccionar.ReadOnly = true;
-            btnseleccionar.Width = 30;
             // 
             // id
             // 
@@ -571,11 +572,33 @@
             Correo.Name = "Correo";
             Correo.ReadOnly = true;
             // 
-            // Column1
+            // Clave
             // 
-            Column1.HeaderText = "Telefono";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            Clave.HeaderText = "Clave";
+            Clave.Name = "Clave";
+            Clave.ReadOnly = true;
+            Clave.Visible = false;
+            // 
+            // IdRol
+            // 
+            IdRol.HeaderText = "IdRol";
+            IdRol.Name = "IdRol";
+            IdRol.ReadOnly = true;
+            IdRol.Visible = false;
+            // 
+            // Rol
+            // 
+            Rol.FillWeight = 96.9196548F;
+            Rol.HeaderText = "Rol";
+            Rol.Name = "Rol";
+            Rol.ReadOnly = true;
+            // 
+            // EstadoValor
+            // 
+            EstadoValor.HeaderText = "EstadoValor";
+            EstadoValor.Name = "EstadoValor";
+            EstadoValor.ReadOnly = true;
+            EstadoValor.Visible = false;
             // 
             // Estado
             // 
@@ -600,7 +623,7 @@
             groupBox1.ResumeLayout(false);
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvclientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvdata).EndInit();
             ResumeLayout(false);
         }
 
@@ -623,19 +646,22 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvclientes;
         private Guna.UI2.WinForms.Guna2TextBox txtcorreo;
         private Guna.UI2.WinForms.Guna2TextBox txtnombrecompleto;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
         private DataGridViewButtonColumn btnseleccionar;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn Documento;
         private DataGridViewTextBoxColumn NombreCompleto;
         private DataGridViewTextBoxColumn Correo;
-        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Clave;
+        private DataGridViewTextBoxColumn IdRol;
+        private DataGridViewTextBoxColumn Rol;
+        private DataGridViewTextBoxColumn EstadoValor;
         private DataGridViewTextBoxColumn Estado;
     }
 }

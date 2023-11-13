@@ -282,6 +282,8 @@ BEGIN
     END
 END
 
+GO
+
 /*------------------------------------------------- PREOCEDIMIENTOS PARA PRODUCTO -------------------------------------------------*/
 
 -- PROCEDIMIENTO PARA REGISTRAR UN PRODUCTO --
@@ -311,10 +313,10 @@ BEGIN
     SET @Mensaje = ''
 
     -- Verificamos si ya existe un producto con el mismo código
-    IF NOT EXISTS (SELECT * FROM producto WHERE Codigo = @Codigo)
+    IF NOT EXISTS (SELECT * FROM PRODUCTO WHERE Codigo = @Codigo)
     BEGIN
         -- Si no existe, insertamos un nuevo registro en la tabla PRODUCTO
-        INSERT INTO producto(Codigo, Nombre, Descripcion, IdCategoria, Estado)
+        INSERT INTO PRODUCTO(Codigo, Nombre, Descripcion, IdCategoria, Estado)
         VALUES (@Codigo, @Nombre, @Descripcion, @IdCategoria, @Estado)
         SET @Resultado = SCOPE_IDENTITY()
     END
@@ -423,5 +425,117 @@ BEGIN
         SET @Respuesta = 1
     END
 END
+
+GO
+
+/*------------------------------------------------- PREOCEDIMIENTOS PARA CLIENTE -------------------------------------------------*/
+
+-- PROCEDIMIENTO PARA REGISTRAR UN CLIENTE --
+-- ========================================
+-- PROCEDIMIENTO ALMACENADO: sp_RegistrarCliente
+-- ========================================
+-- Descripción: Registra un nuevo cliente en la base de datos, si el número de documento no existe.
+-- Parámetros de entrada:
+-- @Documento (varchar(50)): El número de documento del cliente.
+-- @NombreCompleto (varchar(50)): El nombre completo del cliente.
+-- @Correo (varchar(50)): La dirección de correo electrónico del cliente.
+-- @Telefono (varchar(50)): El número de teléfono del cliente.
+-- @Estado (bit): El estado del cliente (activo/inactivo).
+-- Parámetros de salida:
+-- @Resultado (int output): El resultado de la operación (0 si no se registró, ID del cliente si se registró).
+-- @Mensaje (varchar(500) output): Un mensaje de texto que describe el resultado de la operación.
+-- ========================================
+CREATE PROC sp_RegistrarCliente(
+    @Documento varchar(50),
+    @NombreCompleto varchar(50),
+    @Correo varchar(50),
+    @Telefono varchar(50),
+    @Estado bit,
+    @Resultado int output,
+    @Mensaje varchar(500) output
+)
+AS
+BEGIN
+    -- Inicializa el resultado como 0.
+    SET @Resultado = 0
+
+    -- Declara una variable para almacenar el ID de la persona.
+    DECLARE @IDPERSONA INT
+
+    -- Verifica si ya existe un cliente con el mismo número de documento.
+    IF NOT EXISTS (SELECT * FROM CLIENTE WHERE Documento = @Documento)
+    BEGIN
+        -- Inserta los datos del nuevo cliente en la tabla CLIENTE.
+        INSERT INTO CLIENTE(Documento, NombreCompleto, Correo, Telefono, Estado) 
+        VALUES (@Documento, @NombreCompleto, @Correo, @Telefono, @Estado)
+
+        -- Obtiene el ID del cliente recién registrado.
+        SET @Resultado = SCOPE_IDENTITY()
+    END
+    ELSE
+    BEGIN
+        -- Establece un mensaje de error si el número de documento ya existe.
+        SET @Mensaje = 'El número de documento ya existe'
+    END
+END
+
+
+go
+
+-- PROCEDIMIENTO PARA MODIFICAR UN CLIENTE --
+-- ========================================
+-- PROCEDIMIENTO ALMACENADO: sp_ModificarCliente
+-- ========================================
+-- Descripción: Modifica los datos de un cliente en la base de datos si el número de documento no coincide con otro cliente existente.
+-- Parámetros de entrada:
+-- @IdCliente (int): El ID del cliente que se va a modificar.
+-- @Documento (varchar(50)): El nuevo número de documento del cliente.
+-- @NombreCompleto (varchar(50)): El nuevo nombre completo del cliente.
+-- @Correo (varchar(50)): La nueva dirección de correo electrónico del cliente.
+-- @Telefono (varchar(50)): El nuevo número de teléfono del cliente.
+-- @Estado (bit): El nuevo estado del cliente (activo/inactivo).
+-- Parámetros de salida:
+-- @Resultado (bit output): El resultado de la operación (1 si se modificó, 0 si no se modificó).
+-- @Mensaje (varchar(500) output): Un mensaje de texto que describe el resultado de la operación.
+-- ========================================
+CREATE PROC sp_ModificarCliente(
+    @IdCliente int,
+    @Documento varchar(50),
+    @NombreCompleto varchar(50),
+    @Correo varchar(50),
+    @Telefono varchar(50),
+    @Estado bit,
+    @Resultado bit output,
+    @Mensaje varchar(500) output
+)
+AS
+BEGIN
+    -- Inicializa el resultado como 1.
+    SET @Resultado = 1
+
+    -- Declara una variable para almacenar el ID de la persona.
+    DECLARE @IDPERSONA INT
+
+    -- Verifica si no existe otro cliente con el mismo número de documento (excluyendo el cliente actual).
+    IF NOT EXISTS (SELECT * FROM CLIENTE WHERE Documento = @Documento AND IdCliente != @IdCliente)
+    BEGIN
+        -- Realiza la modificación de los datos del cliente en la tabla CLIENTE.
+        UPDATE CLIENTE
+        SET
+            Documento = @Documento,
+            NombreCompleto = @NombreCompleto,
+            Correo = @Correo,
+            Telefono = @Telefono,
+            Estado = @Estado
+        WHERE IdCliente = @IdCliente
+    END
+    ELSE
+    BEGIN
+        -- Establece un resultado de 0 y un mensaje de error si el número de documento ya existe en otro cliente.
+        SET @Resultado = 0
+        SET @Mensaje = 'El número de documento ya existe en otro cliente'
+    END
+END
+
 
 GO
