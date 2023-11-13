@@ -36,9 +36,6 @@ namespace CapaPresentacion
             // Selecciona la primera opción en el ComboBox "cboestado" (en este caso, "Activo").
             cboestado.SelectedIndex = 0;
 
-            // Obtiene una lista de roles y la asigna al ComboBox "cborol".
-            List<Rol> listaRol = new CN_Rol().Listar();
-
 
             // Llena el ComboBox "cbobusqueda" con las opciones de búsqueda basadas en las columnas visibles del DataGridView.
             foreach (DataGridViewColumn columna in dgvdata.Columns)
