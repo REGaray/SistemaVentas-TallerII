@@ -161,6 +161,7 @@
             btnguardarcambios.Size = new Size(126, 36);
             btnguardarcambios.TabIndex = 0;
             btnguardarcambios.Text = "Guardar cambios";
+            btnguardarcambios.Click += btnguardarcambios_Click;
             // 
             // txtdireccion
             // 

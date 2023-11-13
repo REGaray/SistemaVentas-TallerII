@@ -136,7 +136,7 @@ DBCC CHECKIDENT('PROVEEDOR', RESEED, 0);
 INSERT INTO NEGOCIO(idNegocio, Nombre, RUC, Direccion) VALUES
 (1, 'JR Software', '101010', '9 de Julio 2102')
 
-SELECT * FROM NEGOCIO
+
 
 
 

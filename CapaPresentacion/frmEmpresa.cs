@@ -87,5 +87,30 @@ namespace CapaPresentacion
                     MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnguardarcambios_Click(object sender, EventArgs e)
+        {
+            // Se inicializa la variable 'mensaje' para almacenar mensajes relacionados con la operación de guardado.
+            string mensaje = string.Empty;
+
+            // Se crea un objeto 'Negocio' con los datos ingresados en los controles de la interfaz de usuario.
+            Negocio obj = new Negocio()
+            {
+                Nombre = txtnombre.Text,
+                RUC = txtruc.Text,
+                Direccion = txtdireccion.Text
+            };
+
+            // Se llama al método 'GuardarDatos' de la clase 'CN_Negocio' para intentar guardar los datos del negocio.
+            // El resultado de la operación y cualquier mensaje de error se almacenan en 'respuesta' y 'mensaje' respectivamente.
+            bool respuesta = new CN_Negocio().GuardarDatos(obj, out mensaje);
+
+            // Si la operación de guardado fue exitosa, se muestra un mensaje de confirmación.
+            if (respuesta)
+                MessageBox.Show("Los cambios fueron guardados", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                // Si no se pudieron guardar los cambios, se muestra un mensaje de error.
+                MessageBox.Show("No se pudo guardar los cambios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
     }
 }
