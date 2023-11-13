@@ -152,7 +152,7 @@ namespace CapaPresentacion
 
         private void btnCompras1_Click(object sender, EventArgs e)
         {
-            Form frmregistrarcompra = new frmRegistrarCompra();
+            Form frmregistrarcompra = new frmRegistrarCompra(usuarioActual);
             AbrirFormulario(frmregistrarcompra);
 
             hideSubMenu();
