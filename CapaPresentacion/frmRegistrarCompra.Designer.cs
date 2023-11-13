@@ -535,6 +535,7 @@
             btnbuscarproducto.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnbuscarproducto.Size = new Size(38, 36);
             btnbuscarproducto.TabIndex = 28;
+            btnbuscarproducto.Click += btnbuscarproducto_Click;
             // 
             // guna2HtmlLabel6
             // 

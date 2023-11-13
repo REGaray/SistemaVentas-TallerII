@@ -80,13 +80,29 @@ namespace CapaPresentacion
             }
         }
 
+        private void btnbuscarproducto_Click(object sender, EventArgs e)
+        {
+            // Se crea y muestra un formulario modal 'mdProducto' para buscar productos.
+            using (var modal = new mdProducto())
+            {
+                // Se muestra el formulario modal y se espera a que se cierre.
+                var result = modal.ShowDialog();
 
-
-
-
-
-
-
-
+                // Si el resultado del formulario modal es "OK" (el usuario seleccionó un producto).
+                if (result == DialogResult.OK)
+                {
+                    // Se actualizan los campos de texto con los datos del producto seleccionado.
+                    txtidproducto.Text = modal._Producto.IdProducto.ToString();
+                    txtcodproducto.Text = modal._Producto.Codigo;
+                    txtproducto.Text = modal._Producto.Nombre;
+                    txtpreciocompra.Select();
+                }
+                else
+                {
+                    // Si el resultado no es "OK" (el usuario canceló la selección), se selecciona el campo de texto 'txtcodproducto'.
+                    txtcodproducto.Select();
+                }
+            }
+        }
     }
 }
