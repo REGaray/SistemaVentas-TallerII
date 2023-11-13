@@ -539,3 +539,160 @@ END
 
 
 GO
+
+/*------------------------------------------------- PREOCEDIMIENTOS PARA PROVEEDOR -------------------------------------------------*/
+
+-- PROCEDIMIENTO PARA REGISTRAR UN PROVEEDOR --
+-- ========================================
+-- PROCEDIMIENTO ALMACENADO: sp_RegistrarProveedor
+-- ========================================
+-- Descripción: Registra un nuevo proveedor en la base de datos, si el número de documento no existe.
+-- Parámetros de entrada:
+-- @Documento (varchar(50)): El número de documento del proveedor.
+-- @RazonSocial (varchar(50)): La razón social o nombre del proveedor.
+-- @Correo (varchar(50)): La dirección de correo electrónico del proveedor.
+-- @Telefono (varchar(50)): El número de teléfono del proveedor.
+-- @Estado (bit): El estado del proveedor (activo/inactivo).
+-- Parámetros de salida:
+-- @Resultado (int output): El resultado de la operación (0 si no se registró, ID del proveedor si se registró).
+-- @Mensaje (varchar(500) output): Un mensaje de texto que describe el resultado de la operación.
+-- ========================================
+CREATE PROC sp_RegistrarProveedor(
+    @Documento varchar(50),
+    @RazonSocial varchar(50),
+    @Correo varchar(50),
+    @Telefono varchar(50),
+    @Estado bit,
+    @Resultado int output,
+    @Mensaje varchar(500) output
+)
+AS
+BEGIN
+    -- Inicializa el resultado como 0.
+    SET @Resultado = 0
+
+    -- Declara una variable para almacenar el ID de la persona.
+    DECLARE @IDPERSONA INT
+
+    -- Verifica si ya existe un proveedor con el mismo número de documento.
+    IF NOT EXISTS (SELECT * FROM PROVEEDOR WHERE Documento = @Documento)
+    BEGIN
+        -- Inserta los datos del nuevo proveedor en la tabla PROVEEDOR.
+        INSERT INTO PROVEEDOR(Documento, RazonSocial, Correo, Telefono, Estado) 
+        VALUES (@Documento, @RazonSocial, @Correo, @Telefono, @Estado)
+
+        -- Obtiene el ID del proveedor recién registrado.
+        SET @Resultado = SCOPE_IDENTITY()
+    END
+    ELSE
+    BEGIN
+        -- Establece un mensaje de error si el número de documento ya existe.
+        SET @Mensaje = 'El número de documento ya existe en otro proveedor'
+    END
+END
+
+
+GO
+
+
+-- PROCEDIMIENTO PARA MODIFICAR UN PROVEEDOR --
+-- ========================================
+-- PROCEDIMIENTO ALMACENADO: sp_ModificarProveedor
+-- ========================================
+-- Descripción: Modifica los datos de un proveedor en la base de datos si el número de documento no coincide con otro proveedor existente.
+-- Parámetros de entrada:
+-- @IdProveedor (int): El ID del proveedor que se va a modificar.
+-- @Documento (varchar(50)): El nuevo número de documento del proveedor.
+-- @RazonSocial (varchar(50)): La nueva razón social o nombre del proveedor.
+-- @Correo (varchar(50)): La nueva dirección de correo electrónico del proveedor.
+-- @Telefono (varchar(50)): El nuevo número de teléfono del proveedor.
+-- @Estado (bit): El nuevo estado del proveedor (activo/inactivo).
+-- Parámetros de salida:
+-- @Resultado (bit output): El resultado de la operación (1 si se modificó, 0 si no se modificó).
+-- @Mensaje (varchar(500) output): Un mensaje de texto que describe el resultado de la operación.
+-- ========================================
+CREATE PROC sp_ModificarProveedor(
+    @IdProveedor int,
+    @Documento varchar(50),
+    @RazonSocial varchar(50),
+    @Correo varchar(50),
+    @Telefono varchar(50),
+    @Estado bit,
+    @Resultado bit output,
+    @Mensaje varchar(500) output
+)
+AS
+BEGIN
+    -- Inicializa el resultado como 1.
+    SET @Resultado = 1
+
+    -- Declara una variable para almacenar el ID de la persona.
+    DECLARE @IDPERSONA INT
+
+    -- Verifica si no existe otro proveedor con el mismo número de documento (excluyendo el proveedor actual).
+    IF NOT EXISTS (SELECT * FROM PROVEEDOR WHERE Documento = @Documento AND IdProveedor != @IdProveedor)
+    BEGIN
+        -- Realiza la modificación de los datos del proveedor en la tabla PROVEEDOR.
+        UPDATE PROVEEDOR
+        SET
+            Documento = @Documento,
+            RazonSocial = @RazonSocial,
+            Correo = @Correo,
+            Telefono = @Telefono,
+            Estado = @Estado
+        WHERE IdProveedor = @IdProveedor
+    END
+    ELSE
+    BEGIN
+        -- Establece un resultado de 0 y un mensaje de error si el número de documento ya existe en otro proveedor.
+        SET @Resultado = 0
+        SET @Mensaje = 'El número de documento ya existe en otro proveedor'
+    END
+END
+
+
+
+go
+
+-- PROCEDIMIENTO PARA ELIMINAR UN PROVEEDOR --
+-- ========================================
+-- PROCEDIMIENTO ALMACENADO: sp_EliminarProveedor
+-- ========================================
+-- Descripción: Elimina un proveedor de la base de datos si no está relacionado a ninguna compra.
+-- Parámetros de entrada:
+-- @IdProveedor (int): El ID del proveedor que se va a eliminar.
+-- Parámetros de salida:
+-- @Resultado (bit output): El resultado de la operación (1 si se eliminó, 0 si no se eliminó).
+-- @Mensaje (varchar(500) output): Un mensaje de texto que describe el resultado de la operación.
+-- ========================================
+CREATE PROC sp_EliminarProveedor(
+    @IdProveedor int,
+    @Resultado bit output,
+    @Mensaje varchar(500) output
+)
+AS
+BEGIN
+    -- Inicializa el resultado como 1.
+    SET @Resultado = 1
+
+    -- Verifica si el proveedor no está relacionado a ninguna compra.
+    IF NOT EXISTS (
+        SELECT *
+        FROM PROVEEDOR p
+        INNER JOIN COMPRA c ON p.IdProveedor = c.IdProveedor
+        WHERE p.IdProveedor = @IdProveedor
+    )
+    BEGIN
+        -- Elimina el proveedor de la tabla PROVEEDOR.
+        DELETE TOP(1) FROM PROVEEDOR WHERE IdProveedor = @IdProveedor
+    END
+    ELSE
+    BEGIN
+        -- Establece un resultado de 0 y un mensaje de error si el proveedor está relacionado a una compra.
+        SET @Resultado = 0
+        SET @Mensaje = 'El proveedor está relacionado a una compra y no puede ser eliminado'
+    END
+END
+
+
+go
