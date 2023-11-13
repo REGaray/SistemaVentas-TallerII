@@ -307,6 +307,7 @@
             btneliminar.Size = new Size(126, 36);
             btneliminar.TabIndex = 2;
             btneliminar.Text = "Eliminar";
+            btneliminar.Click += btneliminar_Click;
             // 
             // btneditar
             // 
@@ -326,6 +327,7 @@
             btneditar.Size = new Size(126, 36);
             btneditar.TabIndex = 1;
             btneditar.Text = "Limpiar";
+            btneditar.Click += btneditar_Click;
             // 
             // btnguardar
             // 
@@ -436,6 +438,7 @@
             btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 37;
+            btnbuscar.Click += btnbuscar_Click;
             // 
             // btnlimpiar
             // 
@@ -456,6 +459,7 @@
             btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnlimpiar.Size = new Size(38, 36);
             btnlimpiar.TabIndex = 36;
+            btnlimpiar.Click += btnlimpiar_Click;
             // 
             // guna2HtmlLabel7
             // 

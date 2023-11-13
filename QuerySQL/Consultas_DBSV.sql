@@ -97,7 +97,6 @@ DBCC CHECKIDENT('PRODUCTO', RESEED, 0);
 
 
 -- Agregando clientes a la DB --
--- Insertar cliente 1
 INSERT INTO CLIENTE (Documento, NombreCompleto, Correo, Telefono, Estado) VALUES 
 ('12345', 'Juan Pérez', 'juan.perez@example.com', '555-123-4567', 1),
 ('67890', 'María Rodríguez', 'maria.rodriguez@example.com', '555-987-6543', 1),
@@ -113,6 +112,23 @@ INSERT INTO CLIENTE (Documento, NombreCompleto, Correo, Telefono, Estado) VALUES
 DELETE CLIENTE
 DBCC CHECKIDENT('CLIENTE', RESEED, 0);
 
+
+-- Agregando proveedores a la DB --
+-- Insertar proveedor 1
+INSERT INTO PROVEEDOR (Documento, RazonSocial, Correo, Telefono, Estado) VALUES
+('42203149', 'Proveedor A', 'proveedora@example.com', '555-123-4567', 1),
+('42203148', 'Proveedor B', 'proveedorb@example.com', '555-987-6543', 1),
+('42203147', 'Proveedor C', 'proveedorc@example.com', '555-456-7890', 0),
+('42203146', 'Proveedor D', 'proveedord@example.com', '555-234-5678', 1),
+('42203145', 'Proveedor E', 'proveedore@example.com', '555-567-1234', 1),
+('42203144', 'Proveedor F', 'proveedorf@example.com', '555-876-5432', 0),
+('42203143', 'Proveedor G', 'proveedorg@example.com', '555-555-5555', 1),
+('42203142', 'Proveedor H', 'proveedorh@example.com', '555-999-9999', 1),
+('42203141', 'Proveedor I', 'proveedori@example.com', '555-111-1111', 0),
+('42203140', 'Proveedor J', 'proveedorj@example.com', '555-777-7777', 1)
+
+DELETE PROVEEDOR
+DBCC CHECKIDENT('PROVEEDOR', RESEED, 0);
 
 
 -- Esta consulta selecciona los roles (IdRol) y nombres de menú (NombreMenu) de la tabla PERMISO,
