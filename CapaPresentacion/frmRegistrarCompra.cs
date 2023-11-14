@@ -11,6 +11,8 @@ using CapaEntidad;
 using CapaNegocio;
 using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Color = System.Drawing.Color;
 
 namespace CapaPresentacion
 {
@@ -229,7 +231,100 @@ namespace CapaPresentacion
             txttotalpagar.Text = total.ToString("0.00");
         }
 
+        private void dgvdata_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
 
+            if (e.ColumnIndex == 6)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
+                // Obtiene las dimensiones y coordenadas para dibujar el botón de eliminación en la celda.
+                var w = Properties.Resources.delete_16.Width;
+                var h = Properties.Resources.delete_16.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                // Dibuja la imagen del botón de eliminación en la celda.
+                e.Graphics.DrawImage(Properties.Resources.delete_16, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvdata.Columns[e.ColumnIndex].Name == "btneliminar")
+            {
+                int indice = e.RowIndex;
+
+                // Verifica si se hizo clic en el botón de eliminación en una fila válida.
+                if (indice >= 0)
+                {
+                    // Elimina la fila seleccionada en el control 'dgvdata'.
+                    dgvdata.Rows.RemoveAt(indice);
+                    // Llama a la función 'calcularTotal' para actualizar el total después de eliminar una fila.
+                    calcularTotal();
+                }
+            }
+        }
+
+        private void txtpreciocompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un dígito.
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false; // Permite el dígito.
+            }
+            else
+            {
+                // Verifica si el campo de texto está vacío y se presiona el punto decimal.
+                if (txtpreciocompra.Text.Trim().Length == 0 && e.KeyChar.ToString() == ".")
+                {
+                    e.Handled = true; // No permite el punto decimal al principio.
+                }
+                else
+                {
+                    // Verifica si la tecla presionada es un carácter de control (por ejemplo, teclas de flecha) o un punto decimal.
+                    if (Char.IsControl(e.KeyChar) || e.KeyChar.ToString() == ".")
+                    {
+                        e.Handled = false; // Permite carácteres de control y el punto decimal.
+                    }
+                    else
+                    {
+                        e.Handled = true; // No permite otros caracteres.
+                    }
+                }
+            }
+        }
+
+        private void txtprecioventa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un dígito.
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false; // Permite el dígito.
+            }
+            else
+            {
+                // Verifica si el campo de texto está vacío y se presiona el punto decimal.
+                if (txtprecioventa.Text.Trim().Length == 0 && e.KeyChar.ToString() == ".")
+                {
+                    e.Handled = true; // No permite el punto decimal al principio.
+                }
+                else
+                {
+                    // Verifica si la tecla presionada es un carácter de control (por ejemplo, teclas de flecha) o un punto decimal.
+                    if (Char.IsControl(e.KeyChar) || e.KeyChar.ToString() == ".")
+                    {
+                        e.Handled = false; // Permite carácteres de control y el punto decimal.
+                    }
+                    else
+                    {
+                        e.Handled = true; // No permite otros caracteres.
+                    }
+                }
+            }
+        }
     }
 }
