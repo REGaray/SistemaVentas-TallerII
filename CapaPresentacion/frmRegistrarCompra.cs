@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
+using CapaNegocio;
 using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 
@@ -104,5 +105,131 @@ namespace CapaPresentacion
                 }
             }
         }
+
+        private void txtcodproducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Verifica si la tecla presionada es "Enter" (Return).
+            if (e.KeyData == Keys.Enter)
+            {
+
+                // Busca un producto en la lista de productos que tenga el código ingresado y esté activo.
+                Producto oProducto = new CN_Producto().Listar().Where(p => p.Codigo == txtcodproducto.Text && p.Estado == true).FirstOrDefault();
+
+                // Si se encontró un producto con el código ingresado.
+                if (oProducto != null)
+                {
+                    // Cambia el color de fondo del campo de texto 'txtcodproducto' a verde (Honeydew).
+                    txtcodproducto.BackColor = Color.Honeydew;
+                    // Actualiza los campos 'txtidproducto' y 'txtproducto' con los datos del producto encontrado.
+                    txtidproducto.Text = oProducto.IdProducto.ToString();
+                    txtproducto.Text = oProducto.Nombre;
+                    // Establece el foco en el campo de texto 'txtpreciocompra' para continuar la entrada de datos.
+                    txtpreciocompra.Select();
+                }
+                else
+                {
+                    // Si no se encontró un producto, cambia el color de fondo del campo de texto 'txtcodproducto' a rojo (MistyRose).
+                    txtcodproducto.BackColor = Color.MistyRose;
+                    // Establece 'txtidproducto' en "0" y 'txtproducto' en una cadena vacía.
+                    txtidproducto.Text = "0";
+                    txtproducto.Text = "";
+                }
+            }
+        }
+
+        private void btnagregarproducto_Click(object sender, EventArgs e)
+        {
+            // Variables para almacenar el precio de compra, precio de venta y para verificar si el producto ya existe.
+            decimal preciocompra = 0;
+            decimal precioventa = 0;
+            bool producto_existe = false;
+
+            // Se verifica si el ID del producto es 0, lo que significa que no se ha seleccionado un producto.
+            if (int.Parse(txtidproducto.Text) == 0)
+            {
+                MessageBox.Show("Debe seleccionar un producto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            // Se verifica si el valor en 'txtpreciocompra' se puede convertir a un valor decimal.
+            if (!decimal.TryParse(txtpreciocompra.Text, out preciocompra))
+            {
+                MessageBox.Show("Precio Compra - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtpreciocompra.Select();
+                return;
+            }
+
+            // Se verifica si el valor en 'txtprecioventa' se puede convertir a un valor decimal.
+            if (!decimal.TryParse(txtprecioventa.Text, out precioventa))
+            {
+                MessageBox.Show("Precio Venta - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtprecioventa.Select();
+                return;
+            }
+
+            // Se verifica si el producto ya existe en el control 'dgvdata'.
+            foreach (DataGridViewRow fila in dgvdata.Rows)
+            {
+                if (fila.Cells["IdProducto"].Value.ToString() == txtidproducto.Text)
+                {
+                    producto_existe = true;
+                    break;
+                }
+            }
+
+            // Si el producto no existe en el control 'dgvdata'.
+            if (!producto_existe)
+            {
+
+                // Se agrega una nueva fila al control 'dgvdata' con los datos del producto y los cálculos necesarios.
+                dgvdata.Rows.Add(new object[] {
+                txtidproducto.Text,
+                txtproducto.Text,
+                preciocompra.ToString("0.00"),
+                precioventa.ToString("0.00"),
+                txtcantidad.Value.ToString(),
+                (txtcantidad.Value * preciocompra).ToString("0.00")
+        });
+
+                // Se llama a la función 'calcularTotal' para actualizar el total.
+                calcularTotal();
+
+                // Se llama a la función 'limpiarProducto' para limpiar los campos relacionados con el producto.
+                limpiarProducto();
+
+                // Se establece el foco en el campo de texto 'txtcodproducto' para continuar la entrada de datos.
+                txtcodproducto.Select();
+            }
+        }
+
+
+        private void limpiarProducto()
+        {
+            // Restablece los campos relacionados con el producto a sus valores iniciales o vacíos.
+            txtidproducto.Text = "0";
+            txtcodproducto.Text = "";
+            txtcodproducto.BackColor = Color.White;
+            txtproducto.Text = "";
+            txtpreciocompra.Text = "";
+            txtprecioventa.Text = "";
+            txtcantidad.Value = 1;
+        }
+
+
+        private void calcularTotal()
+        {
+            decimal total = 0;
+            if (dgvdata.Rows.Count > 0)
+            {
+                // Calcula el total sumando los subtotales de todas las filas en el control 'dgvdata'.
+                foreach (DataGridViewRow row in dgvdata.Rows)
+                    total += Convert.ToDecimal(row.Cells["SubTotal"].Value.ToString());
+            }
+            // Actualiza el campo 'txttotalpagar' con el valor total calculado y lo formatea como moneda.
+            txttotalpagar.Text = total.ToString("0.00");
+        }
+
+
+
     }
 }

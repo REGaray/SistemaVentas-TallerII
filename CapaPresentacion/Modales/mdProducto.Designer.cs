@@ -49,7 +49,6 @@
             btnbuscar = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
-            panel1 = new Panel();
             id = new DataGridViewTextBoxColumn();
             Codigo = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
@@ -57,6 +56,7 @@
             Stock = new DataGridViewTextBoxColumn();
             PrecioCompra = new DataGridViewTextBoxColumn();
             PrecioVenta = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             panel1.SuspendLayout();
@@ -231,20 +231,6 @@
             dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvdata.CellDoubleClick += dgvdata_CellDoubleClick;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(txtbusqueda);
-            panel1.Controls.Add(cbobusqueda);
-            panel1.Controls.Add(guna2HtmlLabel7);
-            panel1.Controls.Add(btnlimpiar);
-            panel1.Controls.Add(btnbuscar);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(800, 86);
-            panel1.TabIndex = 50;
-            // 
             // id
             // 
             id.HeaderText = "Id";
@@ -298,6 +284,20 @@
             PrecioVenta.ReadOnly = true;
             PrecioVenta.Visible = false;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(txtbusqueda);
+            panel1.Controls.Add(cbobusqueda);
+            panel1.Controls.Add(guna2HtmlLabel7);
+            panel1.Controls.Add(btnlimpiar);
+            panel1.Controls.Add(btnbuscar);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 86);
+            panel1.TabIndex = 50;
+            // 
             // mdProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -306,6 +306,7 @@
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(panel1);
             Name = "mdProducto";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "mdProducto";
             Load += mdProducto_Load;
             guna2CustomGradientPanel1.ResumeLayout(false);
