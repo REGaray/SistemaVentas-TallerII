@@ -137,7 +137,12 @@ INSERT INTO NEGOCIO(idNegocio, Nombre, RUC, Direccion) VALUES
 (1, 'JR Software', '101010', '9 de Julio 2102')
 
 
+-- COMPRAS --
+SELECT COUNT(*) + 1 FROM COMPRA
+SELECT * FROM COMPRA WHERE NumeroDocumento = '00001'
 
+-- DETALLE COMPRA --
+SELECT * FROM DETALLE_COMPRA WHERE IdCompra = 1
 
 
 

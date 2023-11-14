@@ -808,6 +808,7 @@
             btnregistrar.Size = new Size(126, 36);
             btnregistrar.TabIndex = 26;
             btnregistrar.Text = "Registrar";
+            btnregistrar.Click += btnregistrar_Click;
             // 
             // guna2HtmlLabel13
             // 
