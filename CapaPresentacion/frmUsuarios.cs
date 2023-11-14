@@ -15,10 +15,13 @@ using CapaNegocio;
 
 namespace CapaPresentacion
 {
+
     public partial class frmUsuarios : Form
     {
-        public frmUsuarios()
+        private static Usuario usuarioActual; // Declara una variable estática para almacenar el usuario actual.
+        public frmUsuarios(Usuario objusuario)
         {
+            usuarioActual = objusuario;
             InitializeComponent();
         }
 
@@ -41,10 +44,22 @@ namespace CapaPresentacion
             // Obtiene una lista de roles y la asigna al ComboBox "cborol".
             List<Rol> listaRol = new CN_Rol().Listar();
 
-            foreach (Rol item in listaRol)
+            // Filtra las opciones de roles según el ID del usuario actual.
+            if (usuarioActual.oRol.IdRol == 1)
             {
-                // Agrega cada rol como una opción en el ComboBox "cborol".
-                cborol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
+                // Si el ID del usuario es 1, agrega todas las opciones al ComboBox "cborol".
+                foreach (Rol item in listaRol)
+                {
+                    cborol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
+                }
+            }
+            else if (usuarioActual.oRol.IdRol == 2)
+            {
+                // Si el ID del usuario es 2, agrega las opciones desde el índice 1 en adelante.
+                for (int i = 1; i < listaRol.Count; i++)
+                {
+                    cborol.Items.Add(new OpcionCombo() { Valor = listaRol[i].IdRol, Texto = listaRol[i].Descripcion });
+                }
             }
 
             // Establece el atributo "Texto" como el valor a mostrar en el ComboBox "cborol".
@@ -55,24 +70,6 @@ namespace CapaPresentacion
 
             // Selecciona la primera opción en el ComboBox "cborol".
             cborol.SelectedIndex = 0;
-
-            // Llena el ComboBox "cbobusqueda" con las opciones de búsqueda basadas en las columnas visibles del DataGridView.
-            foreach (DataGridViewColumn columna in dgvdata.Columns)
-            {
-                if (columna.Visible == true && columna.Name != "btnseleccionar")
-                {
-                    cbobusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
-                }
-            }
-
-            // Establece el atributo "Texto" como el valor a mostrar en el ComboBox "cbobusqueda".
-            cbobusqueda.DisplayMember = "Texto";
-
-            // Establece el atributo "Valor" como el valor a obtener del ComboBox "cbobusqueda".
-            cbobusqueda.ValueMember = "Valor";
-
-            // Selecciona la primera opción en el ComboBox "cbobusqueda".
-            cbobusqueda.SelectedIndex = 0;
 
             // Obtiene una lista de usuarios y los muestra en el DataGridView.
             List<Usuario> listaUsuario = new CN_Usuario().Listar();

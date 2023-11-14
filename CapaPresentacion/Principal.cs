@@ -212,7 +212,7 @@ namespace CapaPresentacion
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             // Abre el formulario frmUsuarios en el panel "contenedor".
-            Form frmUsuarios = new frmUsuarios();
+            Form frmUsuarios = new frmUsuarios(usuarioActual);
             AbrirFormulario(frmUsuarios);
         }
 

@@ -10,5 +10,6 @@ namespace CapaPresentacion.Utilidades
     {
         public string Texto { get; set; }
         public object Valor { get; set; }
+        public bool Visible { get; internal set; }
     }
 }
