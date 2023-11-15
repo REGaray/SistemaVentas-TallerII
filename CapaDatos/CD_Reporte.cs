@@ -9,7 +9,7 @@ using CapaEntidad;
 
 namespace CapaDatos
 {
-    internal class CD_Reporte
+    public class CD_Reporte
     {
         public List<ReporteCompra> Compra(string fechainicio, string fechafin, int idproveedor)
         {

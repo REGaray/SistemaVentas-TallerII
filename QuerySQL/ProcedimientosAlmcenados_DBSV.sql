@@ -953,3 +953,12 @@ begin
 	end catch
 
 end
+
+go
+
+SELECT * FROM COMPRA c
+inner join USUARIO u on u.IdUsuario = c.IdUsuario
+inner join PROVEEDOR pr on pr.IdProveedor = c.IdProveedor
+inner join DETALLE_COMPRA dc on dc.IdCompra = c.IdCompra
+inner join PRODUCTO p on p.IdProducto = dc.IdProducto
+inner join CATEGORIA ca on ca.IdCategoria = p.IdCategoria

@@ -253,8 +253,8 @@ namespace CapaPresentacion
 
         private void btnReportes2_Click(object sender, EventArgs e)
         {
-            Form frmReporteVenta = new frmReporteVentas();
-            AbrirFormulario(frmReporteVenta);
+            Form frmReporteCompra = new frmReporteCompra();
+            AbrirFormulario(frmReporteCompra);
 
             hideSubMenu();
         }
