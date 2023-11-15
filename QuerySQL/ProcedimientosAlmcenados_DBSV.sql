@@ -803,4 +803,24 @@ GO
 
 
 
-/*------------------------------------------------- PREOCEDIMIENTOS PARA COMPRAS -------------------------------------------------*/
+/*------------------------------------------------- PREOCEDIMIENTOS PARA VENTAS -------------------------------------------------*/
+
+-- Descripción: Este script crea un tipo de tabla llamado EDetalle_Venta en la base de datos.
+-- Este tipo de tabla se utiliza para almacenar detalles de venta, como el ID del producto, 
+-- el precio de venta, la cantidad vendida y el monto subtotal.
+--
+
+-- Crear el tipo de tabla EDetalle_Venta
+CREATE TYPE [dbo].[EDetalle_Venta] AS TABLE(
+	-- Descripción: Representa el ID del producto asociado al detalle de venta.
+	[IdProducto] int NULL,
+
+	-- Descripción: Representa el precio de venta del producto asociado al detalle de venta.
+	[PrecioVenta] decimal(18,2) NULL,
+	
+	-- Descripción: Representa la cantidad del producto vendido en el detalle de venta.
+	[Cantidad] int NULL,
+	
+	-- Descripción: Representa el monto subtotal calculado para el detalle de venta.
+	[SubTotal] decimal(18,2) NULL
+)

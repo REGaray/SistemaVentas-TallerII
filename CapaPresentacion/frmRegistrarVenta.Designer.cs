@@ -46,6 +46,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -78,11 +80,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             groupBox2 = new GroupBox();
-            btnbuscarproveedor = new Guna.UI2.WinForms.Guna2Button();
+            btnbuscarcliente = new Guna.UI2.WinForms.Guna2Button();
             txtnombrecliente = new Guna.UI2.WinForms.Guna2TextBox();
             txtdocumentocliente = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -97,6 +97,8 @@
             guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             btnagregarproducto = new Guna.UI2.WinForms.Guna2Button();
             groupBox4 = new GroupBox();
+            txtcantidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            txtidproducto = new TextBox();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtstock = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -112,6 +114,12 @@
             guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
+            IdProducto = new DataGridViewTextBoxColumn();
+            Producto = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            SubTotal = new DataGridViewTextBoxColumn();
+            btneliminar = new DataGridViewButtonColumn();
             guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel7 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -123,27 +131,19 @@
             txttotalpagar = new Guna.UI2.WinForms.Guna2TextBox();
             btncrearventa = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtidproducto = new TextBox();
-            txtcantidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            IdProducto = new DataGridViewTextBoxColumn();
-            Producto = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            SubTotal = new DataGridViewTextBoxColumn();
-            btneliminar = new DataGridViewButtonColumn();
             guna2CustomGradientPanel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txtcantidad).BeginInit();
             guna2CustomGradientPanel4.SuspendLayout();
             guna2CustomGradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvdata).BeginInit();
             guna2CustomGradientPanel6.SuspendLayout();
             guna2CustomGradientPanel7.SuspendLayout();
             guna2CustomGradientPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)txtcantidad).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -161,7 +161,7 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.White;
-            groupBox2.Controls.Add(btnbuscarproveedor);
+            groupBox2.Controls.Add(btnbuscarcliente);
             groupBox2.Controls.Add(txtnombrecliente);
             groupBox2.Controls.Add(txtdocumentocliente);
             groupBox2.Controls.Add(guna2HtmlLabel7);
@@ -173,25 +173,26 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Información Cliente";
             // 
-            // btnbuscarproveedor
+            // btnbuscarcliente
             // 
-            btnbuscarproveedor.BackColor = Color.White;
-            btnbuscarproveedor.BorderRadius = 18;
-            btnbuscarproveedor.Cursor = Cursors.Hand;
-            btnbuscarproveedor.CustomizableEdges = customizableEdges1;
-            btnbuscarproveedor.DisabledState.BorderColor = Color.DarkGray;
-            btnbuscarproveedor.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnbuscarproveedor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnbuscarproveedor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnbuscarproveedor.FillColor = Color.FromArgb(33, 43, 70);
-            btnbuscarproveedor.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnbuscarproveedor.ForeColor = Color.White;
-            btnbuscarproveedor.Image = Properties.Resources.search_32_white;
-            btnbuscarproveedor.Location = new Point(146, 54);
-            btnbuscarproveedor.Name = "btnbuscarproveedor";
-            btnbuscarproveedor.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnbuscarproveedor.Size = new Size(38, 36);
-            btnbuscarproveedor.TabIndex = 27;
+            btnbuscarcliente.BackColor = Color.White;
+            btnbuscarcliente.BorderRadius = 18;
+            btnbuscarcliente.Cursor = Cursors.Hand;
+            btnbuscarcliente.CustomizableEdges = customizableEdges1;
+            btnbuscarcliente.DisabledState.BorderColor = Color.DarkGray;
+            btnbuscarcliente.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnbuscarcliente.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnbuscarcliente.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnbuscarcliente.FillColor = Color.FromArgb(33, 43, 70);
+            btnbuscarcliente.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnbuscarcliente.ForeColor = Color.White;
+            btnbuscarcliente.Image = Properties.Resources.search_32_white;
+            btnbuscarcliente.Location = new Point(146, 54);
+            btnbuscarcliente.Name = "btnbuscarcliente";
+            btnbuscarcliente.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnbuscarcliente.Size = new Size(38, 36);
+            btnbuscarcliente.TabIndex = 27;
+            btnbuscarcliente.Click += btnbuscarcliente_Click;
             // 
             // txtnombrecliente
             // 
@@ -371,15 +372,17 @@
             btnagregarproducto.DisabledState.CustomBorderColor = Color.DarkGray;
             btnagregarproducto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnagregarproducto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnagregarproducto.FillColor = Color.FromArgb(33, 43, 70);
+            btnagregarproducto.FillColor = Color.FromArgb(33, 70, 40);
             btnagregarproducto.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnagregarproducto.ForeColor = Color.White;
+            btnagregarproducto.Image = Properties.Resources.icons8_plus_32;
             btnagregarproducto.Location = new Point(566, 125);
             btnagregarproducto.Name = "btnagregarproducto";
             btnagregarproducto.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnagregarproducto.Size = new Size(126, 36);
-            btnagregarproducto.TabIndex = 19;
+            btnagregarproducto.TabIndex = 20;
             btnagregarproducto.Text = "Agregar";
+            btnagregarproducto.Click += btnagregarproducto_Click;
             // 
             // groupBox4
             // 
@@ -402,6 +405,26 @@
             groupBox4.TabIndex = 18;
             groupBox4.TabStop = false;
             groupBox4.Text = "Información de Producto";
+            // 
+            // txtcantidad
+            // 
+            txtcantidad.BackColor = Color.Transparent;
+            txtcantidad.BorderRadius = 13;
+            txtcantidad.CustomizableEdges = customizableEdges17;
+            txtcantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtcantidad.Location = new Point(584, 54);
+            txtcantidad.Name = "txtcantidad";
+            txtcantidad.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtcantidad.Size = new Size(83, 36);
+            txtcantidad.TabIndex = 37;
+            // 
+            // txtidproducto
+            // 
+            txtidproducto.Location = new Point(129, 25);
+            txtidproducto.Name = "txtidproducto";
+            txtidproducto.Size = new Size(26, 23);
+            txtidproducto.TabIndex = 36;
+            txtidproducto.Visible = false;
             // 
             // guna2HtmlLabel10
             // 
@@ -464,6 +487,7 @@
             txtprecio.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtprecio.Size = new Size(90, 36);
             txtprecio.TabIndex = 31;
+            txtprecio.KeyPress += txtprecio_KeyPress;
             // 
             // guna2HtmlLabel2
             // 
@@ -515,6 +539,7 @@
             btnbuscarproducto.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnbuscarproducto.Size = new Size(38, 36);
             btnbuscarproducto.TabIndex = 28;
+            btnbuscarproducto.Click += btnbuscarproducto_Click;
             // 
             // guna2HtmlLabel6
             // 
@@ -546,6 +571,7 @@
             txtcodproducto.ShadowDecoration.CustomizableEdges = customizableEdges28;
             txtcodproducto.Size = new Size(149, 36);
             txtcodproducto.TabIndex = 11;
+            txtcodproducto.KeyDown += txtcodproducto_KeyDown;
             // 
             // guna2HtmlLabel9
             // 
@@ -665,6 +691,45 @@
             dgvdata.ThemeStyle.RowsStyle.Height = 28;
             dgvdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvdata.CellContentClick += dgvdata_CellContentClick;
+            dgvdata.CellPainting += dgvdata_CellPainting;
+            // 
+            // IdProducto
+            // 
+            IdProducto.HeaderText = "IdProducto";
+            IdProducto.Name = "IdProducto";
+            IdProducto.ReadOnly = true;
+            IdProducto.Visible = false;
+            // 
+            // Producto
+            // 
+            Producto.HeaderText = "Producto";
+            Producto.Name = "Producto";
+            Producto.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.Name = "Precio";
+            Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            Cantidad.ReadOnly = true;
+            // 
+            // SubTotal
+            // 
+            SubTotal.HeaderText = "Sub Total";
+            SubTotal.Name = "SubTotal";
+            SubTotal.ReadOnly = true;
+            // 
+            // btneliminar
+            // 
+            btneliminar.HeaderText = "";
+            btneliminar.Name = "btneliminar";
+            btneliminar.ReadOnly = true;
             // 
             // guna2CustomGradientPanel6
             // 
@@ -767,6 +832,8 @@
             txtpagocon.ShadowDecoration.CustomizableEdges = customizableEdges42;
             txtpagocon.Size = new Size(120, 23);
             txtpagocon.TabIndex = 30;
+            txtpagocon.KeyDown += txtpagocon_KeyDown;
+            txtpagocon.KeyPress += txtpagocon_KeyPress;
             // 
             // guna2HtmlLabel14
             // 
@@ -818,6 +885,7 @@
             btncrearventa.Size = new Size(126, 36);
             btncrearventa.TabIndex = 26;
             btncrearventa.Text = "Crear venta";
+            btncrearventa.Click += btncrearventa_Click;
             // 
             // guna2HtmlLabel19
             // 
@@ -828,62 +896,6 @@
             guna2HtmlLabel19.Size = new Size(85, 19);
             guna2HtmlLabel19.TabIndex = 27;
             guna2HtmlLabel19.Text = "Total a pagar:";
-            // 
-            // txtidproducto
-            // 
-            txtidproducto.Location = new Point(129, 25);
-            txtidproducto.Name = "txtidproducto";
-            txtidproducto.Size = new Size(26, 23);
-            txtidproducto.TabIndex = 36;
-            // 
-            // txtcantidad
-            // 
-            txtcantidad.BackColor = Color.Transparent;
-            txtcantidad.BorderRadius = 13;
-            txtcantidad.CustomizableEdges = customizableEdges17;
-            txtcantidad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtcantidad.Location = new Point(584, 54);
-            txtcantidad.Name = "txtcantidad";
-            txtcantidad.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtcantidad.Size = new Size(83, 36);
-            txtcantidad.TabIndex = 37;
-            // 
-            // IdProducto
-            // 
-            IdProducto.HeaderText = "IdProducto";
-            IdProducto.Name = "IdProducto";
-            IdProducto.ReadOnly = true;
-            IdProducto.Visible = false;
-            // 
-            // Producto
-            // 
-            Producto.HeaderText = "Producto";
-            Producto.Name = "Producto";
-            Producto.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            Precio.HeaderText = "Precio";
-            Precio.Name = "Precio";
-            Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.Name = "Cantidad";
-            Cantidad.ReadOnly = true;
-            // 
-            // SubTotal
-            // 
-            SubTotal.HeaderText = "Sub Total";
-            SubTotal.Name = "SubTotal";
-            SubTotal.ReadOnly = true;
-            // 
-            // btneliminar
-            // 
-            btneliminar.HeaderText = "";
-            btneliminar.Name = "btneliminar";
-            btneliminar.ReadOnly = true;
             // 
             // frmRegistrarVenta
             // 
@@ -911,6 +923,7 @@
             guna2CustomGradientPanel3.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txtcantidad).EndInit();
             guna2CustomGradientPanel4.ResumeLayout(false);
             guna2CustomGradientPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvdata).EndInit();
@@ -918,7 +931,6 @@
             guna2CustomGradientPanel7.ResumeLayout(false);
             guna2CustomGradientPanel9.ResumeLayout(false);
             guna2CustomGradientPanel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)txtcantidad).EndInit();
             ResumeLayout(false);
         }
 
@@ -926,7 +938,7 @@
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private GroupBox groupBox2;
-        private Guna.UI2.WinForms.Guna2Button btnbuscarproveedor;
+        private Guna.UI2.WinForms.Guna2Button btnbuscarcliente;
         private Guna.UI2.WinForms.Guna2TextBox txtnombrecliente;
         private Guna.UI2.WinForms.Guna2TextBox txtdocumentocliente;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
@@ -939,7 +951,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2Button btnagregarproducto;
         private GroupBox groupBox4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2TextBox txtstock;
@@ -975,5 +986,6 @@
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn SubTotal;
         private DataGridViewButtonColumn btneliminar;
+        private Guna.UI2.WinForms.Guna2Button btnagregarproducto;
     }
 }

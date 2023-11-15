@@ -131,7 +131,7 @@ namespace CapaPresentacion
 
         private void btnVentas1_Click(object sender, EventArgs e)
         {
-            Form frmRegistrarVenta = new frmRegistrarVenta();
+            Form frmRegistrarVenta = new frmRegistrarVenta(usuarioActual);
             AbrirFormulario(frmRegistrarVenta);
 
             hideSubMenu();

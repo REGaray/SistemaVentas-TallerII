@@ -203,3 +203,4 @@ C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.dll
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.xmlworker.dll
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Modals.mdCliente.resources
