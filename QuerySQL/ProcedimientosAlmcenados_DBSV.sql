@@ -800,7 +800,66 @@ end
 
 GO
 
+-- 
+-- PROCEDIMIENTO PARA GENERAR UN REPORTE DE COMPRAS --
+-- ========================================
+-- PROCEDIMIENTO ALMACENADO: sp_ReporteCompras
+-- ========================================
+-- Descripción: Genera un reporte detallado de compras filtrado por rango de fechas y/o proveedor.
+-- Parámetros de entrada:
+-- @fechainicio (varchar(10)): La fecha de inicio del rango de compras en formato dd/mm/yyyy.
+-- @fechafin (varchar(10)): La fecha de fin del rango de compras en formato dd/mm/yyyy.
+-- @idproveedor (int): El ID del proveedor. Si es 0, se considerarán todas las compras independientemente del proveedor.
+-- ========================================
+CREATE PROCEDURE sp_ReporteCompras(
+    @fechainicio varchar(10),
+    @fechafin varchar(10),
+    @idproveedor int
+)
+as
+begin
+    -- Establecer el formato de fecha como dd/mm/yyyy
+    SET DATEFORMAT dmy;
 
+    -- Consulta para obtener el reporte de compras
+    select 
+        -- Información de la compra
+        convert(char(10), c.FechaRegistro, 103) as [FechaRegistro],
+        c.TipoDocumento,
+        c.NumeroDocumento,
+        c.MontoTotal,
+
+        -- Información del usuario que registró la compra
+        u.NombreCompleto as [UsuarioRegistro],
+
+        -- Información del proveedor asociado a la compra
+        pr.Documento as [DocumentoProveedor],
+        pr.RazonSocial,
+
+        -- Información del producto comprado
+        p.Codigo as [CodigoProducto],
+        p.Nombre as [NombreProducto],
+
+        -- Información de la categoría del producto
+        ca.Descripcion as [Categoria],
+
+        -- Detalle de la compra
+        dc.PrecioCompra,
+        dc.PrecioVenta,
+        dc.Cantidad,
+        dc.MontoTotal as [SubTotal]
+    from COMPRA c
+    inner join USUARIO u on u.IdUsuario = c.IdUsuario
+    inner join PROVEEDOR pr on pr.IdProveedor = c.IdProveedor
+    inner join DETALLE_COMPRA dc on dc.IdCompra = c.IdCompra
+    inner join PRODUCTO p on p.IdProducto = dc.IdProducto
+    inner join CATEGORIA ca on ca.IdCategoria = p.IdCategoria
+    where CONVERT(date, c.FechaRegistro) between @fechainicio and @fechafin
+    and pr.IdProveedor = iif(@idproveedor = 0, pr.IdProveedor, @idproveedor)
+end
+
+
+GO
 
 
 /*------------------------------------------------- PREOCEDIMIENTOS PARA VENTAS -------------------------------------------------*/
@@ -824,3 +883,73 @@ CREATE TYPE [dbo].[EDetalle_Venta] AS TABLE(
 	-- Descripción: Representa el monto subtotal calculado para el detalle de venta.
 	[SubTotal] decimal(18,2) NULL
 )
+
+
+-- 
+-- PROCEDIMIENTO PARA REGISTRAR UNA VENTA --
+-- ========================================
+-- PROCEDIMIENTO ALMACENADO: usp_RegistrarVenta
+-- ========================================
+-- Descripción: Registra una venta en la base de datos, incluyendo la información de la venta y su detalle.
+-- Parámetros de entrada:
+-- @IdUsuario (int): El ID del usuario que realiza la venta.
+-- @TipoDocumento (varchar(500)): El tipo de documento utilizado en la venta.
+-- @NumeroDocumento (varchar(500)): El número de documento asociado a la venta.
+-- @DocumentoCliente (varchar(500)): El documento del cliente asociado a la venta.
+-- @NombreCliente (varchar(500)): El nombre del cliente asociado a la venta.
+-- @MontoPago (decimal(18,2)): El monto pagado por el cliente.
+-- @MontoCambio (decimal(18,2)): El monto de cambio devuelto al cliente.
+-- @MontoTotal (decimal(18,2)): El monto total de la venta.
+-- @DetalleVenta [EDetalle_Venta] READONLY: Detalle de la venta utilizando el tipo de tabla definido [EDetalle_Venta].
+-- Parámetros de salida:
+-- @Resultado (bit output): El resultado de la operación (1 si se registró correctamente, 0 si hubo un error).
+-- @Mensaje (varchar(500) output): Un mensaje de texto que describe el resultado de la operación.
+-- ========================================
+CREATE PROCEDURE usp_RegistrarVenta(
+    @IdUsuario int,
+    @TipoDocumento varchar(500),
+    @NumeroDocumento varchar(500),
+    @DocumentoCliente varchar(500),
+    @NombreCliente varchar(500),
+    @MontoPago decimal(18,2),
+    @MontoCambio decimal(18,2),
+    @MontoTotal decimal(18,2),
+    @DetalleVenta [EDetalle_Venta] READONLY,                                      
+    @Resultado bit output,
+    @Mensaje varchar(500) output
+)
+as
+begin
+	
+	begin try
+		-- Declaración de variables locales
+		declare @idventa int = 0
+		set @Resultado = 1
+		set @Mensaje = ''
+
+		-- Inicio de la transacción
+		begin transaction registro
+
+		-- Insertar información de la venta en la tabla VENTA
+		insert into VENTA(IdUsuario, TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal)
+		values(@IdUsuario, @TipoDocumento, @NumeroDocumento, @DocumentoCliente, @NombreCliente, @MontoPago, @MontoCambio, @MontoTotal)
+
+		-- Obtener el ID de la venta recién registrada
+		set @idventa = SCOPE_IDENTITY()
+
+		-- Insertar detalle de la venta en la tabla DETALLE_VENTA
+		insert into DETALLE_VENTA(IdVenta, IdProducto, PrecioVenta, Cantidad, SubTotal)
+		select @idventa, IdProducto, PrecioVenta, Cantidad, SubTotal from @DetalleVenta
+
+		-- Commit de la transacción
+		commit transaction registro
+
+	end try
+	begin catch
+		-- Manejo de errores: establecer el resultado y el mensaje de error, y realizar un rollback
+		set @Resultado = 0
+		set @Mensaje = ERROR_MESSAGE()
+		rollback transaction registro
+	end catch
+
+end

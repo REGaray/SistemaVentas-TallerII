@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -44,13 +42,17 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
-            btnbuscarreporte = new Guna.UI2.WinForms.Guna2Button();
+            btnbuscarresultado = new Guna.UI2.WinForms.Guna2Button();
             txtfechafin = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,16 +68,19 @@
             panel4 = new Panel();
             panel5 = new Panel();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            cboproveedor = new Guna.UI2.WinForms.Guna2ComboBox();
             FechaRegistro = new DataGridViewTextBoxColumn();
             TipoDocumento = new DataGridViewTextBoxColumn();
             NumeroDocumento = new DataGridViewTextBoxColumn();
             MontoTotal = new DataGridViewTextBoxColumn();
             UsuarioRegistro = new DataGridViewTextBoxColumn();
-            DocumentoCliente = new DataGridViewTextBoxColumn();
-            NombreCliente = new DataGridViewTextBoxColumn();
+            DocumentoProveedor = new DataGridViewTextBoxColumn();
+            RazonSocial = new DataGridViewTextBoxColumn();
             CodigoProducto = new DataGridViewTextBoxColumn();
             NombreProducto = new DataGridViewTextBoxColumn();
             Categoria = new DataGridViewTextBoxColumn();
+            PrecioCompra = new DataGridViewTextBoxColumn();
             PrecioVenta = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
             SubTotal = new DataGridViewTextBoxColumn();
@@ -99,7 +104,9 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(btnbuscarreporte);
+            groupBox1.Controls.Add(cboproveedor);
+            groupBox1.Controls.Add(guna2HtmlLabel3);
+            groupBox1.Controls.Add(btnbuscarresultado);
             groupBox1.Controls.Add(txtfechafin);
             groupBox1.Controls.Add(guna2HtmlLabel2);
             groupBox1.Controls.Add(guna2HtmlLabel1);
@@ -110,31 +117,31 @@
             groupBox1.Size = new Size(680, 137);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Reporte ventas";
+            groupBox1.Text = "Reporte Compras";
             // 
-            // btnbuscarreporte
+            // btnbuscarresultado
             // 
-            btnbuscarreporte.Cursor = Cursors.Hand;
-            btnbuscarreporte.CustomizableEdges = customizableEdges1;
-            btnbuscarreporte.DisabledState.BorderColor = Color.DarkGray;
-            btnbuscarreporte.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnbuscarreporte.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnbuscarreporte.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnbuscarreporte.FillColor = Color.FromArgb(33, 43, 70);
-            btnbuscarreporte.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnbuscarreporte.ForeColor = Color.White;
-            btnbuscarreporte.Location = new Point(530, 77);
-            btnbuscarreporte.Name = "btnbuscarreporte";
-            btnbuscarreporte.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnbuscarreporte.Size = new Size(126, 36);
-            btnbuscarreporte.TabIndex = 7;
-            btnbuscarreporte.Text = "Buscar";
+            btnbuscarresultado.Cursor = Cursors.Hand;
+            btnbuscarresultado.CustomizableEdges = customizableEdges3;
+            btnbuscarresultado.DisabledState.BorderColor = Color.DarkGray;
+            btnbuscarresultado.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnbuscarresultado.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnbuscarresultado.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnbuscarresultado.FillColor = Color.FromArgb(33, 43, 70);
+            btnbuscarresultado.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnbuscarresultado.ForeColor = Color.White;
+            btnbuscarresultado.Location = new Point(606, 77);
+            btnbuscarresultado.Name = "btnbuscarresultado";
+            btnbuscarresultado.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnbuscarresultado.Size = new Size(68, 36);
+            btnbuscarresultado.TabIndex = 7;
+            btnbuscarresultado.Text = "Buscar";
             // 
             // txtfechafin
             // 
             txtfechafin.BackColor = Color.FromArgb(33, 43, 70);
             txtfechafin.Checked = true;
-            txtfechafin.CustomizableEdges = customizableEdges3;
+            txtfechafin.CustomizableEdges = customizableEdges5;
             txtfechafin.FillColor = Color.FromArgb(33, 43, 70);
             txtfechafin.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtfechafin.ForeColor = Color.White;
@@ -143,8 +150,8 @@
             txtfechafin.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             txtfechafin.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             txtfechafin.Name = "txtfechafin";
-            txtfechafin.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtfechafin.Size = new Size(200, 36);
+            txtfechafin.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtfechafin.Size = new Size(199, 36);
             txtfechafin.TabIndex = 6;
             txtfechafin.Value = new DateTime(2023, 10, 2, 14, 27, 57, 834);
             // 
@@ -171,7 +178,7 @@
             // txtfechainicio
             // 
             txtfechainicio.Checked = true;
-            txtfechainicio.CustomizableEdges = customizableEdges5;
+            txtfechainicio.CustomizableEdges = customizableEdges7;
             txtfechainicio.FillColor = Color.FromArgb(33, 43, 70);
             txtfechainicio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtfechainicio.ForeColor = Color.White;
@@ -180,8 +187,8 @@
             txtfechainicio.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             txtfechainicio.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             txtfechainicio.Name = "txtfechainicio";
-            txtfechainicio.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtfechainicio.Size = new Size(200, 36);
+            txtfechainicio.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtfechainicio.Size = new Size(206, 36);
             txtfechainicio.TabIndex = 4;
             txtfechainicio.Value = new DateTime(2023, 10, 2, 14, 27, 57, 834);
             // 
@@ -213,7 +220,7 @@
             // 
             btnexportar.BackColor = Color.FromArgb(220, 234, 252);
             btnexportar.Cursor = Cursors.Hand;
-            btnexportar.CustomizableEdges = customizableEdges7;
+            btnexportar.CustomizableEdges = customizableEdges9;
             btnexportar.DisabledState.BorderColor = Color.DarkGray;
             btnexportar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnexportar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -224,7 +231,7 @@
             btnexportar.Image = Properties.Resources.excel_32;
             btnexportar.Location = new Point(38, 103);
             btnexportar.Name = "btnexportar";
-            btnexportar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnexportar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnexportar.Size = new Size(163, 36);
             btnexportar.TabIndex = 19;
             btnexportar.Text = "Descargar en Excel";
@@ -234,7 +241,7 @@
             btnbuscar.BackColor = Color.White;
             btnbuscar.BorderRadius = 18;
             btnbuscar.Cursor = Cursors.Hand;
-            btnbuscar.CustomizableEdges = customizableEdges9;
+            btnbuscar.CustomizableEdges = customizableEdges11;
             btnbuscar.DisabledState.BorderColor = Color.DarkGray;
             btnbuscar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnbuscar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -245,7 +252,7 @@
             btnbuscar.Image = Properties.Resources.search_32_white;
             btnbuscar.Location = new Point(586, 46);
             btnbuscar.Name = "btnbuscar";
-            btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnbuscar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 31;
             // 
@@ -254,7 +261,7 @@
             btnlimpiarbuscador.BackColor = Color.White;
             btnlimpiarbuscador.BorderRadius = 18;
             btnlimpiarbuscador.Cursor = Cursors.Hand;
-            btnlimpiarbuscador.CustomizableEdges = customizableEdges11;
+            btnlimpiarbuscador.CustomizableEdges = customizableEdges13;
             btnlimpiarbuscador.DisabledState.BorderColor = Color.DarkGray;
             btnlimpiarbuscador.DisabledState.CustomBorderColor = Color.DarkGray;
             btnlimpiarbuscador.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -265,14 +272,14 @@
             btnlimpiarbuscador.Image = Properties.Resources.broom_32;
             btnlimpiarbuscador.Location = new Point(630, 46);
             btnlimpiarbuscador.Name = "btnlimpiarbuscador";
-            btnlimpiarbuscador.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnlimpiarbuscador.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnlimpiarbuscador.Size = new Size(38, 36);
             btnlimpiarbuscador.TabIndex = 30;
             // 
             // txtbusqueda
             // 
             txtbusqueda.BackColor = Color.White;
-            txtbusqueda.CustomizableEdges = customizableEdges13;
+            txtbusqueda.CustomizableEdges = customizableEdges15;
             txtbusqueda.DefaultText = "";
             txtbusqueda.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtbusqueda.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -286,14 +293,14 @@
             txtbusqueda.PasswordChar = '\0';
             txtbusqueda.PlaceholderText = "";
             txtbusqueda.SelectedText = "";
-            txtbusqueda.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtbusqueda.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtbusqueda.Size = new Size(433, 36);
             txtbusqueda.TabIndex = 28;
             // 
             // cbobusqueda
             // 
             cbobusqueda.BackColor = Color.White;
-            cbobusqueda.CustomizableEdges = customizableEdges15;
+            cbobusqueda.CustomizableEdges = customizableEdges17;
             cbobusqueda.DrawMode = DrawMode.OwnerDrawFixed;
             cbobusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbobusqueda.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -303,7 +310,7 @@
             cbobusqueda.ItemHeight = 30;
             cbobusqueda.Location = new Point(38, 44);
             cbobusqueda.Name = "cbobusqueda";
-            cbobusqueda.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            cbobusqueda.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cbobusqueda.Size = new Size(103, 36);
             cbobusqueda.TabIndex = 29;
             // 
@@ -352,7 +359,7 @@
             dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvdata.ColumnHeadersHeight = 22;
             dgvdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvdata.Columns.AddRange(new DataGridViewColumn[] { FechaRegistro, TipoDocumento, NumeroDocumento, MontoTotal, UsuarioRegistro, DocumentoCliente, NombreCliente, CodigoProducto, NombreProducto, Categoria, PrecioVenta, Cantidad, SubTotal });
+            dgvdata.Columns.AddRange(new DataGridViewColumn[] { FechaRegistro, TipoDocumento, NumeroDocumento, MontoTotal, UsuarioRegistro, DocumentoProveedor, RazonSocial, CodigoProducto, NombreProducto, Categoria, PrecioCompra, PrecioVenta, Cantidad, SubTotal });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -401,6 +408,33 @@
             dgvdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.Transparent;
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2HtmlLabel3.Location = new Point(451, 48);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(75, 23);
+            guna2HtmlLabel3.TabIndex = 8;
+            guna2HtmlLabel3.Text = "Proveedor";
+            // 
+            // cboproveedor
+            // 
+            cboproveedor.BackColor = Color.White;
+            cboproveedor.CustomizableEdges = customizableEdges1;
+            cboproveedor.DrawMode = DrawMode.OwnerDrawFixed;
+            cboproveedor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboproveedor.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboproveedor.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboproveedor.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cboproveedor.ForeColor = Color.FromArgb(68, 88, 112);
+            cboproveedor.ItemHeight = 30;
+            cboproveedor.Location = new Point(451, 77);
+            cboproveedor.Name = "cboproveedor";
+            cboproveedor.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cboproveedor.Size = new Size(149, 36);
+            cboproveedor.TabIndex = 30;
+            // 
             // FechaRegistro
             // 
             FechaRegistro.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
@@ -441,21 +475,21 @@
             UsuarioRegistro.ReadOnly = true;
             UsuarioRegistro.Width = 54;
             // 
-            // DocumentoCliente
+            // DocumentoProveedor
             // 
-            DocumentoCliente.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            DocumentoCliente.HeaderText = "Documento Cliente";
-            DocumentoCliente.Name = "DocumentoCliente";
-            DocumentoCliente.ReadOnly = true;
-            DocumentoCliente.Width = 54;
+            DocumentoProveedor.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            DocumentoProveedor.HeaderText = "Documento Proveedor";
+            DocumentoProveedor.Name = "DocumentoProveedor";
+            DocumentoProveedor.ReadOnly = true;
+            DocumentoProveedor.Width = 54;
             // 
-            // NombreCliente
+            // RazonSocial
             // 
-            NombreCliente.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            NombreCliente.HeaderText = "Nombre Cliente";
-            NombreCliente.Name = "NombreCliente";
-            NombreCliente.ReadOnly = true;
-            NombreCliente.Width = 54;
+            RazonSocial.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            RazonSocial.HeaderText = "Razon Social";
+            RazonSocial.Name = "RazonSocial";
+            RazonSocial.ReadOnly = true;
+            RazonSocial.Width = 54;
             // 
             // CodigoProducto
             // 
@@ -481,13 +515,19 @@
             Categoria.ReadOnly = true;
             Categoria.Width = 55;
             // 
+            // PrecioCompra
+            // 
+            PrecioCompra.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            PrecioCompra.HeaderText = "Precio Compra";
+            PrecioCompra.Name = "PrecioCompra";
+            PrecioCompra.ReadOnly = true;
+            PrecioCompra.Width = 54;
+            // 
             // PrecioVenta
             // 
-            PrecioVenta.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             PrecioVenta.HeaderText = "Precio Venta";
             PrecioVenta.Name = "PrecioVenta";
             PrecioVenta.ReadOnly = true;
-            PrecioVenta.Width = 54;
             // 
             // Cantidad
             // 
@@ -536,7 +576,7 @@
         private GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2DateTimePicker txtfechafin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button btnbuscarreporte;
+        private Guna.UI2.WinForms.Guna2Button btnbuscarresultado;
         private Panel panel2;
         private Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btnexportar;
@@ -548,16 +588,19 @@
         private Panel panel4;
         private Panel panel5;
         private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
+        private Guna.UI2.WinForms.Guna2ComboBox cboproveedor;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private DataGridViewTextBoxColumn FechaRegistro;
         private DataGridViewTextBoxColumn TipoDocumento;
         private DataGridViewTextBoxColumn NumeroDocumento;
         private DataGridViewTextBoxColumn MontoTotal;
         private DataGridViewTextBoxColumn UsuarioRegistro;
-        private DataGridViewTextBoxColumn DocumentoCliente;
-        private DataGridViewTextBoxColumn NombreCliente;
+        private DataGridViewTextBoxColumn DocumentoProveedor;
+        private DataGridViewTextBoxColumn RazonSocial;
         private DataGridViewTextBoxColumn CodigoProducto;
         private DataGridViewTextBoxColumn NombreProducto;
         private DataGridViewTextBoxColumn Categoria;
+        private DataGridViewTextBoxColumn PrecioCompra;
         private DataGridViewTextBoxColumn PrecioVenta;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn SubTotal;
