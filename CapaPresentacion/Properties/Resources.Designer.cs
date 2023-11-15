@@ -144,24 +144,27 @@ namespace CapaPresentacion.Properties {
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
         ///&lt;html&gt;
         ///&lt;head&gt;
-        ///    &lt;!--sistema creado por el canal yt codigo estudiante--&gt;
-        ///    &lt;title&gt;Web Page Design&lt;/title&gt;
+        ///    &lt;title&gt;Factura - @nombrenegocio&lt;/title&gt;
         ///    &lt;style&gt;
-        ///        table.border {
-        ///            border-collapse: collapse;
+        ///        body {
+        ///            font-family: &apos;Arial&apos;, sans-serif;
+        ///            margin: 0;
+        ///            padding: 0;
+        ///            background-color: #f4f4f4;
         ///        }
         ///
-        ///            table.border th {
-        ///                text-align: center;
-        ///                padding: 5px;
-        ///                border: 1px solid black;
-        ///            }
+        ///        .header {
+        ///            text-align: center;
+        ///            padding: 20px;
+        ///            background-color: #333;
+        ///            color: #fff;
+        ///        }
         ///
-        ///            table.border td {
-        ///                text-align: center;
-        ///                padding: 5px;
-        ///                border: 1px solid black;
-        ///            } [resto de la cadena truncado]&quot;;.
+        ///        .main {
+        ///            max-width: 800px;
+        ///            margin: 20px auto;
+        ///            padding: 20px;
+        ///            bac [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string PlantillaCompra {
             get {
