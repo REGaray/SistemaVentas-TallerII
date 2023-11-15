@@ -49,7 +49,7 @@ namespace CapaNegocio
             {
                 // Obtener los detalles de la venta y asignarlos al objeto Venta
                 List<Detalle_Venta> oDetalleVenta = objcd_venta.ObtenerDetalleVenta(oVenta.IdVenta);
-                oVenta.oDetalle_Venta = oDetalleVenta;
+                oVenta.oDetalleVenta = oDetalleVenta;
             }
 
             // Devolver el objeto Venta con los detalles obtenidos

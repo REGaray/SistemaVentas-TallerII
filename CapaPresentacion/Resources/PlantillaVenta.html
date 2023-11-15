@@ -1,108 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--sistema creado por el canal yt codigo estudiante-->
-    <title>Web Page Design</title>
+    <title>Detalle Venta</title>
     <style>
-        table.border {
-            border-collapse: collapse;
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-            table.border th {
-                text-align: center;
-                padding: 5px;
-                border: 1px solid black;
-            }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
 
-            table.border td {
-                text-align: center;
-                padding: 5px;
-                border: 1px solid black;
-            }
+        .main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            text-align: right;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
-    <table border="0" style="width:100%">
-        <tr>
+    <div class="header">
+        <h1>@nombrenegocio</h1>
+        <p>RUC: @docnegocio</p>
+        <p>Dirección: @direcnegocio</p>
+    </div>
 
-            <td style="width:15%" valign="top"></td>
-            <td style="width:60%" valign="top" align="center">
+    <div class="main">
+        <div>
+            <table>
+                <tr>
+                    <td style="font-weight: bold;">Documento Cliente:</td>
+                    <td>@doccliente</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Nombre Cliente:</td>
+                    <td>@nombrecliente</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Fecha Registro:</td>
+                    <td>@fecharegistro</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Usuario Registro:</td>
+                    <td>@usuarioregistro</td>
+                </tr>
+            </table>
+        </div>
 
-                <label style="font-size:20px;font-weight:bold;margin-bottom:10px">@nombrenegocio</label><br />
-                <div style="height:12px !important"></div>
-                <label style="font-size:11px;">RUC: @docnegocio</label><br />
-                <label style="font-size:11px;">Dirección: @direcnegocio</label><br />
-            </td>
-            <td style="width:25%;" align="right" valign="top">
-                <table style="width:100%" class="border">
-                    <tr>
-                        <td align="center" style="background-color:#CACACA">
-                            <label style="font-size:15px;font-weight:bold">@tipodocumento</label>
-                        </td>
+        <hr/>
+
+        <table>
+            <thead>
+                <tr style="background-color: #CACACA;">
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Sub Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @filas
+            </tbody>
+        </table>
+
+        <hr/>
+
+        <div class="total">
+            <table>
+                <thead>
+                    <tr style="background-color: #CACACA;">
+                        <th>Monto Total</th>
+                        <th>Pago Con</th>
+                        <th>Cambio</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
-                        <td align="center">
-                            <label style="font-size:15px;font-weight:bold">@numerodocumento</label>
-                        </td>
+                        <td>@montototal</td>
+                        <td>@pagocon</td>
+                        <td>@cambio</td>
                     </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <div style="height:15px !important"></div>
-    <hr />
-
-    <table border="0" style="width:100%">
-        <tr>
-            <td style="width:20%"><label style="font-size:12px;font-weight:bold">Documento Cliente:</label></td>
-			<td style="width:20%"><label style="font-size:12px;">@doccliente</label></td>
-        </tr>
-		<tr>
-			<td style="width:20%"><label style="font-size:12px;font-weight:bold">Nombre Cliente:</label></td>
-			<td style="width:20%"><label style="font-size:12px;">@nombrecliente</label></td>
-		</tr>
-		<tr>
-			<td style="width:20%"><label style="font-size:12px;font-weight:bold">Fecha Registro:</label></td>
-            <td style="width:20%"><label style="font-size:12px;">@fecharegistro</label></td>
-        </tr>
-        <tr>
-            <td style="width:20%"><label style="font-size:12px;font-weight:bold">Usuario Registro:</label></td>
-            <td style="width:20%"><label style="font-size:12px;">@usuarioregistro</label></td>
-        </tr>
-
-
-    </table>
-    <div style="height:15px !important"></div>
-    <table style="width:100%;font-size:12px;" class="border">
-        <thead>
-            <tr style="background-color:#CACACA">
-                <th>Producto</th>
-				<th>Precio</th>
-                <th>Cantidad</th>
-                <th>Sub Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            @filas
-        </tbody>
-    </table>
-
-    <div style="height:15px !important"></div>
-    <table style="width:35%;font-size:12px;" class="border">
-        <thead>
-            <tr style="background-color:#CACACA">
-                <th>Monto Total</th>
-                <th>Pago Con</th>
-                <th>Cambio</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>@montototal</td>
-                <td>@pagocon</td>
-                <td>@cambio</td>
-            </tr>
-        </tbody>
-    </table>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

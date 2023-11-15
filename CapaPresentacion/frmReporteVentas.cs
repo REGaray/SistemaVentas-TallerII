@@ -21,5 +21,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void frmReporteVentas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

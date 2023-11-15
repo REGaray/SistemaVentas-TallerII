@@ -122,7 +122,7 @@ namespace CapaPresentacion
             if (e.KeyData == Keys.Enter)
             {
                 // Buscar el producto en la lista de productos activos que coincida con el código ingresado
-                Producto oProducto = new CN__Producto().Listar().Where(p => p.Codigo == txtcodproducto.Text && p.Estado == true).FirstOrDefault();
+                Producto oProducto = new CN_Producto().Listar().Where(p => p.Codigo == txtcodproducto.Text && p.Estado == true).FirstOrDefault();
 
                 // Verificar si se encontró un producto con el código ingresado
                 if (oProducto != null)

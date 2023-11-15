@@ -50,30 +50,35 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
-            btnguardar = new Guna.UI2.WinForms.Guna2Button();
-            guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            btnbuscarreporte = new Guna.UI2.WinForms.Guna2Button();
+            txtfechafin = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            txtfechainicio = new Guna.UI2.WinForms.Guna2DateTimePicker();
             panel2 = new Panel();
             panel3 = new Panel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnexportar = new Guna.UI2.WinForms.Guna2Button();
             btnbuscar = new Guna.UI2.WinForms.Guna2Button();
-            btnlimpiar = new Guna.UI2.WinForms.Guna2Button();
+            btnlimpiarbuscador = new Guna.UI2.WinForms.Guna2Button();
             txtbusqueda = new Guna.UI2.WinForms.Guna2TextBox();
             cbobusqueda = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel4 = new Panel();
             panel5 = new Panel();
             dgvdata = new Guna.UI2.WinForms.Guna2DataGridView();
-            btnseleccionar = new DataGridViewButtonColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Tipodocumento = new DataGridViewTextBoxColumn();
-            Numerodoc = new DataGridViewTextBoxColumn();
+            FechaRegistro = new DataGridViewTextBoxColumn();
+            TipoDocumento = new DataGridViewTextBoxColumn();
+            NumeroDocumento = new DataGridViewTextBoxColumn();
             MontoTotal = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
+            UsuarioRegistro = new DataGridViewTextBoxColumn();
             DocumentoCliente = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
+            NombreCliente = new DataGridViewTextBoxColumn();
+            CodigoProducto = new DataGridViewTextBoxColumn();
+            NombreProducto = new DataGridViewTextBoxColumn();
+            Categoria = new DataGridViewTextBoxColumn();
+            PrecioVenta = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            SubTotal = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             panel3.SuspendLayout();
@@ -94,11 +99,11 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(btnguardar);
-            groupBox1.Controls.Add(guna2DateTimePicker2);
+            groupBox1.Controls.Add(btnbuscarreporte);
+            groupBox1.Controls.Add(txtfechafin);
             groupBox1.Controls.Add(guna2HtmlLabel2);
             groupBox1.Controls.Add(guna2HtmlLabel1);
-            groupBox1.Controls.Add(guna2DateTimePicker1);
+            groupBox1.Controls.Add(txtfechainicio);
             groupBox1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
@@ -107,41 +112,41 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Reporte ventas";
             // 
-            // btnguardar
+            // btnbuscarreporte
             // 
-            btnguardar.Cursor = Cursors.Hand;
-            btnguardar.CustomizableEdges = customizableEdges1;
-            btnguardar.DisabledState.BorderColor = Color.DarkGray;
-            btnguardar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnguardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnguardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnguardar.FillColor = Color.FromArgb(33, 43, 70);
-            btnguardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnguardar.ForeColor = Color.White;
-            btnguardar.Location = new Point(530, 77);
-            btnguardar.Name = "btnguardar";
-            btnguardar.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnguardar.Size = new Size(126, 36);
-            btnguardar.TabIndex = 7;
-            btnguardar.Text = "Buscar";
+            btnbuscarreporte.Cursor = Cursors.Hand;
+            btnbuscarreporte.CustomizableEdges = customizableEdges1;
+            btnbuscarreporte.DisabledState.BorderColor = Color.DarkGray;
+            btnbuscarreporte.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnbuscarreporte.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnbuscarreporte.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnbuscarreporte.FillColor = Color.FromArgb(33, 43, 70);
+            btnbuscarreporte.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnbuscarreporte.ForeColor = Color.White;
+            btnbuscarreporte.Location = new Point(530, 77);
+            btnbuscarreporte.Name = "btnbuscarreporte";
+            btnbuscarreporte.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnbuscarreporte.Size = new Size(126, 36);
+            btnbuscarreporte.TabIndex = 7;
+            btnbuscarreporte.Text = "Buscar";
             // 
-            // guna2DateTimePicker2
+            // txtfechafin
             // 
-            guna2DateTimePicker2.BackColor = Color.FromArgb(33, 43, 70);
-            guna2DateTimePicker2.Checked = true;
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges3;
-            guna2DateTimePicker2.FillColor = Color.FromArgb(33, 43, 70);
-            guna2DateTimePicker2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DateTimePicker2.ForeColor = Color.White;
-            guna2DateTimePicker2.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker2.Location = new Point(238, 77);
-            guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2DateTimePicker2.Size = new Size(200, 36);
-            guna2DateTimePicker2.TabIndex = 6;
-            guna2DateTimePicker2.Value = new DateTime(2023, 10, 2, 14, 27, 57, 834);
+            txtfechafin.BackColor = Color.FromArgb(33, 43, 70);
+            txtfechafin.Checked = true;
+            txtfechafin.CustomizableEdges = customizableEdges3;
+            txtfechafin.FillColor = Color.FromArgb(33, 43, 70);
+            txtfechafin.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtfechafin.ForeColor = Color.White;
+            txtfechafin.Format = DateTimePickerFormat.Long;
+            txtfechafin.Location = new Point(238, 77);
+            txtfechafin.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            txtfechafin.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            txtfechafin.Name = "txtfechafin";
+            txtfechafin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtfechafin.Size = new Size(200, 36);
+            txtfechafin.TabIndex = 6;
+            txtfechafin.Value = new DateTime(2023, 10, 2, 14, 27, 57, 834);
             // 
             // guna2HtmlLabel2
             // 
@@ -163,22 +168,22 @@
             guna2HtmlLabel1.TabIndex = 2;
             guna2HtmlLabel1.Text = "Fecha inicio:";
             // 
-            // guna2DateTimePicker1
+            // txtfechainicio
             // 
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges5;
-            guna2DateTimePicker1.FillColor = Color.FromArgb(33, 43, 70);
-            guna2DateTimePicker1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DateTimePicker1.ForeColor = Color.White;
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(26, 77);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2DateTimePicker1.Size = new Size(200, 36);
-            guna2DateTimePicker1.TabIndex = 4;
-            guna2DateTimePicker1.Value = new DateTime(2023, 10, 2, 14, 27, 57, 834);
+            txtfechainicio.Checked = true;
+            txtfechainicio.CustomizableEdges = customizableEdges5;
+            txtfechainicio.FillColor = Color.FromArgb(33, 43, 70);
+            txtfechainicio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtfechainicio.ForeColor = Color.White;
+            txtfechainicio.Format = DateTimePickerFormat.Long;
+            txtfechainicio.Location = new Point(26, 77);
+            txtfechainicio.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            txtfechainicio.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            txtfechainicio.Name = "txtfechainicio";
+            txtfechainicio.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtfechainicio.Size = new Size(200, 36);
+            txtfechainicio.TabIndex = 4;
+            txtfechainicio.Value = new DateTime(2023, 10, 2, 14, 27, 57, 834);
             // 
             // panel2
             // 
@@ -192,9 +197,9 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(guna2Button1);
+            panel3.Controls.Add(btnexportar);
             panel3.Controls.Add(btnbuscar);
-            panel3.Controls.Add(btnlimpiar);
+            panel3.Controls.Add(btnlimpiarbuscador);
             panel3.Controls.Add(txtbusqueda);
             panel3.Controls.Add(cbobusqueda);
             panel3.Controls.Add(guna2HtmlLabel11);
@@ -204,24 +209,25 @@
             panel3.Size = new Size(704, 162);
             panel3.TabIndex = 2;
             // 
-            // guna2Button1
+            // btnexportar
             // 
-            guna2Button1.BackColor = Color.FromArgb(220, 234, 252);
-            guna2Button1.Cursor = Cursors.Hand;
-            guna2Button1.CustomizableEdges = customizableEdges7;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(33, 100, 70);
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(38, 103);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(152, 36);
-            guna2Button1.TabIndex = 19;
-            guna2Button1.Text = "Descargar en Excel";
+            btnexportar.BackColor = Color.FromArgb(220, 234, 252);
+            btnexportar.Cursor = Cursors.Hand;
+            btnexportar.CustomizableEdges = customizableEdges7;
+            btnexportar.DisabledState.BorderColor = Color.DarkGray;
+            btnexportar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnexportar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnexportar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnexportar.FillColor = Color.FromArgb(33, 100, 70);
+            btnexportar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnexportar.ForeColor = Color.White;
+            btnexportar.Image = Properties.Resources.excel_32;
+            btnexportar.Location = new Point(38, 103);
+            btnexportar.Name = "btnexportar";
+            btnexportar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnexportar.Size = new Size(163, 36);
+            btnexportar.TabIndex = 19;
+            btnexportar.Text = "Descargar en Excel";
             // 
             // btnbuscar
             // 
@@ -243,25 +249,25 @@
             btnbuscar.Size = new Size(38, 36);
             btnbuscar.TabIndex = 31;
             // 
-            // btnlimpiar
+            // btnlimpiarbuscador
             // 
-            btnlimpiar.BackColor = Color.White;
-            btnlimpiar.BorderRadius = 18;
-            btnlimpiar.Cursor = Cursors.Hand;
-            btnlimpiar.CustomizableEdges = customizableEdges11;
-            btnlimpiar.DisabledState.BorderColor = Color.DarkGray;
-            btnlimpiar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnlimpiar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnlimpiar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnlimpiar.FillColor = Color.FromArgb(217, 83, 79);
-            btnlimpiar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnlimpiar.ForeColor = Color.White;
-            btnlimpiar.Image = Properties.Resources.broom_32;
-            btnlimpiar.Location = new Point(630, 46);
-            btnlimpiar.Name = "btnlimpiar";
-            btnlimpiar.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnlimpiar.Size = new Size(38, 36);
-            btnlimpiar.TabIndex = 30;
+            btnlimpiarbuscador.BackColor = Color.White;
+            btnlimpiarbuscador.BorderRadius = 18;
+            btnlimpiarbuscador.Cursor = Cursors.Hand;
+            btnlimpiarbuscador.CustomizableEdges = customizableEdges11;
+            btnlimpiarbuscador.DisabledState.BorderColor = Color.DarkGray;
+            btnlimpiarbuscador.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnlimpiarbuscador.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnlimpiarbuscador.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnlimpiarbuscador.FillColor = Color.FromArgb(217, 83, 79);
+            btnlimpiarbuscador.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnlimpiarbuscador.ForeColor = Color.White;
+            btnlimpiarbuscador.Image = Properties.Resources.broom_32;
+            btnlimpiarbuscador.Location = new Point(630, 46);
+            btnlimpiarbuscador.Name = "btnlimpiarbuscador";
+            btnlimpiarbuscador.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnlimpiarbuscador.Size = new Size(38, 36);
+            btnlimpiarbuscador.TabIndex = 30;
             // 
             // txtbusqueda
             // 
@@ -346,7 +352,7 @@
             dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvdata.ColumnHeadersHeight = 22;
             dgvdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvdata.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, Column1, Tipodocumento, Numerodoc, MontoTotal, Column2, DocumentoCliente, Column3 });
+            dgvdata.Columns.AddRange(new DataGridViewColumn[] { FechaRegistro, TipoDocumento, NumeroDocumento, MontoTotal, UsuarioRegistro, DocumentoCliente, NombreCliente, CodigoProducto, NombreProducto, Categoria, PrecioVenta, Cantidad, SubTotal });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -395,55 +401,109 @@
             dgvdata.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvdata.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // btnseleccionar
+            // FechaRegistro
             // 
-            btnseleccionar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            btnseleccionar.HeaderText = "";
-            btnseleccionar.Name = "btnseleccionar";
-            btnseleccionar.ReadOnly = true;
-            btnseleccionar.Width = 30;
+            FechaRegistro.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            FechaRegistro.HeaderText = "Fecha registro";
+            FechaRegistro.Name = "FechaRegistro";
+            FechaRegistro.ReadOnly = true;
+            FechaRegistro.Width = 54;
             // 
-            // Column1
+            // TipoDocumento
             // 
-            Column1.HeaderText = "Fecha registro";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            TipoDocumento.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TipoDocumento.HeaderText = "Tipo Documento";
+            TipoDocumento.Name = "TipoDocumento";
+            TipoDocumento.ReadOnly = true;
+            TipoDocumento.Width = 54;
             // 
-            // Tipodocumento
+            // NumeroDocumento
             // 
-            Tipodocumento.HeaderText = "Tipo Documento";
-            Tipodocumento.Name = "Tipodocumento";
-            Tipodocumento.ReadOnly = true;
-            // 
-            // Numerodoc
-            // 
-            Numerodoc.HeaderText = "Numero Documento";
-            Numerodoc.Name = "Numerodoc";
-            Numerodoc.ReadOnly = true;
+            NumeroDocumento.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            NumeroDocumento.HeaderText = "Numero Documento";
+            NumeroDocumento.Name = "NumeroDocumento";
+            NumeroDocumento.ReadOnly = true;
+            NumeroDocumento.Width = 54;
             // 
             // MontoTotal
             // 
+            MontoTotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             MontoTotal.HeaderText = "MontoTotal";
             MontoTotal.Name = "MontoTotal";
             MontoTotal.ReadOnly = true;
+            MontoTotal.Width = 55;
             // 
-            // Column2
+            // UsuarioRegistro
             // 
-            Column2.HeaderText = "Usuario Registro";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            UsuarioRegistro.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            UsuarioRegistro.HeaderText = "Usuario Registro";
+            UsuarioRegistro.Name = "UsuarioRegistro";
+            UsuarioRegistro.ReadOnly = true;
+            UsuarioRegistro.Width = 54;
             // 
             // DocumentoCliente
             // 
+            DocumentoCliente.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             DocumentoCliente.HeaderText = "Documento Cliente";
             DocumentoCliente.Name = "DocumentoCliente";
             DocumentoCliente.ReadOnly = true;
+            DocumentoCliente.Width = 54;
             // 
-            // Column3
+            // NombreCliente
             // 
-            Column3.HeaderText = "Nombre Cliente";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            NombreCliente.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            NombreCliente.HeaderText = "Nombre Cliente";
+            NombreCliente.Name = "NombreCliente";
+            NombreCliente.ReadOnly = true;
+            NombreCliente.Width = 54;
+            // 
+            // CodigoProducto
+            // 
+            CodigoProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            CodigoProducto.HeaderText = "CodigoProducto";
+            CodigoProducto.Name = "CodigoProducto";
+            CodigoProducto.ReadOnly = true;
+            CodigoProducto.Width = 54;
+            // 
+            // NombreProducto
+            // 
+            NombreProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            NombreProducto.HeaderText = "Nombre Producto";
+            NombreProducto.Name = "NombreProducto";
+            NombreProducto.ReadOnly = true;
+            NombreProducto.Width = 54;
+            // 
+            // Categoria
+            // 
+            Categoria.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Categoria.HeaderText = "Categoria";
+            Categoria.Name = "Categoria";
+            Categoria.ReadOnly = true;
+            Categoria.Width = 55;
+            // 
+            // PrecioVenta
+            // 
+            PrecioVenta.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            PrecioVenta.HeaderText = "Precio Venta";
+            PrecioVenta.Name = "PrecioVenta";
+            PrecioVenta.ReadOnly = true;
+            PrecioVenta.Width = 54;
+            // 
+            // Cantidad
+            // 
+            Cantidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            Cantidad.ReadOnly = true;
+            Cantidad.Width = 54;
+            // 
+            // SubTotal
+            // 
+            SubTotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            SubTotal.HeaderText = "Sub Total";
+            SubTotal.Name = "SubTotal";
+            SubTotal.ReadOnly = true;
+            SubTotal.Width = 54;
             // 
             // frmReporteVentas
             // 
@@ -457,6 +517,7 @@
             Controls.Add(panel1);
             Name = "frmReporteVentas";
             Text = "frmReporteVentas";
+            Load += frmReporteVentas_Load;
             panel1.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -471,29 +532,34 @@
 
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtfechainicio;
         private GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker txtfechafin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button btnguardar;
+        private Guna.UI2.WinForms.Guna2Button btnbuscarreporte;
         private Panel panel2;
         private Panel panel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnexportar;
         private Guna.UI2.WinForms.Guna2Button btnbuscar;
-        private Guna.UI2.WinForms.Guna2Button btnlimpiar;
+        private Guna.UI2.WinForms.Guna2Button btnlimpiarbuscador;
         private Guna.UI2.WinForms.Guna2TextBox txtbusqueda;
         private Guna.UI2.WinForms.Guna2ComboBox cbobusqueda;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Panel panel4;
         private Panel panel5;
         private Guna.UI2.WinForms.Guna2DataGridView dgvdata;
-        private DataGridViewButtonColumn btnseleccionar;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Tipodocumento;
-        private DataGridViewTextBoxColumn Numerodoc;
+        private DataGridViewTextBoxColumn FechaRegistro;
+        private DataGridViewTextBoxColumn TipoDocumento;
+        private DataGridViewTextBoxColumn NumeroDocumento;
         private DataGridViewTextBoxColumn MontoTotal;
-        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn UsuarioRegistro;
         private DataGridViewTextBoxColumn DocumentoCliente;
-        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn NombreCliente;
+        private DataGridViewTextBoxColumn CodigoProducto;
+        private DataGridViewTextBoxColumn NombreProducto;
+        private DataGridViewTextBoxColumn Categoria;
+        private DataGridViewTextBoxColumn PrecioVenta;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn SubTotal;
     }
 }
