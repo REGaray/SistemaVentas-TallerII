@@ -206,3 +206,19 @@ C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteCompra.resources
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVenta.resources
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVentas.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\ClosedXML.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\ExcelNumberFormat.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\Irony.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.xmlworker.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\XLParser.dll
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.aaaaaaa.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteCompras.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteCompra.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVenta.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Modals.mdCliente.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Modales.mdProducto.resources
+C:\Taller 2\PROYECTO\SistemaVentas\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Modales.md_Proveedor.resources

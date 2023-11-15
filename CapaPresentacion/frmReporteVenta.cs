@@ -52,7 +52,8 @@ namespace CapaPresentacion
             // 4. Llenar el DataGridView con los resultados de la búsqueda.
             foreach (Reporte_Venta rv in lista)
             {
-                dgvdata.Rows.Add(new object[] {
+
+        dgvdata.Rows.Add(new object[] {
                 rv.FechaRegistro,
                 rv.TipoDocumento,
                 rv.NumeroDocumento,

@@ -956,6 +956,28 @@ end
 
 go
 
+CREATE PROC sp_ReporteVentas(
+ @fechainicio varchar(10),
+ @fechafin varchar(10)
+ )
+ as
+ begin
+ SET DATEFORMAT dmy;  
+ select 
+ convert(char(10),v.FechaRegistro,103)[FechaRegistro],v.TipoDocumento,v.NumeroDocumento,v.MontoTotal,
+ u.NombreCompleto[UsuarioRegistro],
+ v.DocumentoCliente,v.NombreCliente,
+ p.Codigo[CodigoProducto],p.Nombre[NombreProducto],ca.Descripcion[Categoria],dv.PrecioVenta,dv.Cantidad,dv.SubTotal
+ from VENTA v
+ inner join USUARIO u on u.IdUsuario = v.IdUsuario
+ inner join DETALLE_VENTA dv on dv.IdVenta = v.IdVenta
+ inner join PRODUCTO p on p.IdProducto = dv.IdProducto
+ inner join CATEGORIA ca on ca.IdCategoria = p.IdCategoria
+ where CONVERT(date,v.FechaRegistro) between @fechainicio and @fechafin
+end
+
+
+
 SELECT * FROM COMPRA c
 inner join USUARIO u on u.IdUsuario = c.IdUsuario
 inner join PROVEEDOR pr on pr.IdProveedor = c.IdProveedor

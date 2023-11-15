@@ -88,6 +88,7 @@ namespace CapaDatos
                             // Crear instancias de la clase ReporteVenta y agregarlas a la lista
                             lista.Add(new Reporte_Venta()
                             {
+
                                 FechaRegistro = dr["FechaRegistro"].ToString(),
                                 TipoDocumento = dr["TipoDocumento"].ToString(),
                                 NumeroDocumento = dr["NumeroDocumento"].ToString(),

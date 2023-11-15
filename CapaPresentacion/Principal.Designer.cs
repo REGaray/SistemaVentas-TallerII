@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             menu = new Panel();
             panelSubMenuReportes = new Panel();
+            btnreporteV = new FontAwesome.Sharp.IconButton();
             btnReportes2 = new FontAwesome.Sharp.IconButton();
             btnReportes = new FontAwesome.Sharp.IconButton();
             btnProveedores = new FontAwesome.Sharp.IconButton();
@@ -60,7 +61,6 @@
             panel2 = new Panel();
             btncancelar = new FontAwesome.Sharp.IconButton();
             contenedor = new Panel();
-            btnreporteV = new FontAwesome.Sharp.IconButton();
             menu.SuspendLayout();
             panelSubMenuReportes.SuspendLayout();
             panelSubMenuCompras.SuspendLayout();
@@ -105,8 +105,31 @@
             panelSubMenuReportes.Dock = DockStyle.Top;
             panelSubMenuReportes.Location = new Point(0, 718);
             panelSubMenuReportes.Name = "panelSubMenuReportes";
-            panelSubMenuReportes.Size = new Size(213, 40);
+            panelSubMenuReportes.Size = new Size(213, 80);
             panelSubMenuReportes.TabIndex = 14;
+            // 
+            // btnreporteV
+            // 
+            btnreporteV.BackColor = Color.FromArgb(9, 34, 88);
+            btnreporteV.Dock = DockStyle.Bottom;
+            btnreporteV.FlatAppearance.BorderSize = 0;
+            btnreporteV.FlatStyle = FlatStyle.Flat;
+            btnreporteV.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnreporteV.ForeColor = Color.White;
+            btnreporteV.IconChar = FontAwesome.Sharp.IconChar.Gear;
+            btnreporteV.IconColor = Color.White;
+            btnreporteV.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnreporteV.IconSize = 30;
+            btnreporteV.ImageAlign = ContentAlignment.MiddleLeft;
+            btnreporteV.Location = new Point(0, 40);
+            btnreporteV.Name = "btnreporteV";
+            btnreporteV.Padding = new Padding(20, 0, 0, 0);
+            btnreporteV.Size = new Size(213, 40);
+            btnreporteV.TabIndex = 24;
+            btnreporteV.Text = "Reporte Venta";
+            btnreporteV.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnreporteV.UseVisualStyleBackColor = false;
+            btnreporteV.Click += btnreporteV_Click;
             // 
             // btnReportes2
             // 
@@ -124,7 +147,7 @@
             btnReportes2.Location = new Point(0, 0);
             btnReportes2.Name = "btnReportes2";
             btnReportes2.Padding = new Padding(20, 0, 0, 0);
-            btnReportes2.Size = new Size(213, 20);
+            btnReportes2.Size = new Size(213, 40);
             btnReportes2.TabIndex = 23;
             btnReportes2.Text = "Reporte Compra";
             btnReportes2.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -608,29 +631,6 @@
             contenedor.Name = "contenedor";
             contenedor.Size = new Size(720, 616);
             contenedor.TabIndex = 14;
-            // 
-            // btnreporteV
-            // 
-            btnreporteV.BackColor = Color.FromArgb(9, 34, 88);
-            btnreporteV.Dock = DockStyle.Top;
-            btnreporteV.FlatAppearance.BorderSize = 0;
-            btnreporteV.FlatStyle = FlatStyle.Flat;
-            btnreporteV.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnreporteV.ForeColor = Color.White;
-            btnreporteV.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            btnreporteV.IconColor = Color.White;
-            btnreporteV.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnreporteV.IconSize = 30;
-            btnreporteV.ImageAlign = ContentAlignment.MiddleLeft;
-            btnreporteV.Location = new Point(0, 20);
-            btnreporteV.Name = "btnreporteV";
-            btnreporteV.Padding = new Padding(20, 0, 0, 0);
-            btnreporteV.Size = new Size(213, 20);
-            btnreporteV.TabIndex = 24;
-            btnreporteV.Text = "Reporte Venta";
-            btnreporteV.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnreporteV.UseVisualStyleBackColor = false;
-            btnreporteV.Click += btnreporteV_Click;
             // 
             // Principal
             // 
