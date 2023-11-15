@@ -40,10 +40,13 @@
     <Compile Update="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Modales\mdProducto.cs">
+    <Compile Update="Modals\mdCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Modales\md_Proveedor.cs">
+    <Compile Update="Modals\mdProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Modals\md_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Principal.cs">
