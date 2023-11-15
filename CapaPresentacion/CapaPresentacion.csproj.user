@@ -37,6 +37,12 @@
     <Compile Update="frmReporteCompra.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>

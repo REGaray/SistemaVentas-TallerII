@@ -258,5 +258,13 @@ namespace CapaPresentacion
 
             hideSubMenu();
         }
+
+        private void btnreporteV_Click(object sender, EventArgs e)
+        {
+            Form frmReporteVenta = new frmReporteVenta();
+            AbrirFormulario(frmReporteVenta);
+
+            hideSubMenu();
+        }
     }
 }

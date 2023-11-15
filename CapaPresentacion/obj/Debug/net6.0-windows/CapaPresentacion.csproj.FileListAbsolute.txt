@@ -204,3 +204,5 @@ C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\bin\Debug\net6.0-windows\itextsharp.xmlworker.dll
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.Modals.mdCliente.resources
 C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteCompra.resources
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVenta.resources
+C:\Users\Jere\source\repos\SistemaVentas-TallerII\CapaPresentacion\obj\Debug\net6.0-windows\CapaPresentacion.frmReporteVentas.resources
