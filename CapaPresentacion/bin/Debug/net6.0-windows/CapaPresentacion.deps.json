@@ -13,10 +13,20 @@
           "ClosedXML": "0.102.1",
           "FontAwesome.Sharp": "6.3.0",
           "Guna.UI2.WinForms": "2.0.4.5",
-          "System.Data.SqlClient": "4.8.5"
+          "System.Data.SqlClient": "4.8.5",
+          "iTextSharp": "5.5.13.3",
+          "itextsharp.xmlworker": "5.5.13.3"
         },
         "runtime": {
           "CapaPresentacion.dll": {}
+        }
+      },
+      "BouncyCastle/1.8.9": {
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.9.0",
+            "fileVersion": "1.8.20343.1"
+          }
         }
       },
       "ClosedXML/0.102.1": {
@@ -87,6 +97,28 @@
           "lib/netstandard1.6/Irony.dll": {
             "assemblyVersion": "1.0.11.0",
             "fileVersion": "1.0.11.0"
+          }
+        }
+      },
+      "iTextSharp/5.5.13.3": {
+        "dependencies": {
+          "BouncyCastle": "1.8.9"
+        },
+        "runtime": {
+          "lib/itextsharp.dll": {
+            "assemblyVersion": "5.5.13.3",
+            "fileVersion": "5.5.13.3"
+          }
+        }
+      },
+      "itextsharp.xmlworker/5.5.13.3": {
+        "dependencies": {
+          "iTextSharp": "5.5.13.3"
+        },
+        "runtime": {
+          "lib/itextsharp.xmlworker.dll": {
+            "assemblyVersion": "5.5.13.3",
+            "fileVersion": "5.5.13.3"
           }
         }
       },
@@ -901,6 +933,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
+      "path": "bouncycastle/1.8.9",
+      "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
+    },
     "ClosedXML/0.102.1": {
       "type": "package",
       "serviceable": true,
@@ -942,6 +981,20 @@
       "sha512": "sha512-/2MCkqdhEjPiSTZKYXg6u9AO9o3m68biqcFHAnM28WdnrcZii2vYbmKPzT5ejByyV72FUlygOtHBMt8SLnUyNw==",
       "path": "irony.netcore/1.0.11",
       "hashPath": "irony.netcore.1.0.11.nupkg.sha512"
+    },
+    "iTextSharp/5.5.13.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vtnMhTEJdZFCkLqaQLjD8aqTBIVKHPrSFuSXnxbLEJlvE/j/l88fvG9wtsejXTmhtErMo0lA9T2LdfdfbwplYw==",
+      "path": "itextsharp/5.5.13.3",
+      "hashPath": "itextsharp.5.5.13.3.nupkg.sha512"
+    },
+    "itextsharp.xmlworker/5.5.13.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tRxeolUZl5863E/IHVb+5riZwsHw8uNiP0uku0gO1nktR2M9DCJS+U9EoLV3CFr0VuxoxQF/sLOffa8BP0hJzg==",
+      "path": "itextsharp.xmlworker/5.5.13.3",
+      "hashPath": "itextsharp.xmlworker.5.5.13.3.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",

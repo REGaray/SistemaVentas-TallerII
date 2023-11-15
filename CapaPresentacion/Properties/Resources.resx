@@ -121,17 +121,23 @@
   <data name="search-32-white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-32-white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Icons\delete-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search-321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-checkmark-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Icons\icons8-checkmark-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="broom-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\broom-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="upload-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Icons\upload-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Icons\icons8-plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-32-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-32-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Abstract Geometric Background _ Futuristic Polygonal Connection Backdrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Abstract Geometric Background _ Futuristic Polygonal Connection Backdrop.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,13 +151,16 @@
   <data name="excel-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Icons\excel-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search-32-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-32-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-checkmark-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Icons\icons8-checkmark-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Icons\icons8-plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pdf-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Icons\pdf-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Icons\delete-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlantillaCompra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlantillaCompra.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PlantillaVenta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlantillaVenta.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>
