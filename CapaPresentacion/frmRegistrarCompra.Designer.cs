@@ -148,7 +148,7 @@
             groupBox1.Size = new Size(321, 107);
             groupBox1.TabIndex = 18;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Información Compa";
+            groupBox1.Text = "Información Compra";
             // 
             // cbotipodocumento
             // 
@@ -234,7 +234,7 @@
             groupBox2.Size = new Size(353, 107);
             groupBox2.TabIndex = 19;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Información Compa";
+            groupBox2.Text = "Información Proveedor";
             // 
             // txtidproveedor
             // 

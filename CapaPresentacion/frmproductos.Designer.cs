@@ -305,7 +305,7 @@
             dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvdata.RowHeadersVisible = false;
             dgvdata.RowTemplate.Height = 28;
-            dgvdata.Size = new Size(785, 305);
+            dgvdata.Size = new Size(797, 305);
             dgvdata.TabIndex = 16;
             dgvdata.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvdata.ThemeStyle.AlternatingRowsStyle.Font = null;
